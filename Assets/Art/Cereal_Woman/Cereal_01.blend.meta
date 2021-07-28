@@ -3,7 +3,82 @@ guid: 7f1fca945b8f04540a76079e526d4d19
 ModelImporter:
   serializedVersion: 21100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bowl
+    second: {fileID: 2100000, guid: c4dd4803403d8b743bc08b6c0bd03514, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cereal_Box
+    second: {fileID: 2100000, guid: 782fcd66450ac484cad4173427248fa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GrandFather_Clock
+    second: {fileID: 2100000, guid: da667866feba20a4bbaa1d3ac7d000fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Iranian_Carpet
+    second: {fileID: 2100000, guid: 71351895351d7d84e978dc3f150bc446, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Milk_Carton
+    second: {fileID: 2100000, guid: 04a5f052443274f44868d7337e3a6f0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Old_Wood_Floor
+    second: {fileID: 2100000, guid: aeb81e1bdeb45c64e96e01f8bd263a78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: School_Chair
+    second: {fileID: 2100000, guid: 610bf79f43dd0d649885dafa24d0e798, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: School_Desk
+    second: {fileID: 2100000, guid: 591ade498d6e921469117424e0ce4f33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_Dotted_Flowers
+    second: {fileID: 2100000, guid: 9174b8b769899984890c657e5d880187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_Washed_Flowers
+    second: {fileID: 2100000, guid: f9227f0b6b248a046af094616d292c85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame.001
+    second: {fileID: 2100000, guid: c43716bbaf0eb614e9c3a66b342bfdc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: frame.002
+    second: {fileID: 2100000, guid: 692f92b9015531c43950133af0c5f210, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture1
+    second: {fileID: 2100000, guid: 8d82fdd1d9084374f8424d46e0f3eea6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture2
+    second: {fileID: 2100000, guid: 820146dda73b5ec4097fa586d68fb7f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: picture3
+    second: {fileID: 2100000, guid: 91805075377be9d4a931c579771ec55b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
