@@ -1,18 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/M_desk_BaseColor.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/M_desk_BaseColor.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Texture/TV_CHAIR_1001_BaseColor.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Texture/TV_CHAIR_1001_BaseColor.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_BrickSmallPlaster0119_3_seamless_S.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_BrickSmallPlaster0119_3_seamless_S.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0022_seamless_S.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0022_seamless_S.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0055_seamless_S.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0055_seamless_S.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0076_seamless_S.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0076_seamless_S.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WoodPlanksOld0244_2_seamless_S.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/TexturesCom_WoodPlanksOld0244_2_seamless_S.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/grandfatherclock_uv.bmp.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/grandfatherclock_uv.bmp.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/oriental-persian-carpet-texture_40015-242.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/oriental-persian-carpet-texture_40015-242.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cam_Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cam_Testing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRP-LowQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +33,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/Singleton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       </list>
     </option>
@@ -67,12 +82,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1627434154130</updated>
-      <workItem from="1627434159132" duration="887000" />
+      <workItem from="1627434159132" duration="3077000" />
     </task>
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
