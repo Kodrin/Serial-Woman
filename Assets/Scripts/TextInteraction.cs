@@ -5,25 +5,36 @@ using UnityEngine.UI;
 
 public class TextInteraction : MonoBehaviour
 {
-    private Color mouseOverColor = Color.red;
-    private Color originalColor;
-    private MeshRenderer renderer;
     public Text txt;
-    private int bowlCount = 1;
-    private int cerealCount = 1;
+    private static int bowlCount = 1;
+    private static int cerealCount = 1;
+    private static int milkCount = 1;
+    private static float timeToDisplay = 4f; // The length of time to display text
+    private static float timeToClear; // The time when the text must be cleared
 
     void Start()
     {
-        //Fetch the mesh renderer component from the GameObject
-        renderer = GetComponent<MeshRenderer>();
-        //Fetch the original color of the GameObject
-        originalColor = renderer.material.color;
+        txt.enabled = false;
     }
 
-    void OnMouseOver()
+    void Update()
     {
-        // Change the color of the GameObject to red when the mouse is over GameObject
-        renderer.material.color = mouseOverColor;
+        if (txt.enabled && (Time.time >= timeToClear))
+        {
+            txt.enabled = false;
+        }
+    }
+
+    void PrintText(string textToPrint)
+    {
+        txt.text = textToPrint;
+        txt.enabled = true;
+        timeToClear = Time.time + timeToDisplay;
+    }
+
+    void OnMouseOver() 
+    {
+        // Do stuff on mouse-over
     }
 
     void OnMouseDown()
@@ -32,12 +43,12 @@ public class TextInteraction : MonoBehaviour
         {
             if (bowlCount == 1)
             {
-                txt.text = "There is a generous portion of milk inside.";
+                PrintText("There is a generous portion of milk inside.");
                 bowlCount = 2;
             }
             else
             {
-                txt.text = "Do I always pour my milk first? You bet I do.";
+                PrintText("Do I always pour my milk first? You bet I do.");
                 bowlCount = 1;
             }
         }
@@ -46,30 +57,35 @@ public class TextInteraction : MonoBehaviour
         {
             if (cerealCount == 1)
             {
-                txt.text = "Letter-O's. I've been eating these since I was kid.";
+                PrintText("Letter-O's. I've been eating these since I was kid.");
                 cerealCount = 2;
             }
             else if (cerealCount == 2)
             {
-                txt.text = "I swear they talk to me sometimes.";
+                PrintText("I swear they talk to me sometimes.");
                 cerealCount = 3;
             }
             else
             {
-                txt.text = "Sometimes... Not all the time...";
+                PrintText("Sometimes... Not all the time...");
                 cerealCount = 1;
             }
         }
 
         else if (this.tag == "milk")
         {
-            txt.text = "Already out of milk? I just bought some yesterday morning...";
+            if (milkCount == 1)
+            {
+                PrintText("Already out of milk? I just bought some yesterday morning...");
+                milkCount++; 
+            }
+            else
+                PrintText("There is already milk in the bowl.");
         }
     }
 
     void OnMouseExit()
     {
-        // Reset the color of the GameObject back to normal
-        renderer.material.color = originalColor;
+        //Do stuff on mouse-off
     }
 }
