@@ -13,6 +13,7 @@
           <e p="Common" t="Include">
             <e p="Singleton.cs" t="Include" />
           </e>
+          <e p="GameManager.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
         </e>
       </e>
