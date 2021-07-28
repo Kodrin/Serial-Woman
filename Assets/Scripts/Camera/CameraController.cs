@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public enum VantagePointType
 {
     ESTABLISHING_SHOT,
+    CHAIR_SHOT,
     BOWL_SHOT,
     GRANDFATHER_SHOT,
     PAINTING_SHOT
@@ -18,6 +19,7 @@ public class CameraController : Singleton<CameraController>
 
     //virtual cameras
     public CinemachineVirtualCamera establishingShot;
+    public CinemachineVirtualCamera chairShot;
     public CinemachineVirtualCamera bowlShot;
     public CinemachineVirtualCamera grandfatherShot;
     public CinemachineVirtualCamera paintingShot;
@@ -41,6 +43,7 @@ public class CameraController : Singleton<CameraController>
     protected void InitializeCameras()
     {
         cameras.Add(VantagePointType.ESTABLISHING_SHOT, establishingShot);
+        cameras.Add(VantagePointType.CHAIR_SHOT, chairShot);
         cameras.Add(VantagePointType.BOWL_SHOT, bowlShot);
         cameras.Add(VantagePointType.GRANDFATHER_SHOT, grandfatherShot);
         cameras.Add(VantagePointType.PAINTING_SHOT, paintingShot);
@@ -73,21 +76,26 @@ public class CameraController : Singleton<CameraController>
             SwitchCameraTo(VantagePointType.ESTABLISHING_SHOT);
         }
         
-        
-        //switch to bowlShot
+        //switch to chair shot
         if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchCameraTo(VantagePointType.CHAIR_SHOT);
+        }
+
+        //switch to bowlShot
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SwitchCameraTo(VantagePointType.BOWL_SHOT);
         }
         
         //switch to grandfatherShot
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             SwitchCameraTo(VantagePointType.GRANDFATHER_SHOT);
         }
         
         //switch to paintingShot
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             SwitchCameraTo(VantagePointType.PAINTING_SHOT);
         }
