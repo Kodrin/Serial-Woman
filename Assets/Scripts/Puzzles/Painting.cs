@@ -15,8 +15,5 @@ public class Painting : MonoBehaviour
     }
 
     public LetterType letterType;
-    public void Something()
-    {
-        
-    }
+
 }

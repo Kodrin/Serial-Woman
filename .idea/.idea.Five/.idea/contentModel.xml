@@ -11,6 +11,7 @@
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
           </e>
+          <e p="CerealInteraction.cs" t="Include" />
           <e p="Common" t="Include">
             <e p="Singleton.cs" t="Include" />
           </e>

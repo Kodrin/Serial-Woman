@@ -21,23 +21,24 @@ public class PaintingPuzzle : MonoBehaviour
         D
     }
 
+    public bool canInteract = true;
+
     public GameObject firstSelection;
     public GameObject secondSelection;
+    public float swapTime = 1.0f;
     
     public List<Painting> paintings = new List<Painting>();
     
     // Start is called before the first frame update
     protected void Start()
     {
-        foreach (var painting in paintings)
-        {
-            painting.Something();
-        }
     }
 
     // Update is called once per frame
     protected void Update()
     {
+        if(!canInteract) return;
+            
         if(Input.GetMouseButtonDown(0))
             Controls();
     }
@@ -91,8 +92,11 @@ public class PaintingPuzzle : MonoBehaviour
         //if both of them are not null
         //swap their position
         Vector3 temp = firstSelection.transform.position;
-        firstSelection.transform.position = secondSelection.transform.position;
-        secondSelection.transform.position = temp;
+        // firstSelection.transform.position = secondSelection.transform.position;
+        // secondSelection.transform.position = temp;
+
+        StartCoroutine(WaitForSwap(firstSelection, firstSelection.transform.position, secondSelection.transform.position));
+        StartCoroutine(WaitForSwap(secondSelection, secondSelection.transform.position, temp));
 
         //then clear the selection to be able to select some more
         ClearSelection();
@@ -109,9 +113,24 @@ public class PaintingPuzzle : MonoBehaviour
         
     }
 
-    protected void WaitForSwap()
+    protected IEnumerator WaitForSwap(GameObject paintingObj, Vector3 originalPos, Vector3 targetPos)
     {
+        canInteract = false; //make sure there is no interaction whilte they switch
         
+        float elapsedTime = 0;
+        while (elapsedTime < swapTime)
+        {
+            paintingObj.transform.position = Vector3.Slerp(originalPos, targetPos, (elapsedTime / swapTime));
+            elapsedTime += Time.deltaTime;
+ 
+            // Yield here
+            yield return null;
+        }  
+        
+        // Make sure we got there
+        paintingObj.transform.position = targetPos; //make sure it snaps to that position
+        canInteract = true; //re-enable interaction
+        yield return null;
     }
 
     protected void ClearSelection()
