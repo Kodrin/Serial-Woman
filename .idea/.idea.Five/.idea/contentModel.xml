@@ -18,7 +18,13 @@
             <e p="TexturePixelator.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
+          <e p="Puzzles" t="Include">
+            <e p="ClockPuzzle.cs" t="Include" />
+            <e p="Painting.cs" t="Include" />
+            <e p="PaintingPuzzle.cs" t="Include" />
+          </e>
           <e p="SimpleCameraController.cs" t="Include" />
+          <e p="StaticTest.cs" t="Include" />
           <e p="TextInteraction.cs" t="Include" />
         </e>
       </e>
