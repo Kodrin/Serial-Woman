@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class TextInteraction : MonoBehaviour
 {
     public Text txt;
-    private static int bowlCount = 1;
-    private static int cerealCount = 1;
-    private static int milkCount = 1;
-    private static float timeToDisplay = 4f; // The length of time to display text
+    private int bowlCount = 1;
+    private int cerealCount = 1;
+    private int milkCount = 1;
+    private static float timeToDisplay = 3f; // The length of time to display text
     private static float timeToClear; // The time when the text must be cleared
 
     void Start()

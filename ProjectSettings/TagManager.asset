@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Sometag
+  - bowl
+  - cereal
+  - milk
+  - letter_i
+  - letter_a
+  - letter_m
   layers:
   - Default
   - TransparentFX
