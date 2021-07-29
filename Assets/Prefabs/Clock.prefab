@@ -174,19 +174,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSelectedArm:
     armObject: {fileID: 5680876969564352223}
-    currentPosition: 0
-    currentRotation: 0
+    currentPosition: 12
   shortArm:
     armObject: {fileID: 5680876969564352223}
-    currentPosition: 0
-    currentRotation: 0
+    currentPosition: 12
   longArm:
     armObject: {fileID: 5680876970004285478}
-    currentPosition: 0
-    currentRotation: 0
+    currentPosition: 12
   moveAngleIncrement: 30
-  targetShortArmPos: 1
-  targetLongArmPos: 1
+  targetShortArmPos: 6
+  targetLongArmPos: 12
 --- !u!1 &5680876969564352223
 GameObject:
   m_ObjectHideFlags: 0

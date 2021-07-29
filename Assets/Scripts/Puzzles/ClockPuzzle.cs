@@ -14,11 +14,19 @@ public class ClockPuzzle : MonoBehaviour
     }
     
     [System.Serializable]
+    public enum ArmType
+    {
+        SHORT,
+        LONG
+    }
+    
+    [System.Serializable]
     public class ClockArm
     {
+        // public ArmType armType;
         public GameObject armObject;
-        public uint currentPosition;
-        public float currentRotation;
+        public int currentPosition;
+        // public float currentRotation;
     }
     
     [SerializeField] protected ClockArm currentSelectedArm;
@@ -29,32 +37,40 @@ public class ClockPuzzle : MonoBehaviour
     [SerializeField] protected float moveAngleIncrement = 30.0f;
 
     [Header("Solve Condition")] 
-    [Range(1, 12)] public uint targetShortArmPos = 1; 
-    [Range(1, 12)] public uint targetLongArmPos = 1; 
+    [Range(1, 12)] public int targetShortArmPos = 1; 
+    [Range(1, 12)] public int targetLongArmPos = 1; 
     
     // Start is called before the first frame update
-    void Start()
+    protected void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    protected void Update()
     {
         ClockControls();
     }
 
     protected void ClockControls()
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
+        {
             MoveArmLeft();
-        if(Input.GetKeyDown(KeyCode.D))
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
             MoveArmRight();
-        
-        if(Input.GetKeyDown(KeyCode.E))
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
             SwitchArm();
-        
-        
+
+        }
+
+
     }
 
     protected void RotateArm(MoveDirection dir)
@@ -63,10 +79,14 @@ public class ClockPuzzle : MonoBehaviour
         {
             case MoveDirection.LEFT:
                 currentSelectedArm.armObject.transform.Rotate(-moveAngleIncrement, 0,0);
+                currentSelectedArm.currentPosition = UpdateArmPosition(dir, currentSelectedArm.currentPosition);
+                UpdateArmParams();
                 break;
                 
             case MoveDirection.RIGHT:
                 currentSelectedArm.armObject.transform.Rotate(moveAngleIncrement, 0,0);
+                currentSelectedArm.currentPosition = UpdateArmPosition(dir, currentSelectedArm.currentPosition);
+                UpdateArmParams();
                 break;
             
         }
@@ -104,7 +124,19 @@ public class ClockPuzzle : MonoBehaviour
 
         return 0;
     }
-    
+
+    protected void UpdateArmParams()
+    {
+        if (currentSelectedArm.armObject == shortArm.armObject)
+        {
+            shortArm.currentPosition = currentSelectedArm.currentPosition;
+        }
+        else if (currentSelectedArm.armObject == longArm.armObject)
+        {
+            longArm.currentPosition = currentSelectedArm.currentPosition;
+        }
+    }
+
     protected void MoveArmLeft()
     {
         RotateArm(MoveDirection.LEFT);
@@ -119,13 +151,17 @@ public class ClockPuzzle : MonoBehaviour
 
     protected void SwitchArm()
     {
-        if (currentSelectedArm == shortArm)
+        if (currentSelectedArm.armObject == shortArm.armObject)
         {
-            currentSelectedArm = longArm;
+            currentSelectedArm.armObject = longArm.armObject; //set currrent object 
+            shortArm.currentPosition = currentSelectedArm.currentPosition;
+            currentSelectedArm.currentPosition = longArm.currentPosition;
         }
-        else
+        else if(currentSelectedArm.armObject == longArm.armObject)
         {
-            currentSelectedArm = shortArm;
+            currentSelectedArm.armObject = shortArm.armObject;
+            longArm.currentPosition = currentSelectedArm.currentPosition;
+            currentSelectedArm.currentPosition = shortArm.currentPosition;
         }
     }
 
@@ -136,7 +172,7 @@ public class ClockPuzzle : MonoBehaviour
 
     protected void CheckSolveCondition()
     {
-        if (shortArm.currentPosition + 1 == targetShortArmPos && longArm.currentPosition + 1 == targetLongArmPos)
+        if (shortArm.currentPosition == targetShortArmPos && longArm.currentPosition == targetLongArmPos)
         {
             Resolve();
         }
