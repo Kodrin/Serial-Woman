@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintingPuzzle : MonoBehaviour
+public class PaintingPuzzle : Puzzle
 {
     [System.Serializable]
     public class PaintingSlot
@@ -21,7 +21,7 @@ public class PaintingPuzzle : MonoBehaviour
         D
     }
 
-    public bool canInteract = true;
+    // public bool canInteract = true;
 
     public GameObject firstSelection;
     public GameObject secondSelection;
@@ -30,12 +30,12 @@ public class PaintingPuzzle : MonoBehaviour
     public List<Painting> paintings = new List<Painting>();
     
     // Start is called before the first frame update
-    protected void Start()
+    protected override void Start()
     {
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected override void Update()
     {
         if(!canInteract) return;
             
@@ -43,7 +43,7 @@ public class PaintingPuzzle : MonoBehaviour
             Controls();
     }
 
-    protected void Controls()
+    protected override void Controls()
     {
         GameObject selection = GetPaintingWithMouse();
 
@@ -103,12 +103,12 @@ public class PaintingPuzzle : MonoBehaviour
     }
     
 
-    protected void CheckSolveCondition()
+    protected override void CheckSolveCondition()
     {
         
     }
 
-    protected void Resolve()
+    protected override void Resolve()
     {
         
     }

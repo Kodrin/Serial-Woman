@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class ClockPuzzle : MonoBehaviour
+public class ClockPuzzle : Puzzle
 {
     [System.Serializable]
     public enum MoveDirection
@@ -47,12 +47,13 @@ public class ClockPuzzle : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected override void Update()
     {
-        ClockControls();
+        if (!canInteract) return;        
+        Controls();
     }
 
-    protected void ClockControls()
+    protected override void Controls()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -165,12 +166,12 @@ public class ClockPuzzle : MonoBehaviour
         }
     }
 
-    protected void Resolve()
+    protected override void Resolve()
     {
         Debug.Log("CLOCK PUZZLE IS SOLVED!!");
     }
 
-    protected void CheckSolveCondition()
+    protected override void CheckSolveCondition()
     {
         if (shortArm.currentPosition == targetShortArmPos && longArm.currentPosition == targetLongArmPos)
         {

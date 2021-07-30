@@ -5,7 +5,7 @@ using Cinemachine;
 using UnityEngine.UI;
 
 [System.Serializable]
-public enum VantagePointType
+public enum CameraShot
 {
     ESTABLISHING_SHOT,
     CHAIR_SHOT,
@@ -16,6 +16,7 @@ public enum VantagePointType
 
 public class CameraController : Singleton<CameraController>
 {
+    public CameraShot currentCameraShot = CameraShot.ESTABLISHING_SHOT;
 
     //virtual cameras
     public CinemachineVirtualCamera establishingShot;
@@ -24,7 +25,7 @@ public class CameraController : Singleton<CameraController>
     public CinemachineVirtualCamera grandfatherShot;
     public CinemachineVirtualCamera paintingShot;
     
-    public Dictionary<VantagePointType, CinemachineVirtualCamera> cameras = new Dictionary<VantagePointType, CinemachineVirtualCamera>();
+    public Dictionary<CameraShot, CinemachineVirtualCamera> cameras = new Dictionary<CameraShot, CinemachineVirtualCamera>();
     
     // Start is called before the first frame update
     protected void Start()
@@ -42,21 +43,21 @@ public class CameraController : Singleton<CameraController>
     //add them to dictionary
     protected void InitializeCameras()
     {
-        cameras.Add(VantagePointType.ESTABLISHING_SHOT, establishingShot);
-        cameras.Add(VantagePointType.CHAIR_SHOT, chairShot);
-        cameras.Add(VantagePointType.BOWL_SHOT, bowlShot);
-        cameras.Add(VantagePointType.GRANDFATHER_SHOT, grandfatherShot);
-        cameras.Add(VantagePointType.PAINTING_SHOT, paintingShot);
+        cameras.Add(CameraShot.ESTABLISHING_SHOT, establishingShot);
+        cameras.Add(CameraShot.CHAIR_SHOT, chairShot);
+        cameras.Add(CameraShot.BOWL_SHOT, bowlShot);
+        cameras.Add(CameraShot.GRANDFATHER_SHOT, grandfatherShot);
+        cameras.Add(CameraShot.PAINTING_SHOT, paintingShot);
     }
 
     //will get coresponding 
-    public CinemachineVirtualCamera GetVirtualCameraOfType(VantagePointType type)
+    public CinemachineVirtualCamera GetVirtualCameraOfType(CameraShot type)
     {
         return cameras[type];
     }
 
     //will switch to wanted camera with priority setting 
-    public void SwitchCameraTo(VantagePointType to)
+    public void SwitchCameraTo(CameraShot to)
     {
         foreach (var cam in cameras.Keys)
         {
@@ -66,6 +67,8 @@ public class CameraController : Singleton<CameraController>
                 cameras[cam].Priority = 0;
 
         }
+
+        currentCameraShot = to; //update current camera shot 
     }
     
     protected void CameraSwitchControl()
@@ -73,31 +76,31 @@ public class CameraController : Singleton<CameraController>
         //switch to establishing
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SwitchCameraTo(VantagePointType.ESTABLISHING_SHOT);
+            SwitchCameraTo(CameraShot.ESTABLISHING_SHOT);
         }
         
         //switch to chair shot
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SwitchCameraTo(VantagePointType.CHAIR_SHOT);
+            SwitchCameraTo(CameraShot.CHAIR_SHOT);
         }
 
         //switch to bowlShot
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SwitchCameraTo(VantagePointType.BOWL_SHOT);
+            SwitchCameraTo(CameraShot.BOWL_SHOT);
         }
         
         //switch to grandfatherShot
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            SwitchCameraTo(VantagePointType.GRANDFATHER_SHOT);
+            SwitchCameraTo(CameraShot.GRANDFATHER_SHOT);
         }
         
         //switch to paintingShot
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            SwitchCameraTo(VantagePointType.PAINTING_SHOT);
+            SwitchCameraTo(CameraShot.PAINTING_SHOT);
         }
     }
     

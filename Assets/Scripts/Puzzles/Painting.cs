@@ -6,14 +6,13 @@ public class Painting : MonoBehaviour
 {
     
     [System.Serializable]
-    public enum LetterType
+    public enum PaintingType
     {
-        A,
-        B,
-        C,
-        D
+        EYE,
+        BURNING_HOUSE,
+        SELF
     }
 
-    public LetterType letterType;
+    public PaintingType paintingType;
 
 }
