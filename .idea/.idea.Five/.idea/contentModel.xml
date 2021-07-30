@@ -23,6 +23,9 @@
             <e p="ClockPuzzle.cs" t="Include" />
             <e p="Painting.cs" t="Include" />
             <e p="PaintingPuzzle.cs" t="Include" />
+            <e p="PaintingSlot.cs" t="Include" />
+            <e p="Puzzle.cs" t="Include" />
+            <e p="PuzzleController.cs" t="Include" />
           </e>
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="StaticTest.cs" t="Include" />
