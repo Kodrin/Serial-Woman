@@ -555,3 +555,225 @@ Received Import Request.
   path: Assets/Art/Cereal_Woman/Texture
   artifactKey: Guid(7deba4ad552a74c449d35a7ae68df4b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Art/Cereal_Woman/Texture using Guid(7deba4ad552a74c449d35a7ae68df4b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '593fd67afb25bd21c5e47179612c256f') in 0.006274 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 369.434569 seconds.
+  path: Assets/Art/Cereal_Woman/carpet.blend
+  artifactKey: Guid(b53f773e8f350da4c85a9f54b0594631) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/carpet.blend using Guid(b53f773e8f350da4c85a9f54b0594631) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf291c829815dc8d06165094932c36ae') in 0.049931 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.970095 seconds.
+  path: Assets/Art/Cereal_Woman/carpet.fbx
+  artifactKey: Guid(8d926e2edb9347b408340cd811dcce0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/carpet.fbx using Guid(8d926e2edb9347b408340cd811dcce0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9619861a74c90a4446e53c6950cd76f') in 0.034464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 32.983163 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures
+  artifactKey: Guid(ff279c4df459f2e4f94838bd25ce9e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures using Guid(ff279c4df459f2e4f94838bd25ce9e44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a6f3f685762b17ce9eee07af867fde9') in 0.008933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.607653 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_obj
+  artifactKey: Guid(90f22f043a37c494da90d99d15739289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_obj using Guid(90f22f043a37c494da90d99d15739289) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb3b248ba1a9644a352ee2e253d19fd') in 0.008282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.280542 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unity_maps
+  artifactKey: Guid(a08dd76b9c53ef74db5f6ab47954db45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unity_maps using Guid(a08dd76b9c53ef74db5f6ab47954db45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e183df9c147431b3759020b91dff728') in 0.006916 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.888314 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unity_maps/T_picture_frame_AO.tga
+  artifactKey: Guid(80e0a4dc731385740894f71322af3da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unity_maps/T_picture_frame_AO.tga using Guid(80e0a4dc731385740894f71322af3da4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ef171c6d6868abf1fbf4ecdba613de0') in 0.020796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.508192 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unity_maps/T_picture_frame_AlbedoTransparency.tga
+  artifactKey: Guid(420146c5c3cc9754f8d0768fe314ce0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unity_maps/T_picture_frame_AlbedoTransparency.tga using Guid(420146c5c3cc9754f8d0768fe314ce0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92aff87634a08c9cf53a8417af89b178') in 0.012755 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.161268 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_fbx.zip
+  artifactKey: Guid(746fbff1fd805ac4d99691abfde42290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_fbx.zip using Guid(746fbff1fd805ac4d99691abfde42290) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '105def6ebef5de64ff51562806f7b1e5') in 0.006109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.281183 seconds.
+  path: Assets/Art/Cereal_Woman/Textures.rar
+  artifactKey: Guid(617f734a59682b548b2214760fe1e2d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Textures.rar using Guid(617f734a59682b548b2214760fe1e2d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98a6771de9cb810c89973345d014d94b') in 0.008345 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.237533 seconds.
+  path: Assets/Art/Cereal_Woman/TexturesCom_BrickSmallPlaster0119_3_seamless_S.png
+  artifactKey: Guid(8a076791aa9768340bbedac964c8ea65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/TexturesCom_BrickSmallPlaster0119_3_seamless_S.png using Guid(8a076791aa9768340bbedac964c8ea65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cd83f11ef62cc8fb990670842a9284a') in 0.017047 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.186255 seconds.
+  path: Assets/Art/Cereal_Woman/OldSchoolChair.obj
+  artifactKey: Guid(79c19f486d652ed4299280cbeaf5104a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/OldSchoolChair.obj using Guid(79c19f486d652ed4299280cbeaf5104a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03a0292b2a6feb8da8c030c1bbe6fce8') in 0.038197 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.484867 seconds.
+  path: Assets/Art/Cereal_Woman/grandfatherclock.obj
+  artifactKey: Guid(35d2101deb5d730409ddb43cdfa9517f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/grandfatherclock.obj using Guid(35d2101deb5d730409ddb43cdfa9517f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fdfe58a06127497060e1e5c8da5f7f0') in 0.157186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.810671 seconds.
+  path: Assets/Art/Cereal_Woman/Desk.fbx
+  artifactKey: Guid(483fb9d0ef82c2647ac72d2f215ea19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Desk.fbx using Guid(483fb9d0ef82c2647ac72d2f215ea19a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e782a8bfa58ba362af0c060dd05dfb') in 0.028309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.066001 seconds.
+  path: Assets/Art/Cereal_Woman/grandfather clock glass.obj
+  artifactKey: Guid(109d395e9f512ff48a7bb311b1f01a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/grandfather clock glass.obj using Guid(109d395e9f512ff48a7bb311b1f01a9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ef72397dc980696998765e65638c32') in 0.024310 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.062635 seconds.
+  path: Assets/Art/Cereal_Woman/M_desk_Normal.png
+  artifactKey: Guid(0df88a36c8084354fbbbb2a0a6359627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/M_desk_Normal.png using Guid(0df88a36c8084354fbbbb2a0a6359627) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88bfdc5f4e66e3da377d211674b64eb7') in 0.014455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.756164 seconds.
+  path: Assets/Art/Cereal_Woman/Cereal_01.blend1
+  artifactKey: Guid(039c3f72ceb2da140baf41ea338a95f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Cereal_01.blend1 using Guid(039c3f72ceb2da140baf41ea338a95f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0c30971f71a4a0f56f1e12db3bfd171') in 0.008230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.032015 seconds.
+  path: Assets/Art/Cereal_Woman/Texture/TV_CHAIR_1001_Height.tga
+  artifactKey: Guid(0f6972f0acb2327488406a1977389d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Texture/TV_CHAIR_1001_Height.tga using Guid(0f6972f0acb2327488406a1977389d9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6be83628785e989804a5f6889613397a') in 0.023945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.357620 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unreal_engine_maps
+  artifactKey: Guid(f15684c0c541d40468de85942f79a3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures/picture_frame/unreal_engine_maps using Guid(f15684c0c541d40468de85942f79a3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f50300df4d280c7769c400a2fd55cf04') in 0.006066 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.387622 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures/picture_frame
+  artifactKey: Guid(fb4075c9fe9310e4aade83936861248b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures/picture_frame using Guid(fb4075c9fe9310e4aade83936861248b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09943052df55d6efe1f7a75195a01286') in 0.005692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 26.514817 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_fbx/SM_picture_01.FBX
+  artifactKey: Guid(b1c80a2c7c1622043b99b7d76940367a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_fbx/SM_picture_01.FBX using Guid(b1c80a2c7c1622043b99b7d76940367a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3df9de260194ff47525a24091d20ed65') in 0.027808 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.230058 seconds.
+  path: Assets/Art/Cereal_Woman/pictures_textures/picture_01
+  artifactKey: Guid(8a0634d45774b6647a44e7d963444fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/pictures_textures/picture_01 using Guid(8a0634d45774b6647a44e7d963444fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6594013039c5b76b0850989ecc0da8f') in 0.006299 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.975544 seconds.
+  path: Assets/Art/Cereal_Woman/grandfatherclock.mtl
+  artifactKey: Guid(bb63d022aa894f74caa74c1dc3801387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/grandfatherclock.mtl using Guid(bb63d022aa894f74caa74c1dc3801387) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b414def848ea87700b3514bef68f0c29') in 0.007544 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 55.543922 seconds.
+  path: Assets/Art/Cereal_Woman/GrandfatherClock_Albedo.bmp
+  artifactKey: Guid(a592e029fe993384ba856950aa7a7876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/GrandfatherClock_Albedo.bmp using Guid(a592e029fe993384ba856950aa7a7876) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d01cebe43cec1e666676da6913f3c0') in 0.016060 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.728710 seconds.
+  path: Assets/Art/Cereal_Woman/SchoolDesk_Albedo.png
+  artifactKey: Guid(5fac1dd20de7ae943933179e243cbfb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/SchoolDesk_Albedo.png using Guid(5fac1dd20de7ae943933179e243cbfb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fce56d458d2250e488e1c83d8ad4bc86') in 0.017014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.139036 seconds.
+  path: Assets/Art/Cereal_Woman/PersianCarpet_Albedo.jpg
+  artifactKey: Guid(a6b645a513f7f3c43861f46a651ea7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/PersianCarpet_Albedo.jpg using Guid(a6b645a513f7f3c43861f46a651ea7eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd742292e3e30a1d37617cee1225cb26a') in 0.010569 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.745134 seconds.
+  path: Assets/Art/Cereal_Woman/PictureFrame_Albedo.tga
+  artifactKey: Guid(420146c5c3cc9754f8d0768fe314ce0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/PictureFrame_Albedo.tga using Guid(420146c5c3cc9754f8d0768fe314ce0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc70b5e7a38ec6f26e428348c7945875') in 0.012859 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.636009 seconds.
+  path: Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0022_seamless_S.jpg
+  artifactKey: Guid(24f5083c03b32f743948d510e456097a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0022_seamless_S.jpg using Guid(24f5083c03b32f743948d510e456097a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f816fe2f1b9d0d528b0939ce58cab98') in 0.013089 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.875850 seconds.
+  path: Assets/Art/Cereal_Woman/Wallpaper_Albedo.png
+  artifactKey: Guid(8a076791aa9768340bbedac964c8ea65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Wallpaper_Albedo.png using Guid(8a076791aa9768340bbedac964c8ea65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19fd855d02c512ac4b1f37c198f0f3e') in 0.012123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.012839 seconds.
+  path: Assets/Art/Cereal_Woman/Wallpaper_1_Albedo.png
+  artifactKey: Guid(8a076791aa9768340bbedac964c8ea65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Wallpaper_1_Albedo.png using Guid(8a076791aa9768340bbedac964c8ea65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c6c5fd3fa57ffc2706445fcdffdc66a') in 0.013032 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 39.561217 seconds.
+  path: Assets/Art/Cereal_Woman/Wallpaper_2_Albedo.jpg
+  artifactKey: Guid(24f5083c03b32f743948d510e456097a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Wallpaper_2_Albedo.jpg using Guid(24f5083c03b32f743948d510e456097a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '636051e5b7c8a6555a1af54bee4774e4') in 0.015080 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.818624 seconds.
+  path: Assets/Art/Cereal_Woman/SchoolChair_Albedo.tga
+  artifactKey: Guid(cdb7603261d0c91438cf4c573bb67c2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/SchoolChair_Albedo.tga using Guid(cdb7603261d0c91438cf4c573bb67c2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47073201ef3f33186234a9568678a31b') in 0.025442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.466016 seconds.
+  path: Assets/Art/Cereal_Woman/Wallpaper_3_Albedo.jpg
+  artifactKey: Guid(f5d7fc88c7430454da91ff3e032315f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Wallpaper_3_Albedo.jpg using Guid(f5d7fc88c7430454da91ff3e032315f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d452824c7d5fc322f8673821004f2c0') in 0.011208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.694389 seconds.
+  path: Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0076_seamless_S.jpg
+  artifactKey: Guid(f6e39fb90d0a63f469611c16cb0a1904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/TexturesCom_WallpaperForties0076_seamless_S.jpg using Guid(f6e39fb90d0a63f469611c16cb0a1904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97b88eae56f08f35b1d4b026a85a0355') in 0.013775 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.096547 seconds.
+  path: Assets/Art/Cereal_Woman/Wallpaper_4_Albedo.jpg
+  artifactKey: Guid(f6e39fb90d0a63f469611c16cb0a1904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Wallpaper_4_Albedo.jpg using Guid(f6e39fb90d0a63f469611c16cb0a1904) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b57075001d499c0e3533fb8bd799ea') in 0.010679 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.957184 seconds.
+  path: Assets/Art/Cereal_Woman/OldWoodenFloor_Albedo.jpg
+  artifactKey: Guid(2814163449cd5a44ba0fa335fc98aa68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/OldWoodenFloor_Albedo.jpg using Guid(2814163449cd5a44ba0fa335fc98aa68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce397a3ddd016c04d93235a23c0ce6eb') in 0.011255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.379090 seconds.
+  path: Assets/Art/Cereal_Woman/Cereal_01.blend
+  artifactKey: Guid(7f1fca945b8f04540a76079e526d4d19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Cereal_01.blend using Guid(7f1fca945b8f04540a76079e526d4d19) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '384591891e664cef59aecede446edb5d') in 0.179898 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 61.010034 seconds.
+  path: Assets/Scenes/Asset_Importing.unity
+  artifactKey: Guid(4fb27925e83d6164287f8f1e316ed2de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Asset_Importing.unity using Guid(4fb27925e83d6164287f8f1e316ed2de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fab57a8014689e989fd26b9e4e1d4fa') in 0.006383 seconds 

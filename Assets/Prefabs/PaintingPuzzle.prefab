@@ -47,10 +47,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 1
+  solved: 0
   firstSelection: {fileID: 0}
   secondSelection: {fileID: 0}
   swapTime: 1
-  paintings: []
+  solveSequence: 000000000200000001000000
+  paintings:
+  - {fileID: 240453042905784776}
+  - {fileID: 240453042331273811}
+  - {fileID: 240453043196423837}
 --- !u!1 &240453042331273832
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,7 +70,7 @@ GameObject:
   - component: {fileID: 240453042331273839}
   - component: {fileID: 240453042331273811}
   m_Layer: 0
-  m_Name: p2
+  m_Name: BurningHouse_Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintingType: 0
+  paintingType: 1
 --- !u!1 &240453042905784773
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +180,7 @@ GameObject:
   - component: {fileID: 240453042905784772}
   - component: {fileID: 240453042905784776}
   m_Layer: 0
-  m_Name: p3
+  m_Name: Self_Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintingType: 0
+  paintingType: 2
 --- !u!1 &240453043196423834
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +290,7 @@ GameObject:
   - component: {fileID: 240453043196423833}
   - component: {fileID: 240453043196423837}
   m_Layer: 0
-  m_Name: p1
+  m_Name: Eye_Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
