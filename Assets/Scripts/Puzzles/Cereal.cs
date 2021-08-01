@@ -8,18 +8,18 @@ public class Cereal : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     private Vector3 initialPosition, previousPosition;
-    public char letter;
-    public bool isMatching;
+    public char letter; //letter of the alphabet associated to this cereal piece
+    public bool isMatching; //boolean to inform puzzle if the letter matches the container's letter
     public CerealPuzzle puzzle;
     public CerealContainer associatedContainer;
 
     void Start()
     {
-        initialPosition = gameObject.transform.position;
+        initialPosition = gameObject.transform.position; //store the initial out-of-bowl position
     }
     void OnMouseDown()
     {
-        previousPosition = gameObject.transform.position;
+        previousPosition = gameObject.transform.position; //store the position of the piece before move
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
     }
@@ -33,9 +33,9 @@ public class Cereal : MonoBehaviour
     
     void OnMouseUp()
     {
-        float iDist; // temp var for loop to avoid computing Distance twice
-        float nearestDist = float.MaxValue; // init distance at max value
-        float maxDist = 0.3f;
+        float iDist; //temp var for loop to avoid computing Distance twice
+        float nearestDist = float.MaxValue; //init distance at max value
+        float maxDist = 0.3f; //threshold distance to be considered on-slot. 
         CerealContainer nearestContainer = null;
         Cereal occupyingCereal;
 
@@ -74,10 +74,16 @@ public class Cereal : MonoBehaviour
             checkMatch();
             puzzle.CheckWin();
         }
-        else
+        else //if we are not close enough to a slot, send the pice to its initial out-of-bowl position
         {
             transform.position = initialPosition;
-            isMatching = false;
+            //when moving from slot to initial position we must clear Container <=> Cereal associations 
+            if (associatedContainer)
+            {
+                associatedContainer.setPiece();
+                associatedContainer = null;
+            }
+            isMatching = false; //if a piece is out-of-bowl, it clearly can't be matching with a slot
         }
     }
 

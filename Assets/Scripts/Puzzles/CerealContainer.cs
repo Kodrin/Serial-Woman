@@ -13,6 +13,10 @@ public class CerealContainer : MonoBehaviour
         return associatedPiece;
     }
 
+    public void setPiece()
+    {
+        associatedPiece = null;
+    }
     public void setPiece(Cereal obj)
     {
         associatedPiece = obj;
