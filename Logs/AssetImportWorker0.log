@@ -368,3 +368,27 @@ Received Import Request.
   path: Assets/Art/Cereal_Bits/Export
   artifactKey: Guid(36e326849e6f79d4986f4014fc047b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Art/Cereal_Bits/Export using Guid(36e326849e6f79d4986f4014fc047b87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec2ff36121e75463b8232235bbb0c4ee') in 0.007229 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 838.765256 seconds.
+  path: Assets/Scripts/Common/Singleton.cs
+  artifactKey: Guid(7fbd11d83f2be734ab8bd600e49970e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Common/Singleton.cs using Guid(7fbd11d83f2be734ab8bd600e49970e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ad9708561bb4022011647151382c34') in 0.006165 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 113.575673 seconds.
+  path: Assets/Scripts/Puzzles/PaintingSlot.cs
+  artifactKey: Guid(1b7bba5b3bc86b747b644f82f4e73e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Puzzles/PaintingSlot.cs using Guid(1b7bba5b3bc86b747b644f82f4e73e1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3dc080564686cfba145a89b4102c291') in 0.005752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.981652 seconds.
+  path: Assets/Scripts/Puzzles/Cereal.cs
+  artifactKey: Guid(60a63ad29c801e148be9320f1dfc52af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Puzzles/Cereal.cs using Guid(60a63ad29c801e148be9320f1dfc52af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0faa5c4b048570bd671a17bd1dfd868') in 0.006256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.381524 seconds.
+  path: Assets/Scripts/Puzzles/CerealPuzzle.cs
+  artifactKey: Guid(5e75a82ebbc5df542942d3623f03773b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Puzzles/CerealPuzzle.cs using Guid(5e75a82ebbc5df542942d3623f03773b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f194790f47b09b0cd50fc3a76f959f3d') in 0.006363 seconds 
