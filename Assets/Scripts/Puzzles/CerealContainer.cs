@@ -7,6 +7,7 @@ public class CerealContainer : MonoBehaviour
     public char associatedLetter;
     private bool isOccupied;
     private Cereal associatedPiece;
+    public bool isMatching;
 
     public Cereal getPiece()
     {
@@ -30,5 +31,15 @@ public class CerealContainer : MonoBehaviour
     public void setOccupied(bool inUse)
     {
         isOccupied = inUse;
+    }
+
+    public bool getMatch()
+    {
+        return isMatching;
+    }
+
+    public void setMatch(bool match)
+    {
+        isMatching = match;
     }
 }

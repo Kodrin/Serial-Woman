@@ -8,14 +8,15 @@ public class Cereal : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     private Vector3 initialPosition, previousPosition;
+    private float initialRotationY;
     public char letter; //letter of the alphabet associated to this cereal piece
-    public bool isMatching; //boolean to inform puzzle if the letter matches the container's letter
     public CerealPuzzle puzzle;
     public CerealContainer associatedContainer;
 
     void Start()
     {
         initialPosition = gameObject.transform.position; //store the initial out-of-bowl position
+        initialRotationY = gameObject.transform.eulerAngles.y; //store the initial out-of-bowl rotation
     }
     void OnMouseDown()
     {
@@ -35,9 +36,9 @@ public class Cereal : MonoBehaviour
     {
         float iDist; //temp var for loop to avoid computing Distance twice
         float nearestDist = float.MaxValue; //init distance at max value
-        float maxDist = 0.3f; //threshold distance to be considered on-slot. 
+        float maxDist = 0.025f; //threshold distance to be considered on-slot. 
         CerealContainer nearestContainer = null;
-        Cereal occupyingCereal;
+        Cereal occupyingCereal = null;
 
         //Check which container is closest to the position we let go of the mouse at
         foreach(CerealContainer cont in puzzle.containers)
@@ -49,51 +50,72 @@ public class Cereal : MonoBehaviour
                 nearestContainer = cont;      
             }
         }
+        occupyingCereal = nearestContainer.getPiece();
         //if the slot is not too far and not already occupied, snap the cereal to the slot
         if (nearestDist <= maxDist)
         {
-            if (nearestContainer.getOccupied() == false) 
+            if (associatedContainer == nearestContainer) //if nearest container is current container, do nothing
+                transform.position = previousPosition;
+            else if (nearestContainer.getOccupied() == false) 
             {
+                if (associatedContainer) //if we are swapping between an empty CerealContainer and an occupied one
+                {
+                    associatedContainer.setPiece(); //clear the associated piece. 
+                    associatedContainer.setOccupied(false);
+                }
                 nearestContainer.setOccupied(true);
                 nearestContainer.setPiece(this);
                 associatedContainer = nearestContainer;
                 transform.position = nearestContainer.transform.position;
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
             }
             else //if the slot is already occupied with another cereal piece
             {
-                occupyingCereal = nearestContainer.getPiece();
-                occupyingCereal.transform.position = previousPosition;
-                transform.position = nearestContainer.transform.position;
+                if (associatedContainer) // if we swap with a cereal thats already on a tile
+                {
+                    occupyingCereal.transform.position = previousPosition;
+                    //swap Ceareal <-> CerealContainer associations as we swap the position of the pieces
+                    occupyingCereal.associatedContainer = associatedContainer;
+                    associatedContainer.setPiece(occupyingCereal);
+                    checkMatch(occupyingCereal);
+                }
+                else //if we swap with a cereal thats out-of-bowl
+                {
+                    occupyingCereal.transform.position = occupyingCereal.initialPosition;
+                    occupyingCereal.associatedContainer = null;
+                }
+                associatedContainer = nearestContainer;
                 nearestContainer.setPiece(this);
                 //swap Ceareal <-> CerealContainer associations as we swap the position of the pieces
-                if (associatedContainer)
-                    occupyingCereal.associatedContainer = associatedContainer;
-                associatedContainer = nearestContainer;
+                transform.position = nearestContainer.transform.position;
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
             }
             //check if the letter attributed to the cereal and the cereal container match
-            checkMatch();
+            checkMatch(this);
             puzzle.CheckWin();
         }
         else //if we are not close enough to a slot, send the pice to its initial out-of-bowl position
         {
             transform.position = initialPosition;
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x, initialRotationY, transform.eulerAngles.z);
             //when moving from slot to initial position we must clear Container <=> Cereal associations 
             if (associatedContainer)
             {
-                associatedContainer.setPiece();
+                associatedContainer.setOccupied(false);
+                associatedContainer.setPiece(); //sets associated cereal piece to NULL
+                associatedContainer.setMatch(false);
                 associatedContainer = null;
             }
-            isMatching = false; //if a piece is out-of-bowl, it clearly can't be matching with a slot
-        }
+        } 
     }
 
-    void checkMatch()
+    void checkMatch(Cereal c)
     {
-        Debug.Log("SLOT: " + associatedContainer.associatedLetter + ", LETTER: " + letter);
-        if (associatedContainer.associatedLetter == letter)
-            isMatching = true;
+        Debug.Log("SLOT: " + c.associatedContainer.associatedLetter + ", LETTER: " + c.letter);
+        if (c.associatedContainer.associatedLetter == c.letter)
+            c.associatedContainer.setMatch(true);
         else
-            isMatching = false;
+            c.associatedContainer.setMatch(false);
     }
 
     //COLLISION METHOD (REQUIRES RIGIDBODY) ***DEPRECATED***

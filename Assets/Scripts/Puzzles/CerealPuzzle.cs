@@ -5,16 +5,15 @@ using UnityEngine;
 public class CerealPuzzle : MonoBehaviour
 {
     private bool youWin;
-    public List<Cereal> cereals = new List<Cereal>();
     public List<CerealContainer> containers = new List<CerealContainer>();
 
     public void CheckWin()
     {
         bool youWin = true; //assume you won
-        foreach(Cereal c in cereals)
+        foreach(CerealContainer c in containers)
         {
-            //if one cereal is not on the correct slot, you did not win
-            if (c.isMatching == false)
+            //if one of the containers does not have a matching cereal bit, you did not win
+            if (c.getMatch() == false)
                 youWin = false;
         }
         if (youWin)
