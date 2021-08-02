@@ -166,7 +166,7 @@ public class ClockPuzzle : Puzzle
         }
     }
 
-    protected override void Resolve()
+    protected override void ResolveState()
     {
         Debug.Log("CLOCK PUZZLE IS SOLVED!!");
     }
@@ -175,7 +175,7 @@ public class ClockPuzzle : Puzzle
     {
         if (shortArm.currentPosition == targetShortArmPos && longArm.currentPosition == targetLongArmPos)
         {
-            Resolve();
+            ResolveState();
         }
     }
 }

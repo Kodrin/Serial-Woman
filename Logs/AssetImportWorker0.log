@@ -1570,3 +1570,136 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 4600.883447 seconds.
+  path: Assets/Texture/958571195fd8df02a0033acc7b284e8b.jpg
+  artifactKey: Guid(fcb5e4cb1342580469240145f51d0b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/958571195fd8df02a0033acc7b284e8b.jpg using Guid(fcb5e4cb1342580469240145f51d0b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4155cfb25c151ef8620ea70f9234eb6e') in 0.049434 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.549756 seconds.
+  path: Assets/Texture/eye_photo.jpg
+  artifactKey: Guid(fcb5e4cb1342580469240145f51d0b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/eye_photo.jpg using Guid(fcb5e4cb1342580469240145f51d0b58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ae8e84b9083661ea31bfdf53bba11ad') in 0.011530 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.914794 seconds.
+  path: Assets/Texture/fire-2946038_1280.jpg
+  artifactKey: Guid(ef3a4e610a813734581febf2e6101f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/fire-2946038_1280.jpg using Guid(ef3a4e610a813734581febf2e6101f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '433411cfa2fc527ccfe0eb367a62e0b0') in 0.013655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.777129 seconds.
+  path: Assets/Texture/BurningHouse.jpg
+  artifactKey: Guid(ef3a4e610a813734581febf2e6101f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/BurningHouse.jpg using Guid(ef3a4e610a813734581febf2e6101f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b80be6200d4510970f195c71bce2ef5e') in 0.010488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.935754 seconds.
+  path: Assets/Texture/Pixelator/ShellPainting.png
+  artifactKey: Guid(f05a2701ce2484c418dd8291a0b8389f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Texture/Pixelator/ShellPainting.png using Guid(f05a2701ce2484c418dd8291a0b8389f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71639a38dba9a57616933ad209015f4b') in 0.010666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.847155 seconds.
+  path: Assets/Art/Paintings
+  artifactKey: Guid(edabe1b2b86dc254c88360f31ccbdb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Paintings using Guid(edabe1b2b86dc254c88360f31ccbdb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f293d6eb5ef5e8354ecfbe2151633ab') in 0.006371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.430306 seconds.
+  path: Assets/Art/Cereal_Woman/Export/Picture_Frame_1.fbx
+  artifactKey: Guid(d60103a6452d23d43a602e24958600ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/Export/Picture_Frame_1.fbx using Guid(d60103a6452d23d43a602e24958600ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '455f482cd51b4d23c4baf7371baec2fb') in 0.150172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 64.569044 seconds.
+  path: Assets/Art/Cereal_Woman/PictureFrame_Albedo.tga
+  artifactKey: Guid(420146c5c3cc9754f8d0768fe314ce0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Cereal_Woman/PictureFrame_Albedo.tga using Guid(420146c5c3cc9754f8d0768fe314ce0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc1a879681ad55f11e7223c8767319b3') in 0.010868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1100.512931 seconds.
+  path: Assets/Scripts/Camera/CameraController.cs
+  artifactKey: Guid(9f2eddd49211729479fc95c43c2fd47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Camera/CameraController.cs using Guid(9f2eddd49211729479fc95c43c2fd47b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7515fae6708d27fa80bc07e34542b060') in 0.008102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 564.309559 seconds.
+  path: Assets/Scenes/Cam_Testing.unity
+  artifactKey: Guid(2fe455bbaf7f18a4996648a8bcd55374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Cam_Testing.unity using Guid(2fe455bbaf7f18a4996648a8bcd55374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc5d8124715fe7409fcbfad6161899b') in 0.007487 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004859 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.296 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1297ms)
+		BeginReloadAssembly (128ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1101ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (421ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (353ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (74ms)
+				ProcessInitializeOnLoadAttributes (258ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4353 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 206.0 MB.
+System memory in use after: 203.6 MB.
+
+Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 5432.
+Total: 5.179700 ms (FindLiveObjects: 0.588800 ms CreateObjectMapping: 0.434600 ms MarkObjects: 2.790400 ms  DeleteObjects: 1.364600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 220.277341 seconds.
+  path: Assets/Scripts/Puzzles/ClockPuzzle.cs
+  artifactKey: Guid(cc986fdfd7c69334cb922dce7fd8a40c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Puzzles/ClockPuzzle.cs using Guid(cc986fdfd7c69334cb922dce7fd8a40c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e819f29eb84b3ee7a7580ec44028f812') in 0.014294 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.957221 seconds.
+  path: Assets/Scripts/Camera/Hotspot.cs
+  artifactKey: Guid(8d78fcbf32e83244ca0e0273dded46a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Camera/Hotspot.cs using Guid(8d78fcbf32e83244ca0e0273dded46a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd97a7d7c5a42e24544d7231ddc132506') in 0.009028 seconds 

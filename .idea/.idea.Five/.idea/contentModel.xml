@@ -10,14 +10,17 @@
         <e p="Scripts" t="Include">
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
+            <e p="CameraShot.cs" t="Include" />
+            <e p="Hotspot.cs" t="Include" />
           </e>
           <e p="Common" t="Include">
+            <e p="EventManager.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
             <e p="Singleton.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
             <e p="TexturePixelator.cs" t="Include" />
           </e>
-          <e p="GameManager.cs" t="Include" />
           <e p="Puzzles" t="Include">
             <e p="Cereal.cs" t="Include" />
             <e p="CerealContainer.cs" t="Include" />

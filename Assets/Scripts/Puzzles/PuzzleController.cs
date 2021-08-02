@@ -20,13 +20,13 @@ public class PuzzleController : MonoBehaviour
     {
         //todo use camera events to call this , only testing right now
         //e.g on camera switch
-        if (cameraController.currentCameraShot == CameraShot.GRANDFATHER_SHOT)
+        if (cameraController.currentShotType == ShotType.GRANDFATHER_SHOT)
         {
             EnablePuzzle(clockPuzzle);
             DisablePuzzle(paintingPuzzle);
         }
 
-        if (cameraController.currentCameraShot == CameraShot.PAINTING_SHOT)
+        if (cameraController.currentShotType == ShotType.PAINTING_SHOT)
         {
             EnablePuzzle(paintingPuzzle);
             DisablePuzzle(clockPuzzle);

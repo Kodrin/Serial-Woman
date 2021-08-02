@@ -20,12 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PaintingPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PaintingPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Asset_Importing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Asset_Importing.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Painting_Prototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Painting_Prototyping.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera_Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera_Controller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cam_Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cam_Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/ClockPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/ClockPuzzle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Painting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Painting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
@@ -39,16 +47,18 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/TexturePixelator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Painting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../stclient-stadium-template/StadiumClientTemplate/Assets/_Stadium/VWT_Assets/Editor/TextureExtractor/TextureExtractor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/ClockPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StaticTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -59,13 +69,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/TexturePixelizer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/TexturePixelator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingSlot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/ClockPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Painting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Painting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" />
       </list>
     </option>
   </component>
@@ -109,7 +122,7 @@
       <updated>1627434154130</updated>
       <workItem from="1627434159132" duration="7581000" />
       <workItem from="1627567233249" duration="6713000" />
-      <workItem from="1627604823485" duration="9227000" />
+      <workItem from="1627604823485" duration="16878000" />
     </task>
     <servers />
   </component>
@@ -131,9 +144,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1627857351236">
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1627863222152">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1627857351236" />
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1627863222152" />
   </component>
 </project>

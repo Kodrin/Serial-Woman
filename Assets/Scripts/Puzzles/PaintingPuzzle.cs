@@ -127,10 +127,10 @@ public class PaintingPuzzle : Puzzle
         
         //if it didn't return, that means it was solved so mark as solved
         solved = true;
-        Resolve();
+        ResolveState();
     }
 
-    protected override void Resolve()
+    protected override void ResolveState()
     {
         Debug.Log("Painting is Solved!");
     }

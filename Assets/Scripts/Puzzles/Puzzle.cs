@@ -14,9 +14,19 @@ public class Puzzle : MonoBehaviour
         if (!canInteract) return;
     }
 
+    //where we encapsulate the controls for the puzzle
     protected virtual void Controls(){}
+    
+    //where we chech for the win condition
     protected virtual void CheckSolveCondition(){}
-    protected virtual void Resolve(){}
-    protected virtual void Reset(){}
+    
+    //what happens if we win
+    protected virtual void ResolveState(){}
+    
+    //what happens if we fail
+    protected virtual void FailState(){}
+    
+    //How to reset the puzzle
+    protected virtual void ResetPuzzle(){}
     
 }

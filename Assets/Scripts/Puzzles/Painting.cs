@@ -12,9 +12,5 @@ public enum PaintingType
 
 public class Painting : MonoBehaviour
 {
-
-
     public PaintingType paintingType;
-    
-
 }
