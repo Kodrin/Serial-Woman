@@ -11,22 +11,14 @@ public class PaintingPuzzle : Puzzle
         public Vector3 position;
         public GameObject paintingObj;
     }
-
-    [System.Serializable]
-    public enum LetterType
-    {
-        A,
-        B,
-        C,
-        D
-    }
-
+    
     // public bool canInteract = true;
 
-    public GameObject firstSelection;
-    public GameObject secondSelection;
+    public Painting firstSelection;
+    public Painting secondSelection;
     public float swapTime = 1.0f;
     
+    public List<PaintingType> solveSequence = new List<PaintingType>();
     public List<Painting> paintings = new List<Painting>();
     
     // Start is called before the first frame update
@@ -45,7 +37,7 @@ public class PaintingPuzzle : Puzzle
 
     protected override void Controls()
     {
-        GameObject selection = GetPaintingWithMouse();
+        Painting selection = GetPaintingWithMouse();
 
         //if its not null and thereis no first selection
         if (selection && firstSelection == null)
@@ -65,7 +57,7 @@ public class PaintingPuzzle : Puzzle
 
     }
 
-    protected GameObject GetPaintingWithMouse()
+    protected Painting GetPaintingWithMouse()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -78,8 +70,8 @@ public class PaintingPuzzle : Puzzle
             //if it has a component painting, return 
             if (hitObj.TryGetComponent(out Painting component))
             {
-                Debug.Log(objectHit.gameObject.name);
-                return component.gameObject;
+                Debug.Log(component.paintingType);
+                return component;
             }
         }
 
@@ -91,29 +83,59 @@ public class PaintingPuzzle : Puzzle
     {
         //if both of them are not null
         //swap their position
-        Vector3 temp = firstSelection.transform.position;
+        Vector3 tempPos = firstSelection.transform.position;
         // firstSelection.transform.position = secondSelection.transform.position;
         // secondSelection.transform.position = temp;
+        
+        //swap their index in the painting list
+        int firstIndex = paintings.IndexOf(firstSelection);
+        int secondIndex = paintings.IndexOf(secondSelection);
+        paintings[firstIndex] = secondSelection;
+        paintings[secondIndex] = firstSelection;
+        
 
         StartCoroutine(WaitForSwap(firstSelection, firstSelection.transform.position, secondSelection.transform.position));
-        StartCoroutine(WaitForSwap(secondSelection, secondSelection.transform.position, temp));
+        StartCoroutine(WaitForSwap(secondSelection, secondSelection.transform.position, tempPos));
 
         //then clear the selection to be able to select some more
         ClearSelection();
+        
+        //and check the solve condition
+        CheckSolveCondition();
     }
     
 
     protected override void CheckSolveCondition()
     {
+        //make sure that solve sequence matches the amount of paintings
+        if (solveSequence.Count == paintings.Count)
+        {
+            
+            for (int i = 0; i < paintings.Count; i++)
+            {
+                // if current painting matches solve index
+                if (paintings[i].paintingType == solveSequence[i])
+                {
+                    // continue;
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
         
+        //if it didn't return, that means it was solved so mark as solved
+        solved = true;
+        Resolve();
     }
 
     protected override void Resolve()
     {
-        
+        Debug.Log("Painting is Solved!");
     }
 
-    protected IEnumerator WaitForSwap(GameObject paintingObj, Vector3 originalPos, Vector3 targetPos)
+    protected IEnumerator WaitForSwap(Painting paintingObj, Vector3 originalPos, Vector3 targetPos)
     {
         canInteract = false; //make sure there is no interaction whilte they switch
         

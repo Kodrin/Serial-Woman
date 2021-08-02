@@ -11,7 +11,6 @@
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
           </e>
-          <e p="CerealInteraction.cs" t="Include" />
           <e p="Common" t="Include">
             <e p="Singleton.cs" t="Include" />
           </e>
@@ -20,6 +19,9 @@
           </e>
           <e p="GameManager.cs" t="Include" />
           <e p="Puzzles" t="Include">
+            <e p="Cereal.cs" t="Include" />
+            <e p="CerealContainer.cs" t="Include" />
+            <e p="CerealPuzzle.cs" t="Include" />
             <e p="ClockPuzzle.cs" t="Include" />
             <e p="Painting.cs" t="Include" />
             <e p="PaintingPuzzle.cs" t="Include" />
