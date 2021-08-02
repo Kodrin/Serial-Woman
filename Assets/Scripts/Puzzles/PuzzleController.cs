@@ -44,6 +44,5 @@ public class PuzzleController : MonoBehaviour
     protected void DisablePuzzle(Puzzle puzzle)
     {
         puzzle.canInteract = false;
-        
     }
 }
