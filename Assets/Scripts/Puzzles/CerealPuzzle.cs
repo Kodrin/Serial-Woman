@@ -2,21 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CerealPuzzle : MonoBehaviour
+public class CerealPuzzle : Puzzle
 {
-    private bool youWin;
     public List<CerealContainer> containers = new List<CerealContainer>();
 
-    public void CheckWin()
+    protected override void CheckSolveCondition()
     {
-        bool youWin = true; //assume you won
+        bool temp = true; //assume you won
         foreach(CerealContainer c in containers)
         {
             //if one of the containers does not have a matching cereal bit, you did not win
             if (c.getMatch() == false)
-                youWin = false;
+                temp = false;
         }
-        if (youWin)
+        if (temp == true)
+        {
+            solved = temp;
             Debug.Log("YOU WIN!");
+        }
+    }
+
+    protected override void ResolveState()
+    {
+        //PLAY CUTSCENE
+    }
+
+    public void CheckWin()
+    {
+        CheckSolveCondition();
     }
 }

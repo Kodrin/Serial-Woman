@@ -6,15 +6,16 @@ using UnityEngine.UI;
 public class TextInteraction : MonoBehaviour
 {
     public Text txt;
-    private int bowlCount = 1;
-    private int cerealCount = 1;
-    private int milkCount = 1;
+    private int currentLine = 1;
+    private int lastLine;
+    public List<string> textLines = new List<string>();
     private static float timeToDisplay = 3f; // The length of time to display text
     private static float timeToClear; // The time when the text must be cleared
 
     void Start()
     {
         txt.enabled = false;
+        lastLine = textLines.Count;
     }
 
     void Update()
@@ -39,48 +40,13 @@ public class TextInteraction : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (this.tag == "bowl")
+        if(textLines[currentLine-1] != null) //check if line is non-null before trying to print text
         {
-            if (bowlCount == 1)
-            {
-                PrintText("There is a generous portion of milk inside.");
-                bowlCount = 2;
-            }
+            PrintText(textLines[currentLine - 1]);
+            if (currentLine != lastLine)
+                currentLine++;
             else
-            {
-                PrintText("Do I always pour my milk first? You bet I do.");
-                bowlCount = 1;
-            }
-        }
-
-        else if (this.tag == "cereal")
-        {
-            if (cerealCount == 1)
-            {
-                PrintText("Letter-O's. I've been eating these since I was kid.");
-                cerealCount = 2;
-            }
-            else if (cerealCount == 2)
-            {
-                PrintText("I swear they talk to me sometimes.");
-                cerealCount = 3;
-            }
-            else
-            {
-                PrintText("Sometimes... Not all the time...");
-                cerealCount = 1;
-            }
-        }
-
-        else if (this.tag == "milk")
-        {
-            if (milkCount == 1)
-            {
-                PrintText("Already out of milk? I just bought some yesterday morning...");
-                milkCount++; 
-            }
-            else
-                PrintText("There is already milk in the bowl.");
+                currentLine = 1;
         }
     }
 
