@@ -1,53 +1,40 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Cinemachine;
 using UnityEngine;
+
 
 [RequireComponent(typeof(CinemachineVirtualCamera))]
 public class CameraShot : MonoBehaviour
 {
-    public List<CameraShot> nextCameraShots = new List<CameraShot>();
+    public ShotType shotType;
     public CinemachineVirtualCamera vCamComponent;
-    public Hotspot hotspot;
+    public List<Hotspot> hotspots = new List<Hotspot>();
 
-    public delegate void HotspotClickEvent();
-    public event HotspotClickEvent OnHotspotClick;
-    
+    protected void Awake()
+    {
+        vCamComponent = this.GetComponent<CinemachineVirtualCamera>();
+        hotspots = this.GetComponentsInChildren<Hotspot>().ToList();
+    }
+
     protected void Start()
     {
-        
+        if (CameraController.Instance.currentCameraShot != this)
+        {
+            ShowHotspots(false);
+        }
     }
 
-    protected void Update()
+    public void ShowHotspots(bool active)
     {
-        
+        if (hotspots.Count > 0)
+        {
+            foreach (var hotspot in hotspots)
+            {
+                hotspot.gameObject.SetActive(active);
+            }
+        }
     }
-
-    protected void OnEnable()
-    {
-        SubcribeToHotspot();
-    }
-
-    protected void OnDisable()
-    {
-        UnsubscribeToHotspot();
-    }
-
-    //todo if this camera is not enabled, disable its hotspot
-    public void GoToShot(CinemachineVirtualCamera shot)
-    {
-        // CameraController.Instance.SwitchCameraTo(shot);
-    }
-
-    protected void SubcribeToHotspot()
-    {
-        
-    }
-
-    protected void UnsubscribeToHotspot()
-    {
-        
-    }
-    
 }

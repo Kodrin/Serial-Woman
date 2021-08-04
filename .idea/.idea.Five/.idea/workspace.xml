@@ -21,12 +21,23 @@
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Camera_Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Camera_Controller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Cam_Testing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Cam_Testing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/VisualFX_Prototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/VisualFX_Prototyping.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/VFX/Void_Stars_FX.vfx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/VFX/Void_Stars_FX.vfx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,14 +76,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/ClockPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Painting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Cereal.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" />
       </list>
     </option>
   </component>
@@ -117,6 +128,7 @@
       <workItem from="1627434159132" duration="7581000" />
       <workItem from="1627567233249" duration="6713000" />
       <workItem from="1627604823485" duration="18432000" />
+      <workItem from="1628035568090" duration="4726000" />
     </task>
     <servers />
   </component>
@@ -138,9 +150,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1627872248974">
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1628036090857">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1627872248974" />
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1628036090857" />
   </component>
 </project>
