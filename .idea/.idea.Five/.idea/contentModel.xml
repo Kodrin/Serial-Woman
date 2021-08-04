@@ -37,6 +37,10 @@
           </e>
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="StaticTest.cs" t="Include" />
+          <e p="Text" t="Include">
+            <e p="TextController.cs" t="Include" />
+            <e p="TextQueuer.cs" t="Include" />
+          </e>
           <e p="TextInteraction.cs" t="Include" />
         </e>
       </e>
