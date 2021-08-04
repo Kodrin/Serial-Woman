@@ -7,6 +7,7 @@ public class Puzzle : MonoBehaviour
 {
     public bool canInteract = false;
     public bool solved = false;
+    public bool isSolvable = true;
     
     protected virtual void Start(){}
     protected virtual void Update()
