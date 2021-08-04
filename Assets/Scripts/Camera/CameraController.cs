@@ -20,7 +20,15 @@ public class CameraController : Singleton<CameraController>
 
     public CameraShot currentCameraShot;
     public List<CameraShot> cameraShots = new List<CameraShot>();
-    
+
+    protected void OnEnable()
+    {
+        if (EventManager.Instance)
+        {
+            // EventManager.Instance.OnCameraChange += SwitchCameraToCamShot;
+        }
+    }
+
 
     //will get coresponding 
     public CameraShot GetCameraShotOfType(ShotType type)
@@ -53,6 +61,9 @@ public class CameraController : Singleton<CameraController>
         if(currentCameraShot) currentCameraShot.ShowHotspots(false); //disable hotspots of previous camera
         currentCameraShot = toCamShot; //update current camera shot 
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
+        
+        //trigger camera switch event
+        EventManager.Instance.CallOnCameraSwitch();
 
     }
     
@@ -71,6 +82,9 @@ public class CameraController : Singleton<CameraController>
         if(currentCameraShot) currentCameraShot.ShowHotspots(false); //disable hotspots of previous camera
         currentCameraShot = to; //update current camera shot 
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
+        
+        //trigger camera switch event
+        EventManager.Instance.CallOnCameraSwitch();
     }
     
     
