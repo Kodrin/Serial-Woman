@@ -15,11 +15,11 @@ E:/Repositories/Five
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55537
+60278
 Successfully changed project path to: E:/Repositories/Five
 E:/Repositories/Five
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 92.03 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 93.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.11f1 (4d8c25f7477e)
 [Subsystems] Discovering subsystems at path C:/UnityEditors/2021.1.11f1/Editor/Data/Resources/UnitySubsystems
@@ -35,93 +35,93 @@ Initialize mono
 Mono path[0] = 'C:/UnityEditors/2021.1.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/UnityEditors/2021.1.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/UnityEditors/2021.1.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/UnityEditors/2021.1.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001691 seconds.
+Registered in 0.001777 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 97.07 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 96.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.130 seconds
+- Completed reload, in  1.146 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1131ms)
-		BeginReloadAssembly (47ms)
+	ReloadAssembly (1146ms)
+		BeginReloadAssembly (49ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (454ms)
-			LoadAssemblies (45ms)
+		EndReloadAssembly (455ms)
+			LoadAssemblies (46ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (155ms)
+			SetupTypeCache (168ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (227ms)
+			RebuildScriptCaches (26ms)
+			SetupLoadedEditorAssemblies (221ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (97ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (95ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				ProcessInitializeOnLoadAttributes (90ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004015 seconds.
+Registered in 0.004004 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 105.35 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 98.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.230 seconds
+- Completed reload, in  1.181 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1231ms)
-		BeginReloadAssembly (131ms)
+	ReloadAssembly (1182ms)
+		BeginReloadAssembly (134ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (18ms)
-		EndReloadAssembly (1047ms)
-			LoadAssemblies (78ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (988ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (328ms)
+			SetupTypeCache (342ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (59ms)
-			SetupLoadedEditorAssemblies (478ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (419ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (105ms)
-				BeforeProcessingInitializeOnLoad (94ms)
-				ProcessInitializeOnLoadAttributes (262ms)
-				ProcessInitializeOnLoadMethodAttributes (6ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (98ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4436 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 173.2 MB.
+System memory in use before: 173.3 MB.
 System memory in use after: 170.7 MB.
 
 Unloading 55 unused Assets to reduce memory usage. Loaded Objects now: 4851.
-Total: 3.552900 ms (FindLiveObjects: 0.326900 ms CreateObjectMapping: 0.227900 ms MarkObjects: 2.001800 ms  DeleteObjects: 0.995200 ms)
+Total: 3.777700 ms (FindLiveObjects: 0.328800 ms CreateObjectMapping: 0.237000 ms MarkObjects: 2.248500 ms  DeleteObjects: 0.962000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -136,58 +136,58 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Scenes/Cereal_Prototype.unity
-  artifactKey: Guid(2879b44a9ab691a48be5f980e219fb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Cereal_Prototype.unity using Guid(2879b44a9ab691a48be5f980e219fb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a76d3078c8c55ba955e593366445984') in 0.014151 seconds 
+  path: Assets/VFX
+  artifactKey: Guid(4aa6ee3559b93d64a911646b8bb2f923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX using Guid(4aa6ee3559b93d64a911646b8bb2f923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf40255ee2f9aab44f930de56b8a8ae3') in 0.009420 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004231 seconds.
+Registered in 0.003956 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 99.36 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.960 seconds
+- Completed reload, in  1.123 seconds
 Domain Reload Profiling:
-	ReloadAssembly (960ms)
-		BeginReloadAssembly (97ms)
+	ReloadAssembly (1123ms)
+		BeginReloadAssembly (102ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (34ms)
-		EndReloadAssembly (807ms)
-			LoadAssemblies (75ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (969ms)
+			LoadAssemblies (79ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (317ms)
+			SetupTypeCache (357ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (277ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (384ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (57ms)
-				ProcessInitializeOnLoadAttributes (205ms)
-				ProcessInitializeOnLoadMethodAttributes (4ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				RefreshPlugins (99ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (208ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (9ms)
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4354 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 169.0 MB.
-System memory in use after: 166.5 MB.
+Unloading 4881 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 184.5 MB.
+System memory in use after: 181.9 MB.
 
-Unloading 50 unused Assets to reduce memory usage. Loaded Objects now: 4854.
-Total: 3.361900 ms (FindLiveObjects: 0.317100 ms CreateObjectMapping: 0.206400 ms MarkObjects: 1.912700 ms  DeleteObjects: 0.924900 ms)
+Unloading 56 unused Assets to reduce memory usage. Loaded Objects now: 5375.
+Total: 4.441000 ms (FindLiveObjects: 0.864300 ms CreateObjectMapping: 0.548900 ms MarkObjects: 2.085700 ms  DeleteObjects: 0.934300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -200,4 +200,310 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 113.284704 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b280532d42cbd271560bcef3a709d3fe') in 0.048462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.996544 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1ecf227f3dba1976da12a6f8602506e') in 0.004190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.350810 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b02e1a31e82a0caca56f9ace399416e') in 0.003152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.599738 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78544f442d04a250112e10be279f0848') in 0.003266 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.604871 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8aa1f59188270f09de7fe56c9506d8e7') in 0.003945 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.296123 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be97989f35b48d7d824cf05f62ba8d3e') in 0.003598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.949358 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b5a20833234ba85622be11c94271159') in 0.004201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.409016 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf0000d3a82e8751d9d06bcdfdec651') in 0.003769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.324951 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da68c47f9751491ca6c548f6c8292c5c') in 0.003463 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.184827 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03ad35f89739f71a8619b863b0aba1a2') in 0.003526 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.327731 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60595161c86e494c044426701eb3b0ca') in 0.003998 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.203549 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520bdcf44d64fa68e8510565f423867f') in 0.003424 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.699263 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '003aa751bfaa12ce7ecbb1a7c700ff90') in 0.003755 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.269786 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ade6ce20e1879de17cfe25bbce89de4') in 0.003393 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.772537 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f39e6900931fe4c2568d68c20f20681') in 0.003354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.720437 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bee4c7cdb1e2972cf099c9281c3d9db') in 0.003629 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.872461 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffc9dea0678deb452f4224801f0b7491') in 0.003657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.891855 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '755b76b54b43453e56339eff3ae70ea3') in 0.003484 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 18.874673 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fabe09d9e99279d283bd7bac2837d7c4') in 0.003646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.949881 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd2e39c5817cbe7da41b9818784a5e26') in 0.003390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.482335 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13b13eecc0cdb925b0aea1cbdfba9d9') in 0.003383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.580880 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f95d738215d63df3cddfbaed0d61d127') in 0.003944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.310272 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac4fb2067da7b2ecb10f6ea46e85f25f') in 0.003612 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.779456 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be8390c25666abbe40b23a6d4369e506') in 0.003713 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.269428 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3cffdea7d83bac8ac87e0c174066ad') in 0.003455 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.544214 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4d6a79a171ea84b93987e626d80386') in 0.003529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.457383 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b4aac5b5c9fa1b791fb9bb2b9244006') in 0.003436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.339536 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '907d64f955817f0afde2ec5f3ea8c916') in 0.003584 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 53.934964 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b1a2575d141ace4c086f18bfcb49236') in 0.003450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.848878 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0544c47d95a9a9816cafa97ecedd22be') in 0.003532 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 106.849823 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd012d7051954611d3dccf5d14a20fd37') in 0.003449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.326592 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d8e230b76030eb26680af8c3e8005e8') in 0.003572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.391020 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f77c86f538995fc3f156c37670fcf9f') in 0.003860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.615328 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04010e230c027a7045f1b521e35d216b') in 0.003436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.186952 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d68d35e6584cd5279149e9e7839febb') in 0.003492 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.433387 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ce896f1419fc8bd3eadb36ae61e2225') in 0.003932 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.236319 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f461b271a370e2e1ea0eb726ca3df37') in 0.004119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 291.104243 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11eb4053faee8022e76d9cd5e0b579e') in 0.003571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.173905 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1861ced653a1fcb09aa36d65f8fda9d') in 0.003379 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.334092 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd94bf462d705feca804c560187b713a') in 0.003488 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 73.142811 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e10890c6707eb0bb2a7f4a376b7a2839') in 0.003513 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.440796 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4da69076bd50de7ec4e35f291612aca1') in 0.003790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.071246 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2290bdce9b5ebb21f7484e2f684e3d') in 0.003604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 47.390923 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bdbdf04a6546998cc95d186cd32009c') in 0.004378 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.428669 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d3899b725b3876975bae619475457e8') in 0.003219 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.367052 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3734a020ab617ccc2a40607d00f5e85') in 0.004672 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 57.063750 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aed8416b222fa3d49c4bb43213a169c5') in 0.003553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.175706 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5111b44dc2c96931a720d3a87353069') in 0.003962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.862444 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91f05321256616931e8fc9d2808b66d8') in 0.003688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.636944 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '668d0cd4034ddd97b6dfa33ef0dc0a71') in 0.003255 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 618.047065 seconds.
+  path: Assets/VFX/Void_Stars_FX.vfx
+  artifactKey: Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VFX/Void_Stars_FX.vfx using Guid(4e3bc419c18a083458b9fb7b672c83be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8504ae33380ebebbd8ffdc9aab33cad') in 0.005548 seconds 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

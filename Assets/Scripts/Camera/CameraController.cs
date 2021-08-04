@@ -17,107 +17,107 @@ public enum ShotType
 
 public class CameraController : Singleton<CameraController>
 {
-    public ShotType currentShotType = ShotType.ESTABLISHING_SHOT;
 
-    //virtual cameras
-    public CinemachineVirtualCamera establishingShot;
-    public CinemachineVirtualCamera chairShot;
-    public CinemachineVirtualCamera bowlShot;
-    public CinemachineVirtualCamera grandfatherShot;
-    public CinemachineVirtualCamera paintingShot;
-    
-    public Dictionary<ShotType, CinemachineVirtualCamera> cameras = new Dictionary<ShotType, CinemachineVirtualCamera>();
-    
+    public CameraShot currentCameraShot;
+    public List<CameraShot> cameraShots = new List<CameraShot>();
 
-
-    // Start is called before the first frame update
-    protected void Start()
+    protected void OnEnable()
     {
-        InitializeCameras();
+        if (EventManager.Instance)
+        {
+            // EventManager.Instance.OnCameraChange += SwitchCameraToCamShot;
+        }
     }
 
-    // Update is called once per frame
-    protected void Update()
-    {
-        CameraSwitchControl();
-        
-    }
-
-    //add them to dictionary
-    protected void InitializeCameras()
-    {
-        cameras.Add(ShotType.ESTABLISHING_SHOT, establishingShot);
-        cameras.Add(ShotType.CHAIR_SHOT, chairShot);
-        cameras.Add(ShotType.BOWL_SHOT, bowlShot);
-        cameras.Add(ShotType.GRANDFATHER_SHOT, grandfatherShot);
-        cameras.Add(ShotType.PAINTING_SHOT, paintingShot);
-    }
 
     //will get coresponding 
-    public CinemachineVirtualCamera GetVirtualCameraOfType(ShotType type)
+    public CameraShot GetCameraShotOfType(ShotType type)
     {
-        return cameras[type];
+        foreach (var cam in cameraShots)
+        {
+            if (cam.shotType == type)
+                return cam;
+        }
+
+        return null;
     }
 
     //will switch to wanted camera with priority setting 
-    public void SwitchCameraTo(ShotType to)
+    public void SwitchCameraToShotType(ShotType to)
     {
-        foreach (var cam in cameras.Keys)
+        CameraShot toCamShot = null;
+        foreach (var cam in cameraShots)
         {
-            if (cam == to)
-                cameras[cam].Priority = 1;
+            if (cam.shotType == to)
+            {
+                cam.vCamComponent.Priority = 1;
+                toCamShot = cam;
+            }
             else
-                cameras[cam].Priority = 0;
-
+                cam.vCamComponent.Priority = 0;
+    
         }
+    
+        if(currentCameraShot) currentCameraShot.ShowHotspots(false); //disable hotspots of previous camera
+        currentCameraShot = toCamShot; //update current camera shot 
+        currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
+        
+        //trigger camera switch event
+        EventManager.Instance.CallOnCameraSwitch();
 
-        currentShotType = to; //update current camera shot 
     }
     
-    // public void SwitchCameraTo(CinemachineVirtualCamera to)
-    // {
-    //     foreach (var cam in cameras.Values)
-    //     {
-    //         if (cam == to)
-    //             cameras[cam].Priority = 1;
-    //         else
-    //             cameras[cam].Priority = 0;
-    //
-    //     }
-    //
-    //     currentShotType = to; //update current camera shot 
-    // }
+    public void SwitchCameraToCamShot(CameraShot to)
+    {
+        foreach (var cam in cameraShots)
+        {
+            if (cam == to)
+                cam.vCamComponent.Priority = 1;
+            else
+                cam.vCamComponent.Priority = 0;
+        
+        }
+        
+        //disable / enable hotspots
+        if(currentCameraShot) currentCameraShot.ShowHotspots(false); //disable hotspots of previous camera
+        currentCameraShot = to; //update current camera shot 
+        currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
+        
+        //trigger camera switch event
+        EventManager.Instance.CallOnCameraSwitch();
+    }
     
-    protected void CameraSwitchControl()
+    
+    protected void DebugCameraSwitchControl()
     {
         //switch to establishing
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            SwitchCameraTo(ShotType.ESTABLISHING_SHOT);
+            SwitchCameraToShotType(ShotType.ESTABLISHING_SHOT);
         }
         
         //switch to chair shot
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SwitchCameraTo(ShotType.CHAIR_SHOT);
+            SwitchCameraToShotType(ShotType.CHAIR_SHOT);
         }
-
+        
         //switch to bowlShot
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SwitchCameraTo(ShotType.BOWL_SHOT);
+            SwitchCameraToShotType(ShotType.BOWL_SHOT);
         }
         
         //switch to grandfatherShot
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            SwitchCameraTo(ShotType.GRANDFATHER_SHOT);
+            SwitchCameraToShotType(ShotType.GRANDFATHER_SHOT);
         }
         
         //switch to paintingShot
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            SwitchCameraTo(ShotType.PAINTING_SHOT);
+            SwitchCameraToShotType(ShotType.PAINTING_SHOT);
         }
     }
     

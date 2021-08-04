@@ -21,6 +21,7 @@ public class Hotspot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             //if you click on the hotspot, send event to camera shot
+            CameraController.Instance.SwitchCameraToCamShot(cameraShot);
         }
     }
 
