@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5680876968392083096}
   - component: {fileID: 5680876968392083097}
   m_Layer: 0
-  m_Name: Clock
+  m_Name: ClockPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

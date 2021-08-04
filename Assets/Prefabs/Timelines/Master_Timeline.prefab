@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1840673403063774665
+--- !u!1 &3703972880148961793
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1840673403063774663}
-  - component: {fileID: 1840673403063774664}
+  - component: {fileID: 3703972880148961792}
+  - component: {fileID: 3703972880148961799}
   m_Layer: 0
-  m_Name: TextController
+  m_Name: Master_Timeline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1840673403063774663
+--- !u!4 &3703972880148961792
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840673403063774665}
+  m_GameObject: {fileID: 3703972880148961793}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 317.30048, y: 160.74101, z: -65.48689}
+  m_LocalPosition: {x: 11.443204, y: 7.883337, z: -0.14898862}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1840673403063774664
-MonoBehaviour:
+--- !u!320 &3703972880148961799
+PlayableDirector:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1840673403063774665}
+  m_GameObject: {fileID: 3703972880148961793}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 263da05ee4f161b4880a564820ac9035, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainTextField: {fileID: 0}
-  currentText:
-    finishedDisplaying: 0
-    text: 
-    displayTimer: 0
-    timeToDisplay: 0
-  displayTimer: 0
-  displayTime: 0
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 6c08770ddfbcec1469de71ea5e43a599, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
