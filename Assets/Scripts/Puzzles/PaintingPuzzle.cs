@@ -45,7 +45,7 @@ public class PaintingPuzzle : Puzzle
         {
             firstSelection = selection; //make current selection equal to first selection
         }
-        else if(selection && firstSelection && secondSelection == null && selection != firstSelection)
+        else if(selection && firstSelection && secondSelection == null)
         {
             secondSelection = selection;
         }
@@ -53,7 +53,14 @@ public class PaintingPuzzle : Puzzle
         //if both selections are full, swap them 
         if (firstSelection && secondSelection)
         {
-            Swap();
+            if (firstSelection == secondSelection)
+            {
+                Rotate();
+            }
+            else
+            {
+                Swap();
+            }
         }
 
     }
@@ -80,8 +87,21 @@ public class PaintingPuzzle : Puzzle
         return null;
     }
 
+    protected void Rotate()
+    {
+        Debug.Log("Rotate");
+        StartCoroutine(WaitForRotate(firstSelection));
+
+        //transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+        //then clear the selection to be able to select some more
+        ClearSelection();
+
+        //and check the solve condition
+        CheckSolveCondition();
+    }
     protected void Swap()
     {
+        Debug.Log("Swap");
         //if both of them are not null
         //swap their position
         Vector3 tempPos = firstSelection.transform.position;
@@ -152,6 +172,29 @@ public class PaintingPuzzle : Puzzle
         
         // Make sure we got there
         paintingObj.transform.position = targetPos; //make sure it snaps to that position
+        canInteract = true; //re-enable interaction
+        yield return null;
+    }
+
+    protected IEnumerator WaitForRotate(Painting paintingObj)
+    {
+        canInteract = false; //make sure there is no interaction whilte the painting rotates
+
+        Quaternion targetRotation = paintingObj.transform.rotation;
+        Vector3 targetEuler = new Vector3(paintingObj.transform.eulerAngles.x, paintingObj.transform.eulerAngles.y, paintingObj.transform.eulerAngles.z + 90);
+        targetRotation *= Quaternion.AngleAxis(90, Vector3.forward);
+        float elapsedTime = 0;
+        while (elapsedTime < swapTime)
+        {
+            paintingObj.transform.rotation = Quaternion.Lerp(paintingObj.transform.rotation, targetRotation, (elapsedTime / swapTime));
+            elapsedTime += Time.deltaTime;
+
+            // Yield here
+            yield return null;
+        }
+
+        // Make sure we got there
+        paintingObj.transform.eulerAngles = targetEuler; //make sure it snaps to that rotation
         canInteract = true; //re-enable interaction
         yield return null;
     }
