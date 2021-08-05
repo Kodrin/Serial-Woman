@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: bd6d88015d32e3a43a0c06dc7608efae
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Hahmlet
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 07d521c94345a5649b6d00cdb812b5d1, type: 3}
+  - {fileID: 12800000, guid: 7829586ac6a9dd14e9cb021861b3da90, type: 3}
+  - {fileID: 12800000, guid: faca572a542a5d54881183d0cf160692, type: 3}
+  - {fileID: 12800000, guid: 86220771fa00df346825809a92ab88ea, type: 3}
+  - {fileID: 12800000, guid: f57b2d2cc4bb7ca4fb64849e64d8e43e, type: 3}
+  - {fileID: 12800000, guid: 00cc6610424afd341b80ad103d991dc8, type: 3}
+  - {fileID: 12800000, guid: 61d6c44bad7bc174daacab71cc0dc687, type: 3}
+  - {fileID: 12800000, guid: a5d823b036cca44468d9038cce802254, type: 3}
+  - {fileID: 12800000, guid: 8c64830134edcf444990cd63eff25cf0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
