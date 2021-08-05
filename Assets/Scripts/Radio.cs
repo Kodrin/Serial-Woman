@@ -6,6 +6,7 @@ public class Radio : MonoBehaviour
 {
     public List<AudioClip> tracks = new List<AudioClip>();
     private AudioSource bgm;
+    public bool useCoroutineMethod = true;
     private int currentTrackNumber = 1;
     // Start is called before the first frame update
     void Start()
@@ -21,17 +22,40 @@ public class Radio : MonoBehaviour
     {
         if (currentTrackNumber == 1)
         {
-            StartCoroutine(switchTrack(tracks[currentTrackNumber]));
+            if (useCoroutineMethod)
+            {
+                StartCoroutine(SwitchTrack(tracks[currentTrackNumber]));
+            }
+            else
+            {
+                Switch(tracks[currentTrackNumber]);
+            }
             currentTrackNumber++;
         }
         else
         {
-            StartCoroutine(switchTrack(tracks[0]));
+            if (useCoroutineMethod)
+            {
+                StartCoroutine(SwitchTrack(tracks[0]));
+            }
+            else
+            {
+                Switch(tracks[0]);
+            }
             currentTrackNumber = 1;
         }
     }
 
-    IEnumerator switchTrack(AudioClip track)
+    void Switch(AudioClip track)
+    {
+        bgm.loop = false;
+        while (bgm.isPlaying) { }
+        bgm.clip = track;
+        bgm.Play();
+        bgm.loop = true;
+    }
+
+    IEnumerator SwitchTrack(AudioClip track)
     {
         yield return new WaitForSeconds(bgm.clip.length - bgm.time);
         bgm.clip = track;
