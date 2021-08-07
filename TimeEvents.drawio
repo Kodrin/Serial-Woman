@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-08-07T00:18:13.564Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" etag="Qrp3IkseD_s4aJ7wCt2-" version="14.9.4" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-07T02:05:30.936Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" etag="jjWAyzOqozoG8gLbIYcz" version="14.9.4" type="github">
   <diagram id="Z_L-AWP88pnk8-IzUKq-" name="Page-1">
-    <mxGraphModel dx="2031" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="mR3gihREqQYf-GJDufRb-217" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="780" y="110" width="220" height="220" as="geometry" />
+          <mxGeometry x="840" y="130" width="220" height="220" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-218" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="1110" y="160" width="220" height="220" as="geometry" />
@@ -17,13 +17,13 @@
           <mxGeometry x="1190" y="220" width="60" height="100" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-221" value="" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="1">
-          <mxGeometry x="860" y="170" width="60" height="100" as="geometry" />
+          <mxGeometry x="910" y="200" width="60" height="100" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-222" value="" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;rotation=90;fillColor=#a20025;strokeColor=#6F0000;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="930" y="500" width="60" height="100" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-223" value="Eye Paintings" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="800" y="60" width="180" height="40" as="geometry" />
+          <mxGeometry x="860" y="80" width="180" height="40" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-225" value="Sun / Moon Paintings" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="1130" y="110" width="180" height="40" as="geometry" />
@@ -31,8 +31,8 @@
         <mxCell id="mR3gihREqQYf-GJDufRb-226" value="Forest Fire / Tsunami" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="870" y="415" width="180" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mR3gihREqQYf-GJDufRb-228" value="&lt;h1 style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;Painting Puzzle&lt;/font&gt;&lt;/h1&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;Once in a blue moon, it points, but not from your perspective.&lt;/i&gt;&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;Neither one can put out the other&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="50" y="690" width="860" height="410" as="geometry" />
+        <mxCell id="mR3gihREqQYf-GJDufRb-228" value="&lt;h1 style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;Painting Puzzle - The base of the lamp is shaped like a moon.&amp;nbsp;&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;The shadows of the night will&amp;nbsp;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;guide your line of sight.&lt;/i&gt;&lt;/b&gt; &lt;/font&gt;&lt;span style=&quot;font-size: 31px&quot;&gt;&amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;And if you chance upon a blue moon,&amp;nbsp;&amp;nbsp;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;font style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;reflect on your perspective.&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;All is taken at a cost.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;But, what is lost will always end up where it&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;font-size: 31px&quot;&gt;&lt;b&gt;&lt;i&gt;belongs.&lt;/i&gt;&lt;/b&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="690" width="1440" height="630" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-230" value="" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;rotation=0;" vertex="1" parent="1">
           <mxGeometry x="310" y="280" width="340" height="170" as="geometry" />
@@ -66,6 +66,42 @@
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-244" value="Forest Fire / Tsunami" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
           <mxGeometry x="382.5" y="230" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-245" value="MOON" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="130" y="150" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-246" value="SUN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="180" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-247" value="FIRE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="452.5" y="300" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-249" value="CLOSED" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="140" y="435" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-250" value="OPEN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="920" y="170" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-252" value="FIRE" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;fontSize=19;" vertex="1" parent="1">
+          <mxGeometry x="930" y="500" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-254" value="&lt;font style=&quot;font-weight: 400 ; text-align: left ; font-size: 31px&quot;&gt;-&amp;gt; At 7pm, 8pm, 9pm and 10pm respectively&lt;br&gt;&lt;/font&gt;&lt;span style=&quot;font-weight: 400 ; text-align: left ; font-size: 31px&quot;&gt;The letters &quot;O&quot;, &quot;P&quot;, &quot;E&quot; and &quot;N&quot; will appear on the wall &lt;br&gt;if the light is closed. The eye must be open.&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="920" y="780" width="680" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-256" value="&lt;font style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;-&amp;gt; At 11pm, the room is lit in blue&lt;/span&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;text-align: center&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;An upside-down mannequin&amp;nbsp;is holding a picture&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;text-align: center ; font-size: 31px ; font-weight: 400&quot;&gt;frame of an owl. and is suspended from the ceiling.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;text-align: center ; font-size: 31px ; font-weight: 400&quot;&gt;The owl in the frame is pointing just like the owl in the&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;text-align: center ; font-size: 31px ; font-weight: 400&quot;&gt;Sun/Moon painting. Match the direction while taking&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;into account the mannequin&#39;s perspective.&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="640" y="980" width="840" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-257" value="Painting of a Sun&lt;br&gt;with an owl pointing&lt;br&gt;to the East.&lt;br&gt;Painting of the&amp;nbsp;&lt;br&gt;Moon with an owl&lt;br&gt;pointing to the&amp;nbsp;&lt;br&gt;West." style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="100" width="230" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-258" value="Painting of a Wildfire &lt;br&gt;(Forest Fire).&lt;br&gt;Painting of a&amp;nbsp;&lt;br&gt;Tsunami" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="500" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-260" value="Painting of&lt;br&gt;a closed eye.&lt;br&gt;Painting of&amp;nbsp;&lt;br&gt;an open eye." style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="670" y="120" width="170" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="mR3gihREqQYf-GJDufRb-261" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;-&amp;gt; There is a flyer for a missing cat in the scene.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;If the clock is set to 3:35:45, the hydrate clip plays.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;a glass of water appears on the table - examine:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;There&#39;s a cat in the water.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;10 seconds later - glass is empty...&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span style=&quot;font-size: 31px ; font-weight: 400&quot;&gt;examine: The cat has evaporated.&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="750" y="1240" width="840" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
