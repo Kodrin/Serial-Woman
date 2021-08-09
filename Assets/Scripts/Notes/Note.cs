@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Note
+public class NewBehaviourScript : MonoBehaviour
 {
-    public string noteName;
-    public List<string> pages = new List<string>();
-
-    public void AddPage(string txt)
+    // Start is called before the first frame update
+    void Start()
     {
-        pages.Add(txt);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

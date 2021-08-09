@@ -7,35 +7,35 @@ using System;
 using UnityEngine;
 
 
-public class LoadNotes : MonoBehaviour
+public class LoadNotes : Singleton<LoadNotes>
 {
-    Notes noteList; 
+    public NotesStructure noteList; 
 
     void CreateXML(string nPath)
     {
-        Notes noteList = new Notes();
-        Note threeBarons = new Note();
+        NotesStructure noteList = new NotesStructure();
+        NoteStructure threeBarons = new NoteStructure();
         threeBarons.AddPage("This is the text for page 1.");
         threeBarons.AddPage("This is the text for page 2.");
         threeBarons.AddPage("This is the text for page 3.");
         threeBarons.noteName = "Three Barons";
-        Note wallPlaque = new Note();
+        NoteStructure wallPlaque = new NoteStructure();
         wallPlaque.AddPage("This is the text for page 1.");
         wallPlaque.noteName = "Wall Plaque";
         noteList.AddNote(threeBarons);
         noteList.AddNote(wallPlaque);
 
-        XmlSerializer makeSerial = new XmlSerializer(typeof(Notes));
+        XmlSerializer makeSerial = new XmlSerializer(typeof(NotesStructure));
         StreamWriter writer = new StreamWriter(nPath);
         makeSerial.Serialize(writer, noteList);
     }
 
-    public static Notes LoadXML(string path)
+    public static NotesStructure LoadXML(string path)
     {
-        XmlSerializer makeSerial = new XmlSerializer(typeof(Notes));
+        XmlSerializer makeSerial = new XmlSerializer(typeof(NotesStructure));
         StreamReader reader = new StreamReader(path);
 
-        Notes nt = (Notes)makeSerial.Deserialize(reader);
+        NotesStructure nt = (NotesStructure)makeSerial.Deserialize(reader);
 
         return nt;
     }
@@ -43,7 +43,7 @@ public class LoadNotes : MonoBehaviour
     {
         //CreateXML("D:\\Five\\Assets\\Resources\\Notes3.xml");
         noteList = LoadXML(Path.Combine(Application.dataPath, "Resources/Notes2.xml"));
-        Debug.Log("Loaded, OK.");
+        Debug.Log("Notes Loaded, OK.");
         if (noteList.notes[0].pages[0] != null)
         {
             Debug.Log(noteList.notes[0].pages[0]);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Notes xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<NotesStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <notes>
-    <Note>
+    <NoteStructure>
       <noteName>Three Barons</noteName>
       <pages>
         <string>Three barons lived at the top of a tall wooden tower
@@ -42,8 +42,8 @@ The first was very small, but enjoyed life slowly and to the fullest
 The second was average, indecisive and lived minute to minute
 The third was so tall, and the quickest thinker of them all</string>
       </pages>
-    </Note>
-    <Note>
+    </NoteStructure>
+    <NoteStructure>
       <noteName>Wall Plaque</noteName>
       <pages>
         <string>The shadows of the night will guide your line of sight.
@@ -54,6 +54,6 @@ Reflect on your perspective.
 The prey must turn its back to the predator,
 Only then will the pieces come together.</string>
       </pages>
-    </Note>
+    </NoteStructure>
   </notes>
-</Notes>
+</NotesStructure>
