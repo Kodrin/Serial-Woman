@@ -1,9 +1,10 @@
-<?xml version=”1.0″ encoding=”UTF-8″?>
-<notes>
-	<note name="The Three Barons">
-		<page number="1">
-			<text>
-Three barons lived at the top of a tall wooden tower
+<?xml version="1.0" encoding="utf-8"?>
+<NotesStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <notes>
+    <NoteStructure>
+      <noteName>Three Barons</noteName>
+      <pages>
+        <string>Three barons lived at the top of a tall wooden tower
 The first was very small, but enjoyed life slowly and to the fullest
 The second was average, indecisive and lived minute to minute
 The third was so tall, and the quickest thinker of them all
@@ -16,12 +17,8 @@ Passers-by claimed they even spoke to their walls
 One day, in came a new companion
 A little black cat with the pride of a lion
 They cherished and loved it and made it their own
-But soon it grew hungry and thin to the bone
-			</text>
-		</page>
-		<page number="2">
-			<text>
-“It ran. It ran. The cat ran away.”
+But soon it grew hungry and thin to the bone</string>
+        <string>“It ran. It ran. The cat ran away.”
 The third baron screamed, on that heinous day
 They pondered and pondered but urgency grew
 They had to move, go out, it's the least they could do
@@ -34,12 +31,8 @@ The other two stood watching and turning their hands
 The second baron followed suit and got further than the first
 Four steps to be exact, before his legs suddenly burst
 He stood there,  frozen, pointing and motionless
-The last remaining baron stood quietly turning his hand
-			</text>
-		</page>
-		<page number="3">
-			<text>
-It took all his courage but the third baron ran
+The last remaining baron stood quietly turning his hand</string>
+        <string>It took all his courage but the third baron ran
 As much as anyone could or anyone can
 From the first baron, he made it eight steps in fact
 Only to realize he was on a circular track
@@ -47,21 +40,20 @@ Only to realize he was on a circular track
 Three barons lived at the top of a tall wooden tower
 The first was very small, but enjoyed life slowly and to the fullest
 The second was average, indecisive and lived minute to minute
-The third was so tall, and the quickest thinker of them all
-			</text>
-		</page>
-	</note>
-	<note name="Wall Plaque">
-		<page number="1">
-			<text>
-			The shadows of the night will guide your line of sight.
-			
-			And if you chance upon a blue moon,
-			Reflect on your perspective.
-			
-			The prey must turn its back to the predator,
-			Only then will the pieces come together.
-			</text>
-		</page>
-	</note>
-</notes>
+The third was so tall, and the quickest thinker of them all</string>
+      </pages>
+    </NoteStructure>
+    <NoteStructure>
+      <noteName>Wall Plaque</noteName>
+      <pages>
+        <string>The shadows of the night will guide your line of sight.
+		
+And if you chance upon a blue moon,
+Reflect on your perspective.
+
+The prey must turn its back to the predator,
+Only then will the pieces come together.</string>
+      </pages>
+    </NoteStructure>
+  </notes>
+</NotesStructure>
