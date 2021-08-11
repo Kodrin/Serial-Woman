@@ -10,9 +10,6 @@ public interface IPublish
 public interface ISubscribe
 {
     public void Subscribe();
-}
-
-public interface IUnsubscribe
-{
     public void Unsubscribe();
 }
+
