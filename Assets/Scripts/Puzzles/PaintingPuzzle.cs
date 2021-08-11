@@ -19,6 +19,7 @@ public class PaintingPuzzle : Puzzle
     public float swapTime = 1.0f;
     
     public List<PaintingType> solveSequence = new List<PaintingType>();
+    public List<RotationHeading> solveRotation = new List<RotationHeading>();
     public List<Painting> paintings = new List<Painting>();
     
     // Start is called before the first frame update
@@ -91,6 +92,7 @@ public class PaintingPuzzle : Puzzle
     {
         Debug.Log("Rotate");
         StartCoroutine(WaitForRotate(firstSelection));
+        ChangeHeading(firstSelection);
 
         //transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
         //then clear the selection to be able to select some more
@@ -134,8 +136,8 @@ public class PaintingPuzzle : Puzzle
             
             for (int i = 0; i < paintings.Count; i++)
             {
-                // if current painting matches solve index
-                if (paintings[i].paintingType == solveSequence[i])
+                // if current painting matches solve index and current rotation matches solve index
+                if ((paintings[i].paintingType == solveSequence[i]) && (paintings[i].currentRotation == solveRotation[i]))
                 {
                     // continue;
                 }
@@ -197,6 +199,25 @@ public class PaintingPuzzle : Puzzle
         paintingObj.transform.eulerAngles = targetEuler; //make sure it snaps to that rotation
         canInteract = true; //re-enable interaction
         yield return null;
+    }
+
+    protected void ChangeHeading(Painting paintingObj)
+    {
+        switch (paintingObj.currentRotation)
+        {
+            case RotationHeading.UP:
+                paintingObj.currentRotation = RotationHeading.RIGHT;
+                break;
+            case RotationHeading.RIGHT:
+                paintingObj.currentRotation = RotationHeading.DOWN;
+                break;
+            case RotationHeading.DOWN:
+                paintingObj.currentRotation = RotationHeading.LEFT;
+                break;
+            case RotationHeading.LEFT:
+                paintingObj.currentRotation = RotationHeading.UP;
+                break;
+        }
     }
 
     protected void ClearSelection()
