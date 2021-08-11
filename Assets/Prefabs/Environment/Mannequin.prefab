@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7750223131506024299}
   - component: {fileID: 6638738463160111310}
   - component: {fileID: 8918673435512628228}
+  - component: {fileID: 654052147}
   m_Layer: 0
   m_Name: Mannequin
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6973122863966373329}
-  m_LocalRotation: {x: -0.7876855, y: -0.06348495, z: -0.14651756, w: 0.5950242}
+  m_LocalRotation: {x: -0.7876848, y: -0.06348579, z: -0.14651795, w: 0.59502506}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.041005995, y: 0.041006, z: 0.041006}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -107.062, y: -31.950989, z: 14.679001}
 --- !u!33 &6638738463160111310
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -82,3 +83,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &654052147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6973122863966373329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da8334b8fd83854ea50ada250dc8251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
