@@ -19,10 +19,33 @@ public class EventManager : Singleton<EventManager>
     public delegate void CerealSolveEvent();
     public event CerealSolveEvent OnCerealSolve;
     public void CallOnCerealSolve() { if (OnCerealSolve != null) { OnCerealSolve(); } }
+
     
+    
+    #region Clock Events
+    //CLOCK
     public delegate void ClockSolveEvent();
     public event ClockSolveEvent OnClockSolve;
     public void CallOnClockSolve() { if (OnClockSolve != null) { OnClockSolve(); } }
+    
+    public delegate void AnyArmMoveEvent();
+    public event AnyArmMoveEvent OnAnyArmMove;
+    public void CallOnAnyArmMove() { if (OnAnyArmMove != null) { OnAnyArmMove(); } }
+    
+    public delegate void SmallArmMoveEvent(int position);
+    public event SmallArmMoveEvent OnSmallArmMove;
+    public void CallOnSmallArmMove(int position) { if (OnSmallArmMove != null) { OnSmallArmMove(position); } }
+    
+    public delegate void MiddleArmMoveEvenet(int position);
+    public event MiddleArmMoveEvenet OnMiddleArmMove;
+    public void CallOnMiddleArmMove(int position) { if (OnMiddleArmMove != null) { OnMiddleArmMove(position); } }
+    
+    public delegate void LongArmMoveEvent(int position);
+    public event LongArmMoveEvent OnLongArmMove;
+    public void CallOnLongArmMove(int position) { if (OnLongArmMove != null) { OnLongArmMove(position); } }
+
+    #endregion
+
     
     
     //LAMP
@@ -35,6 +58,12 @@ public class EventManager : Singleton<EventManager>
     protected void OnEnable()
     {
         // OnCameraSwitch += DebugEvent;
+        // OnSmallArmMove += SignatureFunction;
+    }
+
+    protected void SignatureFunction(int position)
+    {
+        
     }
 
     protected void OnDisable()
