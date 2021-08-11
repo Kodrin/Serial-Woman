@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Puzzle : MonoBehaviour
 {
+    [Header("PUZZLE")]
     public bool canInteract = false;
     public bool solved = false;
     public bool isSolvable = true;

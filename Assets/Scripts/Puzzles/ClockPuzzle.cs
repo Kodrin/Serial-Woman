@@ -29,8 +29,10 @@ public class ClockPuzzle : Puzzle
         // public float currentRotation;
     }
     
+    [Header("ARMS")]
     [SerializeField] protected ClockArm currentSelectedArm;
     [SerializeField] protected ClockArm shortArm;
+    [SerializeField] protected ClockArm middleArm;
     [SerializeField] protected ClockArm longArm;
     
     
@@ -38,15 +40,11 @@ public class ClockPuzzle : Puzzle
 
     [Header("Solve Condition")] 
     [Range(1, 12)] public int targetShortArmPos = 1; 
+    [Range(1, 12)] public int targetMiddleArmPos = 1; 
     [Range(1, 12)] public int targetLongArmPos = 1; 
     
-    // Start is called before the first frame update
-    protected void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     protected override void Update()
     {
         if (!canInteract) return;        
@@ -132,6 +130,10 @@ public class ClockPuzzle : Puzzle
         {
             shortArm.currentPosition = currentSelectedArm.currentPosition;
         }
+        else if (currentSelectedArm.armObject == middleArm.armObject)
+        {
+            middleArm.currentPosition = currentSelectedArm.currentPosition;
+        }
         else if (currentSelectedArm.armObject == longArm.armObject)
         {
             longArm.currentPosition = currentSelectedArm.currentPosition;
@@ -154,8 +156,14 @@ public class ClockPuzzle : Puzzle
     {
         if (currentSelectedArm.armObject == shortArm.armObject)
         {
-            currentSelectedArm.armObject = longArm.armObject; //set currrent object 
+            currentSelectedArm.armObject = middleArm.armObject; //set currrent object 
             shortArm.currentPosition = currentSelectedArm.currentPosition;
+            currentSelectedArm.currentPosition = middleArm.currentPosition;
+        }
+        else if (currentSelectedArm.armObject == middleArm.armObject)
+        {
+            currentSelectedArm.armObject = longArm.armObject; //set currrent object 
+            middleArm.currentPosition = currentSelectedArm.currentPosition;
             currentSelectedArm.currentPosition = longArm.currentPosition;
         }
         else if(currentSelectedArm.armObject == longArm.armObject)
@@ -173,7 +181,9 @@ public class ClockPuzzle : Puzzle
 
     protected override void CheckSolveCondition()
     {
-        if (shortArm.currentPosition == targetShortArmPos && longArm.currentPosition == targetLongArmPos)
+        if (shortArm.currentPosition == targetShortArmPos && 
+            middleArm.currentPosition == targetMiddleArmPos && 
+            longArm.currentPosition == targetLongArmPos)
         {
             ResolveState();
         }
