@@ -188,4 +188,15 @@ public class ClockPuzzle : Puzzle
             ResolveState();
         }
     }
+
+    #region Event Handling
+
+    protected void InvokeAnyArmMoveEvent()
+    {
+
+        EventHandler.CallOnAnyArmMove();
+
+    }
+
+    #endregion
 }

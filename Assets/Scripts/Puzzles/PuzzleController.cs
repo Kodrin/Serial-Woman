@@ -11,12 +11,12 @@ public class PuzzleController : MonoBehaviour
 
     protected void OnEnable()
     {
-        EventManager.Instance.OnCameraSwitch += CheckPuzzleControls; //add so it will enable interaction when camera is switching
+        EventHandler.OnCameraSwitch += CheckPuzzleControls; //add so it will enable interaction when camera is switching
     }
 
     protected void OnDisable()
     {
-        EventManager.Instance.OnCameraSwitch -= CheckPuzzleControls; //add so it will enable interaction when camera is switching
+        EventHandler.OnCameraSwitch -= CheckPuzzleControls; //add so it will enable interaction when camera is switching
     }
 
     protected void CheckPuzzleControls()

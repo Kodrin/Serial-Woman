@@ -23,10 +23,8 @@ public class CameraController : Singleton<CameraController>
 
     protected void OnEnable()
     {
-        if (EventManager.Instance)
-        {
-            // EventManager.Instance.OnCameraChange += SwitchCameraToCamShot;
-        }
+
+        // EventManager.OnCameraChange += SwitchCameraToCamShot;
     }
 
 
@@ -63,7 +61,7 @@ public class CameraController : Singleton<CameraController>
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
         
         //trigger camera switch event
-        EventManager.Instance.CallOnCameraSwitch();
+        EventHandler.CallOnCameraSwitch();
 
     }
     
@@ -84,7 +82,7 @@ public class CameraController : Singleton<CameraController>
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
         
         //trigger camera switch event
-        EventManager.Instance.CallOnCameraSwitch();
+        EventHandler.CallOnCameraSwitch();
     }
     
     
