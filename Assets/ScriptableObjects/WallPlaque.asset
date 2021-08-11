@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteName: Wall Plaque
   pages:
-  - content: "The shadows of the night will guide your line of sight. \t\t And if
-      you chance upon a blue moon, Reflect on your perspective.  The prey must turn
-      its back to the predator, Only then will the pieces come together."
+  - content: The shadows of the night will guide your line of sight.**And if you
+      chance upon a blue moon,* Reflect on your perspective. ** The prey must turn
+      its back to the predator, *Only then will the pieces come together.
