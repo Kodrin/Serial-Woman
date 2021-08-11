@@ -193,10 +193,9 @@ public class ClockPuzzle : Puzzle
 
     protected void InvokeAnyArmMoveEvent()
     {
-        if (EventManager.Instance)
-        {
-            EventManager.Instance.CallOnAnyArmMove();
-        }
+
+        EventHandler.CallOnAnyArmMove();
+
     }
 
     #endregion

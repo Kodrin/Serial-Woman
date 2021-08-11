@@ -16,29 +16,29 @@ public class EventTester : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            EventHandler.PublishOnTestEvent();
+            EventHandlerTest.PublishOnTestEvent();
         }
         
         if (Input.GetKeyDown(KeyCode.S))
         {
-            EventHandler.PublishOnTestParameterEvent(10);
+            EventHandlerTest.PublishOnTestParameterEvent(10);
         }
     }
 
     void OnEnable()
     {
-        EventHandler.OnTestEvent += DebugRed;
-        EventHandler.OnTestEvent += DebugGreen;
-        EventHandler.OnTestEvent += DebugBlue;
-        EventHandler.OnTestParameterEvent += Arithmetic;
+        EventHandlerTest.OnTestEvent += DebugRed;
+        EventHandlerTest.OnTestEvent += DebugGreen;
+        EventHandlerTest.OnTestEvent += DebugBlue;
+        EventHandlerTest.OnTestParameterEvent += Arithmetic;
     }
 
     void OnDisable()
     {
-        EventHandler.OnTestEvent -= DebugRed;
-        EventHandler.OnTestEvent -= DebugGreen;
-        EventHandler.OnTestEvent -= DebugBlue;
-        EventHandler.OnTestParameterEvent -= Arithmetic;
+        EventHandlerTest.OnTestEvent -= DebugRed;
+        EventHandlerTest.OnTestEvent -= DebugGreen;
+        EventHandlerTest.OnTestEvent -= DebugBlue;
+        EventHandlerTest.OnTestParameterEvent -= Arithmetic;
     }
 
     void DebugRed()

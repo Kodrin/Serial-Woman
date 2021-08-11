@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class EventHandler
+public static class EventHandlerTest
 {
     public delegate void TestEvent();
     public static event TestEvent OnTestEvent;
