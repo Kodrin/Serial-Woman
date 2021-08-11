@@ -24,10 +24,13 @@ public class Painting : MonoBehaviour
     public PaintingType paintingType;
     public RotationHeading initialRotation;
     public RotationHeading currentRotation;
+    public Texture alternateTexture;
+    private Texture currentTexture;
 
     private void Start()
     {
         currentRotation = initialRotation;
+        currentTexture = gameObject.GetComponent<Renderer>().material.mainTexture;
 
         switch (initialRotation)
         {
@@ -43,6 +46,17 @@ public class Painting : MonoBehaviour
                 this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, this.transform.eulerAngles.z + 270);
                 break;
         }
+    }
+
+    private Texture GetTexture()
+    {
+        return currentTexture;
+    }
+
+    public void SetTexture(Texture t)
+    {
+        currentTexture = t;
+        gameObject.GetComponent<Renderer>().material.mainTexture = currentTexture;
     }
 }
 

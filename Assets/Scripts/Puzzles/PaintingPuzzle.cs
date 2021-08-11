@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PaintingPuzzle : Puzzle
+public class PaintingPuzzle : Puzzle, ISubscribe
 {
     [System.Serializable]
     public class PaintingSlot
@@ -21,12 +21,10 @@ public class PaintingPuzzle : Puzzle
     public List<PaintingType> solveSequence = new List<PaintingType>();
     public List<RotationHeading> solveRotation = new List<RotationHeading>();
     public List<Painting> paintings = new List<Painting>();
-    
-    // Start is called before the first frame update
-    protected override void Start()
-    {
-        
-    }
+
+    public bool baronsSmallSolved = false;
+    public bool baronsMiddleSolved = false;
+    public bool baronsLongSolved = false;
 
     // Update is called once per frame
     protected override void Update()
@@ -36,7 +34,94 @@ public class PaintingPuzzle : Puzzle
         if(Input.GetMouseButtonDown(0))
             Controls();
     }
+    private void OnEnable()
+    {
+        Subscribe();
+    }
+    private void OnDisable()
+    {
+        Unsubscribe();
+    }
+    public void Subscribe()
+    {
+        EventHandler.OnSmallArmMove += CheckSmallArm;
+        EventHandler.OnMiddleArmMove += CheckMiddleArm;
+        EventHandler.OnLongArmMove += CheckLongArm;
+    }
+    public void Unsubscribe()
+    {
+        EventHandler.OnSmallArmMove -= CheckSmallArm;
+        EventHandler.OnMiddleArmMove += CheckMiddleArm;
+        EventHandler.OnLongArmMove += CheckLongArm;
+    }
 
+    public void CheckSmallArm(int smallArmPosition)
+    {
+        switch(smallArmPosition)
+        {
+            //Eye is half open, sun is out
+            case 1:
+            case 4:
+                paintings[0].paintingType=PaintingType.SUNOWL;
+                paintings[2].paintingType = PaintingType.EYE;
+                baronsSmallSolved = false;
+                break;
+            //Eye is fully open, sun is out
+            case 2:
+            case 5:
+            case 6:
+                paintings[0].paintingType = PaintingType.SUNOWL;
+                paintings[2].paintingType = PaintingType.OTHER;
+                baronsSmallSolved = false;
+                break;
+            //Eye is fully open, sun is out and Three Barons small arm is True
+            case 3:
+                paintings[0].paintingType = PaintingType.SUNOWL;
+                paintings[2].paintingType = PaintingType.OTHER;
+                baronsSmallSolved = true;
+                break;
+            //Eye is half open, moon is out
+            case 7:
+            case 10:
+            case 12:
+                paintings[0].paintingType = PaintingType.OTHER;
+                paintings[2].paintingType = PaintingType.EYE;
+                baronsSmallSolved = false;
+                break;
+            //Eye is fully open, moon is out
+            case 8:
+            case 9:
+            case 11:
+                paintings[0].paintingType = PaintingType.OTHER;
+                paintings[2].paintingType = PaintingType.OTHER;
+                baronsSmallSolved = false;
+                break;
+        }
+    }
+
+    public void CheckMiddleArm(int middleArmPosition)
+    {
+        if (middleArmPosition == 7)
+            baronsMiddleSolved = true;
+        else
+            baronsMiddleSolved = false;
+    }   
+
+    public void CheckLongArm(int longArmPosition)
+    {
+        if (longArmPosition == 11)
+            baronsLongSolved = true;
+        else
+            baronsLongSolved = false;
+    }
+    private void CheckBaronSolved()
+    {
+        if (baronsSmallSolved && baronsMiddleSolved && baronsLongSolved)
+        {
+            //Set texture for cat.
+            paintings[1].paintingType = PaintingType.CAT;
+        }
+    }
     protected override void Controls()
     {
         Painting selection = GetPaintingWithMouse();
