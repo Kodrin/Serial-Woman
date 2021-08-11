@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lamp : MonoBehaviour
+public class Lamp : MonoBehaviour, ISubscribe
 {
     [System.Serializable]
     public enum LampConfiguration
@@ -37,34 +37,69 @@ public class Lamp : MonoBehaviour
         lightComponent.enabled = !lightComponent.enabled;
     }
 
+    protected void OnEnable()
+    {
+        Subscribe();
+    }
+
+    protected void OnDisable()
+    {
+        Unsubscribe();
+    }
+
+    public void Subscribe()
+    {
+        EventHandler.OnSmallArmMove += CheckConfiguration;
+    }
+
+    public void Unsubscribe()
+    {
+        EventHandler.OnSmallArmMove -= CheckConfiguration;
+    }
+
+    
+
     //CONFIGURATIONS
+
+    public void CheckConfiguration(int armPosition)
+    {
+        //if its 11 o clock, change light to blue, else keep normal light
+        if (armPosition == 11)
+        {
+            BlueConfiguration();
+        }
+        else
+        {
+            NormalConfiguration();
+        }
+    }
+    
     public void NormalConfiguration()
     {
         lightComponent.color = normalColor;
-        InvokeOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch();
+
     }
 
     public void RedConfiguration()
     {
         lightComponent.color = redColor;
-        InvokeOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch();
+
     }
 
     public void GreenConfiguration()
     {
         lightComponent.color = greenColor;
-        InvokeOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch();
+
     }
 
     public void BlueConfiguration()
     {
         lightComponent.color = blueColor;
-        InvokeOnLampConfigSwitch();
-    }
-
-    protected void InvokeOnLampConfigSwitch()
-    {
-
         EventHandler.PublishOnLampConfigSwitch();
+
     }
+
 }
