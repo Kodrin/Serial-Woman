@@ -1,31 +1,72 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Lamp : MonoBehaviour
 {
-    private Color lampColor;
-    public Light associatedLight;
-
-    void Start()
+    [System.Serializable]
+    public enum LampConfiguration
     {
-        lampColor = associatedLight.color;
+        NORMAL,
+        RED,
+        GREEN,
+        BLUE
     }
 
-    void OnMouseDown()
+    [SerializeField] protected LampConfiguration lampConfiguration;
+    [SerializeField] protected Color normalColor;
+    [SerializeField] protected Color redColor;
+    [SerializeField] protected Color greenColor;
+    [SerializeField] protected Color blueColor;
+    protected Light lightComponent;
+
+    protected void Awake()
     {
-        SetColor(Color.red);
-        associatedLight.enabled = !associatedLight.enabled;
+        lightComponent = this.GetComponentInChildren<Light>();
     }
 
-    void SetColor(Color c)
+    
+    protected void OnMouseDown()
     {
-        lampColor = c;
-        associatedLight.color = lampColor;
+        ToggleLight();
     }
 
-    Color GetColor()
+    public void ToggleLight()
     {
-        return lampColor;
+        lightComponent.enabled = !lightComponent.enabled;
+    }
+
+    //CONFIGURATIONS
+    public void NormalConfiguration()
+    {
+        lightComponent.color = normalColor;
+        InvokeOnLampConfigSwitch();
+    }
+
+    public void RedConfiguration()
+    {
+        lightComponent.color = redColor;
+        InvokeOnLampConfigSwitch();
+    }
+
+    public void GreenConfiguration()
+    {
+        lightComponent.color = greenColor;
+        InvokeOnLampConfigSwitch();
+    }
+
+    public void BlueConfiguration()
+    {
+        lightComponent.color = blueColor;
+        InvokeOnLampConfigSwitch();
+    }
+
+    protected void InvokeOnLampConfigSwitch()
+    {
+        if (EventManager.Instance)
+        {
+            EventManager.Instance.CallOnLampConfigSwitch();
+        }
     }
 }

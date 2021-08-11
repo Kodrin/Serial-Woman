@@ -23,6 +23,12 @@ public class EventManager : Singleton<EventManager>
     public delegate void ClockSolveEvent();
     public event ClockSolveEvent OnClockSolve;
     public void CallOnClockSolve() { if (OnClockSolve != null) { OnClockSolve(); } }
+    
+    
+    //LAMP
+    public delegate void LampSwitchEvent();
+    public event LampSwitchEvent OnLampConfigSwitch;
+    public void CallOnLampConfigSwitch() { if (OnLampConfigSwitch != null) { OnLampConfigSwitch(); } }
 
 
     //Note on how to use events and how to subscribe functions to them 
