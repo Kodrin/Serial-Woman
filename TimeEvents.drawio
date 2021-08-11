@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-08-11T02:55:21.736Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" etag="JpvbSz2bgyMAK39Q8d2Z" version="14.9.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-08-11T04:11:05.030Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36" etag="AzktDTb3VnLg27-38sJq" version="14.9.5" type="github">
   <diagram id="Z_L-AWP88pnk8-IzUKq-" name="Page-1">
     <mxGraphModel dx="1673" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -91,7 +91,7 @@
         <mxCell id="mR3gihREqQYf-GJDufRb-257" value="Painting of a Sun&lt;br&gt;with an owl pointing&lt;br&gt;to the East.&lt;br&gt;Painting of the&amp;nbsp;&lt;br&gt;Moon with an owl&lt;br&gt;pointing to the&amp;nbsp;&lt;br&gt;West." style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="1350" y="100" width="230" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="mR3gihREqQYf-GJDufRb-258" value="Empty Canvas.&lt;br&gt;Painting of a&amp;nbsp;&lt;br&gt;Black Cat, facing&amp;nbsp;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+        <mxCell id="mR3gihREqQYf-GJDufRb-258" value="Empty Canvas.&lt;br&gt;Painting of a&amp;nbsp;&lt;br&gt;Black Cat, facing away&lt;br&gt;from the owl.&amp;nbsp;" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="1150" y="500" width="260" height="160" as="geometry" />
         </mxCell>
         <mxCell id="mR3gihREqQYf-GJDufRb-260" value="Painting of&lt;br&gt;an open eye.&lt;br&gt;Painting of&amp;nbsp;&lt;br&gt;a half-open eye." style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
