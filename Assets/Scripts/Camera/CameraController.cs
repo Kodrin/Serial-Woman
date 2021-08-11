@@ -61,7 +61,7 @@ public class CameraController : Singleton<CameraController>
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
         
         //trigger camera switch event
-        EventHandler.CallOnCameraSwitch();
+        EventHandler.PublishOnCameraSwitch();
 
     }
     
@@ -82,7 +82,7 @@ public class CameraController : Singleton<CameraController>
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
         
         //trigger camera switch event
-        EventHandler.CallOnCameraSwitch();
+        EventHandler.PublishOnCameraSwitch();
     }
     
     

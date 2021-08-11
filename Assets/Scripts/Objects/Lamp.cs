@@ -65,6 +65,6 @@ public class Lamp : MonoBehaviour
     protected void InvokeOnLampConfigSwitch()
     {
 
-        EventHandler.CallOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch();
     }
 }

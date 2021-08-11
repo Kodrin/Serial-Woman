@@ -77,17 +77,19 @@ public class ClockPuzzle : Puzzle
         switch (dir)
         {
             case MoveDirection.LEFT:
-                currentSelectedArm.armObject.transform.Rotate(-moveAngleIncrement, 0,0);
+                currentSelectedArm.armObject.transform.Rotate(-moveAngleIncrement, 0, 0);
                 currentSelectedArm.currentPosition = UpdateArmPosition(dir, currentSelectedArm.currentPosition);
                 UpdateArmParams();
+                PublishArmEvents();
                 break;
-                
+
             case MoveDirection.RIGHT:
-                currentSelectedArm.armObject.transform.Rotate(moveAngleIncrement, 0,0);
+                currentSelectedArm.armObject.transform.Rotate(moveAngleIncrement, 0, 0);
                 currentSelectedArm.currentPosition = UpdateArmPosition(dir, currentSelectedArm.currentPosition);
                 UpdateArmParams();
+                PublishArmEvents();
                 break;
-            
+
         }
     }
 
@@ -188,15 +190,13 @@ public class ClockPuzzle : Puzzle
             ResolveState();
         }
     }
-
-    #region Event Handling
-
-    protected void InvokeAnyArmMoveEvent()
+    
+    //event handling
+    protected void PublishArmEvents()
     {
-
-        EventHandler.CallOnAnyArmMove();
-
+        EventHandler.PublishOnAnyArmMove();
+        EventHandler.PublishOnSmallArmMove(shortArm.currentPosition);
+        EventHandler.PublishOnMiddleArmMove(middleArm.currentPosition);
+        EventHandler.PublishOnLongArmMove(longArm.currentPosition);
     }
-
-    #endregion
 }
