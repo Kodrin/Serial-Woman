@@ -24,7 +24,7 @@ public class TextQueuer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            TextController.Instance.QueueText(GetNextLine());
+            EventHandler.PublishOnTextControllerMsg(GetNextLine());
         }
     }
 

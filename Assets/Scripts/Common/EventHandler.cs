@@ -46,7 +46,10 @@ public static class EventHandler
 
     #endregion
 
-    
+    //TEXTCONTROLLER
+    public delegate void TextControllerMsgEvent(string message);
+    public static event TextControllerMsgEvent OnTextControllerMsg;
+    public static void PublishOnTextControllerMsg(string message) { if (OnTextControllerMsg != null) { OnTextControllerMsg(message); } }
     
     //LAMP
     public delegate void LampSwitchEvent();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TextController : Singleton<TextController>
+public class TextController : MonoBehaviour, ISubscribe
 {
     [System.Serializable]
     public class ScreenText
@@ -68,6 +68,26 @@ public class TextController : Singleton<TextController>
         {
             mainTextField.text = "";
         }
+    }
+    
+    protected void OnEnable()
+    {
+        Subscribe();
+    }
+
+    protected void OnDisable()
+    {
+        Unsubscribe();
+    }
+
+    public void Subscribe()
+    {
+        EventHandler.OnTextControllerMsg += QueueText;
+    }
+
+    public void Unsubscribe()
+    {
+        EventHandler.OnTextControllerMsg -= QueueText;
     }
 
     public void QueueText(string text)
