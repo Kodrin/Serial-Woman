@@ -26,6 +26,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public bool baronsMiddleSolved = false;
     public bool baronsLongSolved = false;
 
+    public Texture sunOwl, moonOwl, empty, cat, halfEye, openEye;
+
     // Update is called once per frame
     protected override void Update()
     {
@@ -63,7 +65,9 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             case 1:
             case 4:
                 paintings[0].paintingType=PaintingType.SUNOWL;
-                paintings[2].paintingType = PaintingType.EYE;
+                paintings[0].SetTexture(sunOwl);
+                paintings[2].paintingType = PaintingType.HALFEYE;
+                paintings[2].SetTexture(halfEye);
                 baronsSmallSolved = false;
                 break;
             //Eye is fully open, sun is out
@@ -71,29 +75,38 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             case 5:
             case 6:
                 paintings[0].paintingType = PaintingType.SUNOWL;
-                paintings[2].paintingType = PaintingType.OTHER;
+                paintings[0].SetTexture(sunOwl);
+                paintings[2].paintingType = PaintingType.OPENEYE;
+                paintings[2].SetTexture(openEye);
                 baronsSmallSolved = false;
                 break;
             //Eye is fully open, sun is out and Three Barons small arm is True
             case 3:
                 paintings[0].paintingType = PaintingType.SUNOWL;
-                paintings[2].paintingType = PaintingType.OTHER;
+                paintings[0].SetTexture(sunOwl);
+                paintings[2].paintingType = PaintingType.OPENEYE;
+                paintings[2].SetTexture(openEye);
                 baronsSmallSolved = true;
+                CheckBaronSolved();
                 break;
             //Eye is half open, moon is out
             case 7:
             case 10:
             case 12:
-                paintings[0].paintingType = PaintingType.OTHER;
-                paintings[2].paintingType = PaintingType.EYE;
+                paintings[0].paintingType = PaintingType.MOONOWL;
+                paintings[0].SetTexture(moonOwl);
+                paintings[2].paintingType = PaintingType.HALFEYE;
+                paintings[2].SetTexture(halfEye);
                 baronsSmallSolved = false;
                 break;
             //Eye is fully open, moon is out
             case 8:
             case 9:
             case 11:
-                paintings[0].paintingType = PaintingType.OTHER;
-                paintings[2].paintingType = PaintingType.OTHER;
+                paintings[0].paintingType = PaintingType.MOONOWL;
+                paintings[0].SetTexture(moonOwl);
+                paintings[2].paintingType = PaintingType.OPENEYE;
+                paintings[2].SetTexture(openEye);
                 baronsSmallSolved = false;
                 break;
         }
@@ -102,15 +115,21 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public void CheckMiddleArm(int middleArmPosition)
     {
         if (middleArmPosition == 7)
+        {
             baronsMiddleSolved = true;
+            CheckBaronSolved();
+        }
         else
             baronsMiddleSolved = false;
-    }   
+    }
 
     public void CheckLongArm(int longArmPosition)
     {
         if (longArmPosition == 11)
+        {
             baronsLongSolved = true;
+            CheckBaronSolved();
+        }
         else
             baronsLongSolved = false;
     }
@@ -120,6 +139,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         {
             //Set texture for cat.
             paintings[1].paintingType = PaintingType.CAT;
+            paintings[1].SetTexture(cat);
         }
     }
     protected override void Controls()

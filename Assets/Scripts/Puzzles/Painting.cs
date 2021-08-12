@@ -5,10 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public enum PaintingType
 {
-    EYE,
+    HALFEYE,
     SUNOWL,
     CAT,
-    OTHER
+    OPENEYE,
+    MOONOWL,
+    EMPTY
 }
 
 public enum RotationHeading
@@ -24,7 +26,6 @@ public class Painting : MonoBehaviour
     public PaintingType paintingType;
     public RotationHeading initialRotation;
     public RotationHeading currentRotation;
-    public Texture alternateTexture;
     private Texture currentTexture;
 
     private void Start()
@@ -48,7 +49,7 @@ public class Painting : MonoBehaviour
         }
     }
 
-    private Texture GetTexture()
+    public Texture GetTexture()
     {
         return currentTexture;
     }

@@ -53,11 +53,20 @@ MonoBehaviour:
   secondSelection: {fileID: 0}
   swapTime: 1
   solveSequence: 000000000100000002000000
-  solveRotation: 010000000300000002000000
+  solveRotation: 030000000200000002000000
   paintings:
   - {fileID: 240453042905784776}
   - {fileID: 240453042331273811}
   - {fileID: 240453043196423837}
+  baronsSmallSolved: 0
+  baronsMiddleSolved: 0
+  baronsLongSolved: 0
+  sunOwl: {fileID: 2800000, guid: ac2cfcdd6e9e00d4085c8cc998687157, type: 3}
+  moonOwl: {fileID: 2800000, guid: 559e06dd073277e4ab3dc1669dc5c89c, type: 3}
+  empty: {fileID: 2800000, guid: f6dbdb4c9e336384e93ea078f25f9060, type: 3}
+  cat: {fileID: 2800000, guid: a05a443f98fddd348bbb3e88d0a89006, type: 3}
+  halfEye: {fileID: 2800000, guid: 4b7deef452793024a8959be3e64a976e, type: 3}
+  openEye: {fileID: 2800000, guid: 712724e3b343ca348b86e33fadd8b2d9, type: 3}
 --- !u!1 &240453042331273832
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +129,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50ba7a839435ad040bfcd299ab2b3cb7, type: 2}
+  - {fileID: 2100000, guid: 005763781d3be6440ab5d0452217e797, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintingType: 2
+  paintingType: 5
   initialRotation: 0
   currentRotation: 0
 --- !u!1 &240453042905784773
@@ -232,7 +241,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97bcca414dbef46439e992588bc85f46, type: 2}
+  - {fileID: 2100000, guid: a567ce9ea461b3149a9f4261787cc03e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -280,8 +289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintingType: 1
-  initialRotation: 1
-  currentRotation: 1
+  initialRotation: 3
+  currentRotation: 3
 --- !u!1 &240453043196423834
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +353,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9de61a7d0f459543ae88d17871c3c1d, type: 2}
+  - {fileID: 2100000, guid: 3dac3451e02498c44be2954598aeb0e4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -391,6 +400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintingType: 0
-  initialRotation: 0
-  currentRotation: 0
+  paintingType: 3
+  initialRotation: 2
+  currentRotation: 2
