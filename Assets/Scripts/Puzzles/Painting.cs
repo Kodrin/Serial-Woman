@@ -5,12 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public enum PaintingType
 {
-    HALFEYE,
-    SUNOWL,
-    CAT,
-    OPENEYE,
-    MOONOWL,
-    EMPTY
+    DEMON,
+    HORSE,
+    SLEEP,
+    LADY,
+    DOG
 }
 
 public enum RotationHeading
@@ -27,9 +26,13 @@ public class Painting : MonoBehaviour
     public RotationHeading initialRotation;
     public RotationHeading currentRotation;
     private Texture currentTexture;
+    public bool isInteractable = true;
 
     private void Start()
     {
+        if ((paintingType == PaintingType.LADY) || (paintingType == PaintingType.DOG))
+            isInteractable = false; 
+
         currentRotation = initialRotation;
         currentTexture = gameObject.GetComponent<Renderer>().material.mainTexture;
 

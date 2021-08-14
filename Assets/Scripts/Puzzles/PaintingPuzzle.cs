@@ -26,7 +26,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public bool baronsMiddleSolved = false;
     public bool baronsLongSolved = false;
 
-    public Texture sunOwl, moonOwl, empty, cat, halfEye, openEye;
+    //public Texture sunOwl, moonOwl, empty, cat, halfEye, openEye;
+    public Texture ladyDog;
 
     // Update is called once per frame
     protected override void Update()
@@ -59,7 +60,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
 
     public void CheckSmallArm(int smallArmPosition)
     {
-        switch(smallArmPosition)
+        /*switch(smallArmPosition)
         {
             //Eye is half open, sun is out
             case 1:
@@ -109,7 +110,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 paintings[2].SetTexture(openEye);
                 baronsSmallSolved = false;
                 break;
-        }
+        }*/
     }
 
     public void CheckMiddleArm(int middleArmPosition)
@@ -138,8 +139,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         if (baronsSmallSolved && baronsMiddleSolved && baronsLongSolved)
         {
             //Set texture for cat.
-            paintings[1].paintingType = PaintingType.CAT;
-            paintings[1].SetTexture(cat);
+            paintings[1].paintingType = PaintingType.DOG;
+            paintings[1].SetTexture(ladyDog);
         }
     }
     protected override void Controls()
@@ -184,6 +185,10 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             //if it has a component painting, return 
             if (hitObj.TryGetComponent(out Painting component))
             {
+                //if the painting is not of the interactable kind (not part of the puzzle) then the click should not count as a selection
+                if (component.isInteractable == false)
+                    return null; 
+
                 Debug.Log(component.paintingType);
                 return component;
             }

@@ -31,6 +31,7 @@ Transform:
   - {fileID: 240453043196423838}
   - {fileID: 240453042331273836}
   - {fileID: 240453042905784777}
+  - {fileID: 1228374227561381448}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52,21 +53,17 @@ MonoBehaviour:
   firstSelection: {fileID: 0}
   secondSelection: {fileID: 0}
   swapTime: 1
-  solveSequence: 000000000100000002000000
-  solveRotation: 030000000200000002000000
+  solveSequence: 00000000010000000200000004000000
+  solveRotation: 03000000020000000200000000000000
   paintings:
+  - {fileID: 240453043196423837}
+  - {fileID: 1872159874072541514}
   - {fileID: 240453042905784776}
   - {fileID: 240453042331273811}
-  - {fileID: 240453043196423837}
   baronsSmallSolved: 0
   baronsMiddleSolved: 0
   baronsLongSolved: 0
-  sunOwl: {fileID: 2800000, guid: ac2cfcdd6e9e00d4085c8cc998687157, type: 3}
-  moonOwl: {fileID: 2800000, guid: 559e06dd073277e4ab3dc1669dc5c89c, type: 3}
-  empty: {fileID: 2800000, guid: f6dbdb4c9e336384e93ea078f25f9060, type: 3}
-  cat: {fileID: 2800000, guid: a05a443f98fddd348bbb3e88d0a89006, type: 3}
-  halfEye: {fileID: 2800000, guid: 4b7deef452793024a8959be3e64a976e, type: 3}
-  openEye: {fileID: 2800000, guid: 712724e3b343ca348b86e33fadd8b2d9, type: 3}
+  ladyDog: {fileID: 2800000, guid: 4ed0cc5382aa0054680c047a1baf6e8c, type: 3}
 --- !u!1 &240453042331273832
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,7 +78,7 @@ GameObject:
   - component: {fileID: 240453042331273839}
   - component: {fileID: 240453042331273811}
   m_Layer: 0
-  m_Name: Cat_Painting
+  m_Name: Lady_Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,13 +91,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240453042331273832}
-  m_LocalRotation: {x: 0, y: 0, z: 0.03489949, w: 0.99939084}
-  m_LocalPosition: {x: -2.4, y: 4.89, z: 0}
-  m_LocalScale: {x: 3.8, y: 5.8, z: 0.26172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.7, y: 2.45, z: 0}
+  m_LocalScale: {x: 10, y: 14, z: 0.26172}
   m_Children: []
   m_Father: {fileID: 240453041908595711}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &240453042331273837
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -176,9 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintingType: 5
+  paintingType: 3
   initialRotation: 0
   currentRotation: 0
+  isInteractable: 1
 --- !u!1 &240453042905784773
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +191,7 @@ GameObject:
   - component: {fileID: 240453042905784772}
   - component: {fileID: 240453042905784776}
   m_Layer: 0
-  m_Name: SunOwl_Painting
+  m_Name: Horse_Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,8 +205,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240453042905784773}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.55, y: 4.82, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0.09078388}
+  m_LocalPosition: {x: -2.19, y: 5.45, z: 0}
+  m_LocalScale: {x: 6, y: 6, z: 0.09078388}
   m_Children: []
   m_Father: {fileID: 240453041908595711}
   m_RootOrder: 2
@@ -241,7 +239,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bcf681979e23aca49a292af179af2e1f, type: 2}
+  - {fileID: 2100000, guid: 1e43734a0dd03124a9cd2cf34b978c90, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -291,6 +289,7 @@ MonoBehaviour:
   paintingType: 1
   initialRotation: 3
   currentRotation: 3
+  isInteractable: 1
 --- !u!1 &240453043196423834
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +304,7 @@ GameObject:
   - component: {fileID: 240453043196423833}
   - component: {fileID: 240453043196423837}
   m_Layer: 0
-  m_Name: Eye_Painting
+  m_Name: Sleep_Painting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,8 +318,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240453043196423834}
   m_LocalRotation: {x: -0, y: -0, z: -0.06669569, w: 0.9977734}
-  m_LocalPosition: {x: 0.77, y: -1.45, z: 0}
-  m_LocalScale: {x: 6, y: 5, z: 0.20435248}
+  m_LocalPosition: {x: 1.7, y: -2.46, z: 0}
+  m_LocalScale: {x: 9, y: 6, z: 0.20435248}
   m_Children: []
   m_Father: {fileID: 240453041908595711}
   m_RootOrder: 0
@@ -353,7 +352,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18a1a07d07492094d88fc63df278320c, type: 2}
+  - {fileID: 2100000, guid: e6ceebbbfe1ec3843a7d3f1059288dd8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -400,6 +399,120 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintingType: 3
+  paintingType: 2
   initialRotation: 2
   currentRotation: 2
+  isInteractable: 1
+--- !u!1 &5000588074713671000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1228374227561381448}
+  - component: {fileID: 7297257452582555432}
+  - component: {fileID: 7368716738904734315}
+  - component: {fileID: 8460864515050749688}
+  - component: {fileID: 1872159874072541514}
+  m_Layer: 0
+  m_Name: Demon_Painting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1228374227561381448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000588074713671000}
+  m_LocalRotation: {x: 0, y: 0, z: 0.026176924, w: 0.99965733}
+  m_LocalPosition: {x: 5.71, y: 5.63, z: 0}
+  m_LocalScale: {x: 5.5, y: 6, z: 0.20435248}
+  m_Children: []
+  m_Father: {fileID: 240453041908595711}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3}
+--- !u!33 &7297257452582555432
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000588074713671000}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7368716738904734315
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000588074713671000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: f93a10e9b26c7bf458d8438b59069ac8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8460864515050749688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000588074713671000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1872159874072541514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5000588074713671000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a72bd7203309b4c8d2219f2eeacc05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paintingType: 0
+  initialRotation: 2
+  currentRotation: 2
+  isInteractable: 1
