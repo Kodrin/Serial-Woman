@@ -26,7 +26,6 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public bool baronsMiddleSolved = false;
     public bool baronsLongSolved = false;
 
-    //public Texture sunOwl, moonOwl, empty, cat, halfEye, openEye;
     public Texture ladyDog;
 
     // Update is called once per frame
@@ -60,99 +59,139 @@ public class PaintingPuzzle : Puzzle, ISubscribe
 
     public void CheckSmallArm(int smallArmPosition)
     {
-        /*switch(smallArmPosition)
+        switch(smallArmPosition)
         {
-            //Eye is half open, sun is out
             case 1:
             case 4:
-                paintings[0].paintingType=PaintingType.SUNOWL;
-                paintings[0].SetTexture(sunOwl);
-                paintings[2].paintingType = PaintingType.HALFEYE;
-                paintings[2].SetTexture(halfEye);
+                RotateToHeading(paintings[0], RotationHeading.LEFT);
                 baronsSmallSolved = false;
                 break;
-            //Eye is fully open, sun is out
             case 2:
             case 5:
             case 6:
-                paintings[0].paintingType = PaintingType.SUNOWL;
-                paintings[0].SetTexture(sunOwl);
-                paintings[2].paintingType = PaintingType.OPENEYE;
-                paintings[2].SetTexture(openEye);
+                RotateToHeading(paintings[0], RotationHeading.DOWN);
                 baronsSmallSolved = false;
                 break;
-            //Eye is fully open, sun is out and Three Barons small arm is True
             case 3:
-                paintings[0].paintingType = PaintingType.SUNOWL;
-                paintings[0].SetTexture(sunOwl);
-                paintings[2].paintingType = PaintingType.OPENEYE;
-                paintings[2].SetTexture(openEye);
+                RotateToHeading(paintings[0], RotationHeading.RIGHT);
                 baronsSmallSolved = true;
                 CheckBaronSolved();
                 break;
-            //Eye is half open, moon is out
             case 7:
             case 10:
             case 12:
-                paintings[0].paintingType = PaintingType.MOONOWL;
-                paintings[0].SetTexture(moonOwl);
-                paintings[2].paintingType = PaintingType.HALFEYE;
-                paintings[2].SetTexture(halfEye);
+                RotateToHeading(paintings[0], RotationHeading.UP);
                 baronsSmallSolved = false;
                 break;
-            //Eye is fully open, moon is out
             case 8:
             case 9:
             case 11:
-                paintings[0].paintingType = PaintingType.MOONOWL;
-                paintings[0].SetTexture(moonOwl);
-                paintings[2].paintingType = PaintingType.OPENEYE;
-                paintings[2].SetTexture(openEye);
+                RotateToHeading(paintings[0], RotationHeading.UP);
                 baronsSmallSolved = false;
                 break;
-        }*/
+        }
     }
 
     public void CheckMiddleArm(int middleArmPosition)
     {
-        if (middleArmPosition == 7)
+        switch (middleArmPosition)
         {
-            baronsMiddleSolved = true;
-            CheckBaronSolved();
+            case 2:
+            case 6:
+                RotateToHeading(paintings[1], RotationHeading.UP);
+                baronsMiddleSolved = false;
+                break;
+            case 1:
+            case 4:
+                RotateToHeading(paintings[1], RotationHeading.LEFT);
+                baronsMiddleSolved = false;
+                break;
+            case 3:
+            case 5:
+                RotateToHeading(paintings[1], RotationHeading.RIGHT);
+                baronsMiddleSolved = false;
+                break;
+            case 8:
+            case 11:
+            case 12:
+                RotateToHeading(paintings[1], RotationHeading.DOWN);
+                baronsMiddleSolved = false;
+                break;
+            case 7:
+                RotateToHeading(paintings[1], RotationHeading.UP);
+                baronsMiddleSolved = true;
+                CheckBaronSolved();
+                break;
+            case 9:
+            case 10:
+                RotateToHeading(paintings[1], RotationHeading.RIGHT);
+                baronsMiddleSolved = false;
+                break;
         }
-        else
-            baronsMiddleSolved = false;
     }
 
     public void CheckLongArm(int longArmPosition)
     {
-        if (longArmPosition == 11)
+        switch (longArmPosition)
         {
-            baronsLongSolved = true;
-            CheckBaronSolved();
+            case 1:
+            case 3:
+                RotateToHeading(paintings[2], RotationHeading.DOWN);
+                baronsLongSolved = false;
+                break;
+            case 5:
+            case 7:
+                RotateToHeading(paintings[2], RotationHeading.RIGHT);
+                baronsLongSolved = false;
+                break;
+            case 2:
+            case 4:
+                RotateToHeading(paintings[2], RotationHeading.DOWN);
+                baronsLongSolved = false;
+                break;
+            case 6:
+            case 10:
+                RotateToHeading(paintings[2], RotationHeading.UP);
+                baronsLongSolved = false;
+                break;
+            case 11:
+                RotateToHeading(paintings[2], RotationHeading.LEFT);
+                baronsLongSolved = true;
+                CheckBaronSolved();
+                break;
+            case 8:
+            case 9:
+            case 12:
+                RotateToHeading(paintings[2], RotationHeading.UP);
+                baronsLongSolved = false;
+                break;
         }
-        else
-            baronsLongSolved = false;
     }
+
     private void CheckBaronSolved()
     {
         if (baronsSmallSolved && baronsMiddleSolved && baronsLongSolved)
         {
             //Set texture for cat.
-            paintings[1].paintingType = PaintingType.DOG;
-            paintings[1].SetTexture(ladyDog);
+            paintings[3].paintingType = PaintingType.DOG;
+            paintings[3].SetTexture(ladyDog);
         }
     }
     protected override void Controls()
     {
         Painting selection = GetPaintingWithMouse();
 
-        //if its not null and thereis no first selection
+        //if its not null and there is no first selection
         if (selection && firstSelection == null)
         {
             firstSelection = selection; //make current selection equal to first selection
         }
-        else if(selection && firstSelection && secondSelection == null)
+
+        //DEPRECATED ROTATE LOGIC
+        //else if (selection && firstSelection && secondSelection == null)
+
+        //make sure that the second selection is not the same as the first
+        else if((selection && firstSelection && secondSelection == null) && (selection != firstSelection))
         {
             secondSelection = selection;
         }
@@ -160,6 +199,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         //if both selections are full, swap them 
         if (firstSelection && secondSelection)
         {
+            //DEPRECATED ROTATE LOGIC
+            /*
             if (firstSelection == secondSelection)
             {
                 Rotate();
@@ -167,7 +208,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             else
             {
                 Swap();
-            }
+            }*/
+            Swap();
         }
 
     }
@@ -198,10 +240,11 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         return null;
     }
 
+    /* DEPRECATED ROTATE LOGIC
     protected void Rotate()
     {
         Debug.Log("Rotate");
-        StartCoroutine(WaitForRotate(firstSelection));
+        StartCoroutine(WaitForRotate(firstSelection,90));
         ChangeHeading(firstSelection);
 
         //transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
@@ -210,6 +253,59 @@ public class PaintingPuzzle : Puzzle, ISubscribe
 
         //and check the solve condition
         CheckSolveCondition();
+    }*/
+
+    protected void RotateToHeading(Painting p, RotationHeading desiredhHeading)
+    {
+        if(p.currentRotation != desiredhHeading)
+        {
+            if(p.currentRotation == RotationHeading.UP)
+            {
+                if (desiredhHeading == RotationHeading.RIGHT)
+                    StartCoroutine(WaitForRotate(p, 90));
+
+                else if (desiredhHeading == RotationHeading.DOWN)
+                    StartCoroutine(WaitForRotate(p, 180));
+
+                else if (desiredhHeading == RotationHeading.LEFT)
+                    StartCoroutine(WaitForRotate(p, 270));
+            }
+            else if (p.currentRotation == RotationHeading.RIGHT)
+            {
+                if (desiredhHeading == RotationHeading.DOWN)
+                    StartCoroutine(WaitForRotate(p, 90));
+
+                else if (desiredhHeading == RotationHeading.LEFT)
+                    StartCoroutine(WaitForRotate(p, 180));
+
+                else if (desiredhHeading == RotationHeading.UP)
+                    StartCoroutine(WaitForRotate(p, 270));
+            }
+            else if (p.currentRotation == RotationHeading.DOWN) 
+            {
+                if (desiredhHeading == RotationHeading.LEFT)
+                    StartCoroutine(WaitForRotate(p, 90));
+
+                else if (desiredhHeading == RotationHeading.UP)
+                    StartCoroutine(WaitForRotate(p, 180));
+
+                else if (desiredhHeading == RotationHeading.RIGHT)
+                    StartCoroutine(WaitForRotate(p, 270));
+            }
+            else if (p.currentRotation == RotationHeading.LEFT)
+            {
+                if (desiredhHeading == RotationHeading.UP)
+                    StartCoroutine(WaitForRotate(p, 90));
+
+                else if (desiredhHeading == RotationHeading.RIGHT)
+                    StartCoroutine(WaitForRotate(p, 180));
+
+                else if (desiredhHeading == RotationHeading.DOWN)
+                    StartCoroutine(WaitForRotate(p, 270));
+            }
+
+            p.currentRotation = desiredhHeading;
+        }
     }
     protected void Swap()
     {
@@ -288,13 +384,13 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         yield return null;
     }
 
-    protected IEnumerator WaitForRotate(Painting paintingObj)
+    protected IEnumerator WaitForRotate(Painting paintingObj, int angle)
     {
         canInteract = false; //make sure there is no interaction whilte the painting rotates
 
         Quaternion targetRotation = paintingObj.transform.rotation;
-        Vector3 targetEuler = new Vector3(paintingObj.transform.eulerAngles.x, paintingObj.transform.eulerAngles.y, paintingObj.transform.eulerAngles.z + 90);
-        targetRotation *= Quaternion.AngleAxis(90, Vector3.forward);
+        Vector3 targetEuler = new Vector3(paintingObj.transform.eulerAngles.x, paintingObj.transform.eulerAngles.y, paintingObj.transform.eulerAngles.z + angle);
+        targetRotation *= Quaternion.AngleAxis(angle, Vector3.forward);
         float elapsedTime = 0;
         while (elapsedTime < swapTime)
         {
