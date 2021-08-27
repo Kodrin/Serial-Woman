@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class WallText : MonoBehaviour, ISubscribe
 {
-    [SerializeField] protected int[] triggerTimes;
+    [SerializeField] protected List<Material> textMaterials;
     protected MeshRenderer meshRend;
 
     protected void Awake()
@@ -16,7 +16,7 @@ public class WallText : MonoBehaviour, ISubscribe
 
     protected void Start()
     {
-        meshRend.enabled = false;  //disbale text on start
+        meshRend.enabled = false;  //disable text on start
     }
 
     protected void OnEnable()
@@ -32,26 +32,50 @@ public class WallText : MonoBehaviour, ISubscribe
     public void Subscribe()
     {
         EventHandler.OnSmallArmMove += CheckTime;
+        EventHandler.OnLampPowerToggle += LampToggle;
     }
 
     public void Unsubscribe()
     {
         EventHandler.OnSmallArmMove -= CheckTime;
+        EventHandler.OnLampPowerToggle -= LampToggle;
     }
 
+    public void LampToggle()
+    {
+        meshRend.enabled = !meshRend.enabled;
+    }
 
     public void CheckTime(int armPosition)
     {
-        for (int i = 0; i < triggerTimes.Length; i++)
+        switch(armPosition)
         {
-            if (triggerTimes[i] == armPosition)
-            {
-                meshRend.enabled = true;
-                return;
-            }
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+                meshRend.material = textMaterials[0];
+                break;
+            case 7:
+                meshRend.material = textMaterials[1];
+                break;
+            case 8:
+                meshRend.material = textMaterials[2];
+                break;
+            case 9:
+                meshRend.material = textMaterials[3];
+                break;
+            case 10:
+                meshRend.material = textMaterials[4];
+                break;
+            case 11:
+                meshRend.material = textMaterials[5];
+                break;
+            case 12:
+                meshRend.material = textMaterials[6];
+                break;
         }
-        
-        //if its not matching then disble the component
-        meshRend.enabled = false;
     }
 }

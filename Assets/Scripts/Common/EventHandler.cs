@@ -52,9 +52,13 @@ public static class EventHandler
     public static void PublishOnTextControllerMsg(string message) { if (OnTextControllerMsg != null) { OnTextControllerMsg(message); } }
     
     //LAMP
-    public delegate void LampSwitchEvent();
+    public delegate void LampSwitchEvent(string color);
     public static event LampSwitchEvent OnLampConfigSwitch;
-    public static void PublishOnLampConfigSwitch() { if (OnLampConfigSwitch != null) { OnLampConfigSwitch(); } }
+    public static void PublishOnLampConfigSwitch(string color) { if (OnLampConfigSwitch != null) { OnLampConfigSwitch(color); } }
+
+    public delegate void LampPowerEvent();
+    public static event LampPowerEvent OnLampPowerToggle;
+    public static void PublishOnLampPowerToggle() { if (OnLampPowerToggle != null) { OnLampPowerToggle(); } }
 
     
 }

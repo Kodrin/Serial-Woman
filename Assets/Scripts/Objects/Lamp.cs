@@ -35,6 +35,8 @@ public class Lamp : MonoBehaviour, ISubscribe
     public void ToggleLight()
     {
         lightComponent.enabled = !lightComponent.enabled;
+        EventHandler.PublishOnLampPowerToggle();
+
     }
 
     protected void OnEnable()
@@ -77,28 +79,28 @@ public class Lamp : MonoBehaviour, ISubscribe
     public void NormalConfiguration()
     {
         lightComponent.color = normalColor;
-        EventHandler.PublishOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch("yellow");
 
     }
 
     public void RedConfiguration()
     {
         lightComponent.color = redColor;
-        EventHandler.PublishOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch("red");
 
     }
 
     public void GreenConfiguration()
     {
         lightComponent.color = greenColor;
-        EventHandler.PublishOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch("green");
 
     }
 
     public void BlueConfiguration()
     {
         lightComponent.color = blueColor;
-        EventHandler.PublishOnLampConfigSwitch();
+        EventHandler.PublishOnLampConfigSwitch("blue");
 
     }
 
