@@ -20,20 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/WallText_Materials/Materials/sheishungry2.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/WallText_Materials/Materials/sheishungry2.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/PaintingPuzzle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzles/PaintingPuzzle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Painting_Association.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Painting_Association.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Painting_Prototyping.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Painting_Prototyping.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Radio_Association.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Radio_Association.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PaintingLady.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PaintingLady.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +124,7 @@
       <workItem from="1628035568090" duration="15294000" />
       <workItem from="1628698116145" duration="2171000" />
       <workItem from="1632880448043" duration="1046000" />
+      <workItem from="1635900962777" duration="1218000" />
     </task>
     <servers />
   </component>

@@ -92,6 +92,9 @@
         },
         {
             "m_Id": "fb02700f3b6743bdadb0796e3f8c567a"
+        },
+        {
+            "m_Id": "5638e4868abb446bbcfb440f4d99a817"
         }
     ],
     "m_GroupDatas": [],
@@ -137,6 +140,20 @@
                     "m_Id": "4d34fc57970c48dd841761c2a2a0c1b5"
                 },
                 "m_SlotId": 1428035791
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "5638e4868abb446bbcfb440f4d99a817"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b7a3f885168a47ddaa36a859c73825d7"
+                },
+                "m_SlotId": 3
             }
         },
         {
@@ -374,6 +391,19 @@
             "m_Id": "e9813fe95d77464fad30f5a23ff40204"
         }
     ]
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SamplerStateMaterialSlot",
+    "m_ObjectId": "0a0b13b51af74d9e8e2e48752b5f54ac",
+    "m_Id": 0,
+    "m_DisplayName": "Out",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_BareResource": false
 }
 
 {
@@ -947,6 +977,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.SamplerStateNode",
+    "m_ObjectId": "5638e4868abb446bbcfb440f4d99a817",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Sampler State",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -2272.0,
+            "y": 352.9999694824219,
+            "width": 145.0,
+            "height": 140.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "0a0b13b51af74d9e8e2e48752b5f54ac"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_filter": 1,
+    "m_wrap": 0
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
     "m_ObjectId": "5ac6e1b66dce468aaedc9746ce8fab4f",
     "m_Group": {
@@ -957,9 +1021,9 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -2261.0,
-            "y": 383.99993896484377,
-            "width": 161.0,
+            "x": -2287.0,
+            "y": 312.0,
+            "width": 138.00001525878907,
             "height": 34.0
         }
     },
