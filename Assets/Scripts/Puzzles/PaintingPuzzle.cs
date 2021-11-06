@@ -26,7 +26,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public bool baronsMiddleSolved = false;
     public bool baronsLongSolved = false;
 
-    public Texture ladyDog;
+    //public Texture ladyDog;
+    public Material ladyDog; 
 
     // Update is called once per frame
     protected override void Update()
@@ -174,7 +175,10 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         {
             //Set texture for cat.
             paintings[3].paintingType = PaintingType.DOG;
-            paintings[3].SetTexture(ladyDog);
+            //paintings[3].SetTexture(ladyDog);
+            Material[] allMaterials = paintings[3].GetComponent<Renderer>().materials;
+            allMaterials[1] = ladyDog;
+            paintings[3].GetComponent<Renderer>().materials = allMaterials;
         }
     }
     protected override void Controls()
