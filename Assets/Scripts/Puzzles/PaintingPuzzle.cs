@@ -173,12 +173,12 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     {
         if (baronsSmallSolved && baronsMiddleSolved && baronsLongSolved)
         {
-            //Set texture for cat.
             paintings[3].paintingType = PaintingType.DOG;
             //paintings[3].SetTexture(ladyDog);
             Material[] allMaterials = paintings[3].GetComponent<Renderer>().materials;
             allMaterials[1] = ladyDog;
             paintings[3].GetComponent<Renderer>().materials = allMaterials;
+            EventHandler.PublishOnBaronSolve();
         }
     }
     protected override void Controls()
@@ -366,6 +366,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     protected override void ResolveState()
     {
         Debug.Log("Painting is Solved!");
+        EventHandler.PublishOnPaintingSolve();
     }
 
     protected IEnumerator WaitForSwap(Painting paintingObj, Vector3 originalPos, Vector3 targetPos)

@@ -5,12 +5,16 @@ using UnityEngine;
 
 public static class EventHandler 
 {
-    //events
+    //MAIN EVENTS
     
     public delegate void CameraSwitchEvent();
     public static event CameraSwitchEvent OnCameraSwitch;
     
     public static void PublishOnCameraSwitch() { if (OnCameraSwitch != null) { OnCameraSwitch(); } }
+
+    public delegate void BaronSolveEvent();
+    public static event BaronSolveEvent OnBaronSolve;
+    public static void PublishOnBaronSolve() { if (OnBaronSolve != null) { OnBaronSolve(); } }
 
     public delegate void PaintingSolveEvent();
     public static event PaintingSolveEvent OnPaintingSolve;
@@ -24,10 +28,6 @@ public static class EventHandler
     
     #region Clock Events
     //CLOCK
-    public delegate void ClockSolveEvent();
-    public static event ClockSolveEvent OnClockSolve;
-    public static void PublishOnClockSolve() { if (OnClockSolve != null) { OnClockSolve(); } }
-    
     public delegate void AnyArmMoveEvent();
     public static event AnyArmMoveEvent OnAnyArmMove;
     public static void PublishOnAnyArmMove() { if (OnAnyArmMove != null) { OnAnyArmMove(); } }
@@ -59,6 +59,11 @@ public static class EventHandler
     public delegate void LampPowerEvent();
     public static event LampPowerEvent OnLampPowerToggle;
     public static void PublishOnLampPowerToggle() { if (OnLampPowerToggle != null) { OnLampPowerToggle(); } }
+
+    //RADIO
+    public delegate void IntroCompleteEvent();
+    public static event IntroCompleteEvent OnIntroComplete;
+    public static void PublishOnIntroComplete() { if (OnIntroComplete != null) { OnIntroComplete(); } }
 
     
 }

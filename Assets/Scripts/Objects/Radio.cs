@@ -7,9 +7,11 @@ public class Radio : MonoBehaviour, ISubscribe
     public List<AudioClip> tracks = new List<AudioClip>();
     private AudioSource bgm;
     public bool useCoroutineMethod = true;
+    public bool firstPass = true;
     private int currentTrackNumber = 1;
+    private int previousSmallArmPosition = 1;
     // Start is called before the first frame update
-    void Start()
+    public void StartRadio()
     {
         bgm = GetComponent<AudioSource>();
         bgm.loop = true;
@@ -18,7 +20,7 @@ public class Radio : MonoBehaviour, ISubscribe
     }
 
     // Update is called once per frame
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         if (currentTrackNumber == 1)
         {
@@ -44,7 +46,7 @@ public class Radio : MonoBehaviour, ISubscribe
             }
             currentTrackNumber = 1;
         }
-    }
+    }*/
 
     void Switch(AudioClip track)
     {
@@ -62,19 +64,79 @@ public class Radio : MonoBehaviour, ISubscribe
         bgm.Play();
         bgm.loop = true;
     }
+    protected void OnEnable()
+    {
+        Subscribe();
+    }
 
+    protected void OnDisable()
+    {
+        Unsubscribe();
+    }
     public void Subscribe()
     {
-        EventHandler.OnAnyArmMove += StartStatic;
+        EventHandler.OnIntroComplete += StartRadio;
+        EventHandler.OnAnyArmMove += PlayGeneral;
+        EventHandler.OnSmallArmMove += PlayBlueMoon;
+        EventHandler.OnBaronSolve += PlayBaron;
+        EventHandler.OnPaintingSolve += PlayPainting ;
+        EventHandler.OnCerealSolve += PlayCereal;
+
     }
 
     public void Unsubscribe()
     {
-        EventHandler.OnAnyArmMove -= StartStatic;
+        EventHandler.OnIntroComplete -= StartRadio;
+        EventHandler.OnAnyArmMove -= PlayGeneral;
+        EventHandler.OnSmallArmMove -= PlayBlueMoon;
+        EventHandler.OnBaronSolve -= PlayBaron;
+        EventHandler.OnPaintingSolve -= PlayPainting;
+        EventHandler.OnCerealSolve -= PlayCereal;
     }
 
-    public void StartStatic()
+    public void PlayGeneral()
     {
-        StartCoroutine(SwitchTrack(tracks[3]));
+        if (firstPass)
+        {
+            Switch(tracks[7]);
+            StartCoroutine(SwitchTrack(tracks[1]));
+            firstPass = false;
+        }
+    }
+
+    public void PlayBlueMoon(int smallArmPosition)
+    {
+        if (smallArmPosition == 11) 
+        {
+            Switch(tracks[7]);
+            StartCoroutine(SwitchTrack(tracks[3]));
+            StartCoroutine(SwitchTrack(tracks[4]));
+        }
+        else if (previousSmallArmPosition == 11)
+        {
+            Switch(tracks[7]);
+            StartCoroutine(SwitchTrack(tracks[3]));
+        }
+        previousSmallArmPosition = smallArmPosition;
+    }
+
+    public void PlayBaron()
+    {
+        Switch(tracks[5]);
+        StartCoroutine(SwitchTrack(tracks[6]));
+        StartCoroutine(SwitchTrack(tracks[8]));
+    }
+
+    public void PlayPainting()
+    {
+        Switch(tracks[5]);
+        StartCoroutine(SwitchTrack(tracks[7]));
+    }
+
+    public void PlayCereal()
+    {
+        Switch(tracks[5]);
+        StartCoroutine(SwitchTrack(tracks[7]));
+        StartCoroutine(SwitchTrack(tracks[0]));
     }
 }

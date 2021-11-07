@@ -176,6 +176,8 @@ public class ClockPuzzle : Puzzle
         }
     }
 
+    //Clock Puzzle (Baron Puzzle) logic is in PaintingPuzzle.cs
+    /*
     protected override void ResolveState()
     {
         Debug.Log("CLOCK PUZZLE IS SOLVED!!");
@@ -190,7 +192,8 @@ public class ClockPuzzle : Puzzle
             ResolveState();
         }
     }
-    
+    */
+
     //event handling
     protected void PublishArmEvents()
     {

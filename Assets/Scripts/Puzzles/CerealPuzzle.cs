@@ -18,13 +18,13 @@ public class CerealPuzzle : Puzzle
         if (temp == true)
         {
             solved = temp;
-            Debug.Log("YOU WIN!");
+            ResolveState();
         }
     }
 
     protected override void ResolveState()
     {
-        //PLAY CUTSCENE
+        EventHandler.PublishOnCerealSolve();
     }
 
     public void CheckWin()
