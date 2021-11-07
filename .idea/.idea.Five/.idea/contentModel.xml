@@ -43,6 +43,9 @@
           <e p="Interfaces" t="Include">
             <e p="EventHandling.cs" t="Include" />
           </e>
+          <e p="Lights" t="Include">
+            <e p="LightsController.cs" t="Include" />
+          </e>
           <e p="Note.cs" t="Include" />
           <e p="Objects" t="Include">
             <e p="Lamp.cs" t="Include" />

@@ -14,6 +14,8 @@ public class Lamp : MonoBehaviour, ISubscribe
         BLUE
     }
 
+
+    [SerializeField] protected bool lightOn = true;
     [SerializeField] protected LampConfiguration lampConfiguration;
     [SerializeField] protected Color normalColor;
     [SerializeField] protected Color redColor;
@@ -21,12 +23,21 @@ public class Lamp : MonoBehaviour, ISubscribe
     [SerializeField] protected Color blueColor;
     protected Light lightComponent;
 
+    public bool LightOn => lightOn;
+    
     protected void Awake()
     {
         lightComponent = this.GetComponentInChildren<Light>();
     }
 
-    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            ToggleLight();
+        }
+    }
+
     protected void OnMouseDown()
     {
         ToggleLight();
@@ -35,6 +46,7 @@ public class Lamp : MonoBehaviour, ISubscribe
     public void ToggleLight()
     {
         lightComponent.enabled = !lightComponent.enabled;
+        lightOn = lightComponent.enabled;
         EventHandler.PublishOnLampPowerToggle();
 
     }
