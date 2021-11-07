@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Cereal_Woman/Cereal_01.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Timelines/TitleCard_Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/TitleCard_Timeline.playable" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +47,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/ClockPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Puzzles/Puzzle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/StaticTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -77,6 +77,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Text/TextController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Text/TextInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/VHSEffect.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" />
       </list>
     </option>
   </component>
@@ -125,6 +127,8 @@
       <workItem from="1628698116145" duration="2171000" />
       <workItem from="1632880448043" duration="1046000" />
       <workItem from="1635900962777" duration="1218000" />
+      <workItem from="1636246413099" duration="157000" />
+      <workItem from="1636246612309" duration="2115000" />
     </task>
     <servers />
   </component>
@@ -150,9 +154,9 @@
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="157" y="358" width="3108" height="1477" key="VCS.FileHistoryDialog/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1628699016593" />
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1628699964918">
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1636246533429">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1628699964918" />
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1636246533429" />
   </component>
 </project>
