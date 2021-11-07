@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Radio : MonoBehaviour
+public class Radio : MonoBehaviour, ISubscribe
 {
     public List<AudioClip> tracks = new List<AudioClip>();
     private AudioSource bgm;
@@ -61,5 +61,20 @@ public class Radio : MonoBehaviour
         bgm.clip = track;
         bgm.Play();
         bgm.loop = true;
+    }
+
+    public void Subscribe()
+    {
+        EventHandler.OnAnyArmMove += StartStatic;
+    }
+
+    public void Unsubscribe()
+    {
+        EventHandler.OnAnyArmMove -= StartStatic;
+    }
+
+    public void StartStatic()
+    {
+        StartCoroutine(SwitchTrack(tracks[3]));
     }
 }
