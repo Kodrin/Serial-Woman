@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/TitleCard_Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/TitleCard_Timeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Cereal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventHandler.cs" />
@@ -79,6 +75,8 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/VHSEffect.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Mannequin.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       </list>
     </option>
   </component>
@@ -128,7 +126,8 @@
       <workItem from="1632880448043" duration="1046000" />
       <workItem from="1635900962777" duration="1218000" />
       <workItem from="1636246413099" duration="157000" />
-      <workItem from="1636246612309" duration="2115000" />
+      <workItem from="1636246612309" duration="3134000" />
+      <workItem from="1636514724724" duration="3125000" />
     </task>
     <servers />
   </component>
