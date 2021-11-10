@@ -1,32 +1,70 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class LightsController : Singleton<LightsController>
+public class LightsController : Singleton<LightsController>, ISubscribe
 {
-    
-    [SerializeField] protected List<Light> lights = new List<Light>();
 
-    public List<Light> Lights
+    [SerializeField] protected Light[] lights;
+
+    public Light[] Lights
     {
         get { return lights;}
         set { lights = value; }
     }
 
 
-    public void TurnOnAllLights()
+    private void Awake()
+    {
+        lights = this.GetComponentsInChildren<Light>();
+    }
+
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Alpha9))
+    //     {
+    //         ToggleAllLights(false);
+    //     }
+    // }
+
+    public void ToggleAllLights(bool isOn)
     {
         foreach (var l in lights)
         {
-            l.enabled = true;
+            l.enabled = isOn;
         }
     }
 
-    public void TurnOffAllLights()
+    public void SwitchLightColor(string colorName, Color color)
     {
         foreach (var l in lights)
         {
-            l.enabled = false;
+            l.color = color;
         }
+    }
+
+    private void OnEnable()
+    {
+        Subscribe();
+    }
+
+    private void OnDisable()
+    {
+        Unsubscribe();
+    }
+
+    public void Subscribe()
+    {
+        EventHandler.OnLampConfigSwitch += SwitchLightColor;
+        EventHandler.OnLampPowerToggle += ToggleAllLights;
+    }
+
+    public void Unsubscribe()
+    {
+        EventHandler.OnLampConfigSwitch -= SwitchLightColor;
+        EventHandler.OnLampPowerToggle -= ToggleAllLights;
+        
     }
 }

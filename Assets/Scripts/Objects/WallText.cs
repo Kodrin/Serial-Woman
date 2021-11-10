@@ -41,9 +41,9 @@ public class WallText : MonoBehaviour, ISubscribe
         EventHandler.OnLampPowerToggle -= LampToggle;
     }
 
-    public void LampToggle()
+    public void LampToggle(bool isOn)
     {
-        meshRend.enabled = !meshRend.enabled;
+        meshRend.enabled = isOn;
     }
 
     public void CheckTime(int armPosition)
