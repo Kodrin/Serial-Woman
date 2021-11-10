@@ -23,7 +23,6 @@ public class Radio : MonoBehaviour, ISubscribe
 
     void Switch(AudioClip track, bool loopIt, bool cut)
     {
-        print(loopIt);
         bgm.loop = loopIt;
         if (cut || !bgm.isPlaying)
         {

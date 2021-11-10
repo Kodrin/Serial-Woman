@@ -266,48 +266,47 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             if(p.currentRotation == RotationHeading.UP)
             {
                 if (desiredhHeading == RotationHeading.RIGHT)
-                    StartCoroutine(WaitForRotate(p, 90));
+                    QuickRotate(p, 90);
 
                 else if (desiredhHeading == RotationHeading.DOWN)
-                    StartCoroutine(WaitForRotate(p, 180));
+                    QuickRotate(p, 180);
 
                 else if (desiredhHeading == RotationHeading.LEFT)
-                    StartCoroutine(WaitForRotate(p, 270));
+                    QuickRotate(p, 270);
             }
             else if (p.currentRotation == RotationHeading.RIGHT)
             {
                 if (desiredhHeading == RotationHeading.DOWN)
-                    StartCoroutine(WaitForRotate(p, 90));
+                    QuickRotate(p, 90);
 
                 else if (desiredhHeading == RotationHeading.LEFT)
-                    StartCoroutine(WaitForRotate(p, 180));
+                    QuickRotate(p, 180);
 
                 else if (desiredhHeading == RotationHeading.UP)
-                    StartCoroutine(WaitForRotate(p, 270));
+                    QuickRotate(p, 270);
             }
             else if (p.currentRotation == RotationHeading.DOWN) 
             {
                 if (desiredhHeading == RotationHeading.LEFT)
-                    StartCoroutine(WaitForRotate(p, 90));
+                    QuickRotate(p, 90);
 
                 else if (desiredhHeading == RotationHeading.UP)
-                    StartCoroutine(WaitForRotate(p, 180));
+                    QuickRotate(p, 180);
 
                 else if (desiredhHeading == RotationHeading.RIGHT)
-                    StartCoroutine(WaitForRotate(p, 270));
+                    QuickRotate(p, 270);
             }
             else if (p.currentRotation == RotationHeading.LEFT)
             {
                 if (desiredhHeading == RotationHeading.UP)
-                    StartCoroutine(WaitForRotate(p, 90));
+                    QuickRotate(p, 90);
 
                 else if (desiredhHeading == RotationHeading.RIGHT)
-                    StartCoroutine(WaitForRotate(p, 180));
+                    QuickRotate(p, 180);
 
                 else if (desiredhHeading == RotationHeading.DOWN)
-                    StartCoroutine(WaitForRotate(p, 270));
+                    QuickRotate(p, 270);
             }
-
             p.currentRotation = desiredhHeading;
         }
     }
@@ -410,6 +409,12 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         paintingObj.transform.eulerAngles = targetEuler; //make sure it snaps to that rotation
         canInteract = true; //re-enable interaction
         yield return null;
+    }
+
+    protected void QuickRotate(Painting paintingObj, int angle)
+    {
+        Vector3 targetEuler = new Vector3(paintingObj.transform.eulerAngles.x, paintingObj.transform.eulerAngles.y, paintingObj.transform.eulerAngles.z + angle);
+        paintingObj.transform.eulerAngles = targetEuler; //snap to desired rotation
     }
 
     protected void ChangeHeading(Painting paintingObj)
