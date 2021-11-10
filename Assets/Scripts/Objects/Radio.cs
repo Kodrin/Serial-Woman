@@ -6,11 +6,9 @@ public class Radio : MonoBehaviour, ISubscribe
 {
     public List<AudioClip> tracks = new List<AudioClip>();
     private AudioSource bgm;
-    public bool useCoroutineMethod = true;
     public bool firstPass = true;
-    private int currentTrackNumber = 1;
-    private int previousSmallArmPosition = 1;
-    private bool disableClockRadio = false; 
+    public int previousSmallArmPosition = 1;
+    public bool disableClockRadio = false; 
 
     // Start is called before the first frame update
     private void Awake()
@@ -20,16 +18,12 @@ public class Radio : MonoBehaviour, ISubscribe
     public void StartRadio()
     {
         bgm.loop = true;
-        currentTrackNumber = 1;
         bgm.Play(0); //play with 0 delay
     }
 
     void Switch(AudioClip track, bool loopIt = true, bool cut = false)
     {
-        if (!loopIt)
-        {
-            bgm.loop = false;
-        }
+        bgm.loop = loopIt;
         if (cut || !bgm.isPlaying)
         {
             bgm.clip = track;
@@ -56,7 +50,6 @@ public class Radio : MonoBehaviour, ISubscribe
     public void Subscribe()
     {
         EventHandler.OnIntroComplete += StartRadio;
-        EventHandler.OnAnyArmMove += PlayGeneral;
         EventHandler.OnSmallArmMove += PlayBlueMoon;
         EventHandler.OnBaronSolve += PlayBaron;
         EventHandler.OnPaintingSolve += PlayPainting ;
@@ -67,21 +60,10 @@ public class Radio : MonoBehaviour, ISubscribe
     public void Unsubscribe()
     {
         EventHandler.OnIntroComplete -= StartRadio;
-        EventHandler.OnAnyArmMove -= PlayGeneral;
         EventHandler.OnSmallArmMove -= PlayBlueMoon;
         EventHandler.OnBaronSolve -= PlayBaron;
         EventHandler.OnPaintingSolve -= PlayPainting;
         EventHandler.OnCerealSolve -= PlayCereal;
-    }
-
-    public void PlayGeneral()
-    {
-        if (firstPass)
-        {
-            Switch(tracks[7], false, true);
-            StartCoroutine(SwitchTrack(tracks[1]));
-            firstPass = false;
-        }
     }
 
     public void PlayBlueMoon(int smallArmPosition)
@@ -94,17 +76,17 @@ public class Radio : MonoBehaviour, ISubscribe
                 Switch(tracks[3], false);
                 Switch(tracks[4]);
             }
-            else if (smallArmPosition >= 6)
+            else if ((smallArmPosition >= 6) && (smallArmPosition != 12))
             {
-                if (previousSmallArmPosition == 11)
+                if ((previousSmallArmPosition == 11) || (previousSmallArmPosition < 6) || (previousSmallArmPosition == 12))
                 {
                     Switch(tracks[7], false, true);
                     Switch(tracks[1]);
                 }
             }
-            else if (smallArmPosition < 6)
+            else
             {
-                if (previousSmallArmPosition >= 6)
+                if ((previousSmallArmPosition >= 6) && (previousSmallArmPosition != 12))
                 {
                     Switch(tracks[7], false, true);
                     Switch(tracks[0]);
@@ -120,7 +102,7 @@ public class Radio : MonoBehaviour, ISubscribe
         Switch(tracks[6], false);
         Switch(tracks[8], false);
         Switch(tracks[8], false);
-        if (previousSmallArmPosition >= 6)
+        if ((previousSmallArmPosition >= 6) && (previousSmallArmPosition != 12))
         {
             Switch(tracks[1]);
         }
