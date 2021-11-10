@@ -11,8 +11,11 @@ public enum ShotType
     ESTABLISHING_SHOT,
     CHAIR_SHOT,
     BOWL_SHOT,
+    LOTTERY_SHOT,
     GRANDFATHER_SHOT,
-    PAINTING_SHOT
+    PAINTING_SHOT,
+    MANNEQUIN_SHOT,
+    BLOOD_SHOT
 }
 
 public class CameraController : Singleton<CameraController>
