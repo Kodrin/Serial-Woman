@@ -10,51 +10,31 @@ public class Radio : MonoBehaviour, ISubscribe
     public bool firstPass = true;
     private int currentTrackNumber = 1;
     private int previousSmallArmPosition = 1;
+    private bool disableClockRadio = false; 
+
     // Start is called before the first frame update
-    public void StartRadio()
+    private void Awake()
     {
         bgm = GetComponent<AudioSource>();
+    }
+    public void StartRadio()
+    {
         bgm.loop = true;
         currentTrackNumber = 1;
         bgm.Play(0); //play with 0 delay
     }
 
-    // Update is called once per frame
-    /*private void OnMouseDown()
+    void Switch(AudioClip track, bool loopIt = true, bool cut = false)
     {
-        if (currentTrackNumber == 1)
+        if (!loopIt)
         {
-            if (useCoroutineMethod)
-            {
-                StartCoroutine(SwitchTrack(tracks[currentTrackNumber]));
-            }
-            else
-            {
-                Switch(tracks[currentTrackNumber]);
-            }
-            currentTrackNumber++;
+            bgm.loop = false;
         }
-        else
+        if (cut || !bgm.isPlaying)
         {
-            if (useCoroutineMethod)
-            {
-                StartCoroutine(SwitchTrack(tracks[0]));
-            }
-            else
-            {
-                Switch(tracks[0]);
-            }
-            currentTrackNumber = 1;
+            bgm.clip = track;
+            bgm.Play();
         }
-    }*/
-
-    void Switch(AudioClip track)
-    {
-        bgm.loop = false;
-        while (bgm.isPlaying) { }
-        bgm.clip = track;
-        bgm.Play();
-        bgm.loop = true;
     }
 
     IEnumerator SwitchTrack(AudioClip track)
@@ -98,7 +78,7 @@ public class Radio : MonoBehaviour, ISubscribe
     {
         if (firstPass)
         {
-            Switch(tracks[7]);
+            Switch(tracks[7], false, true);
             StartCoroutine(SwitchTrack(tracks[1]));
             firstPass = false;
         }
@@ -106,37 +86,62 @@ public class Radio : MonoBehaviour, ISubscribe
 
     public void PlayBlueMoon(int smallArmPosition)
     {
-        if (smallArmPosition == 11) 
+        if (!disableClockRadio)
         {
-            Switch(tracks[7]);
-            StartCoroutine(SwitchTrack(tracks[3]));
-            StartCoroutine(SwitchTrack(tracks[4]));
+            if (smallArmPosition == 11)
+            {
+                Switch(tracks[7], false, true);
+                Switch(tracks[3], false);
+                Switch(tracks[4]);
+            }
+            else if (smallArmPosition >= 6)
+            {
+                if (previousSmallArmPosition == 11)
+                {
+                    Switch(tracks[7], false, true);
+                    Switch(tracks[1]);
+                }
+            }
+            else if (smallArmPosition < 6)
+            {
+                if (previousSmallArmPosition >= 6)
+                {
+                    Switch(tracks[7], false, true);
+                    Switch(tracks[0]);
+                }
+            }
+            previousSmallArmPosition = smallArmPosition;
         }
-        else if (previousSmallArmPosition == 11)
-        {
-            Switch(tracks[7]);
-            StartCoroutine(SwitchTrack(tracks[3]));
-        }
-        previousSmallArmPosition = smallArmPosition;
     }
 
     public void PlayBaron()
     {
-        Switch(tracks[5]);
-        StartCoroutine(SwitchTrack(tracks[6]));
-        StartCoroutine(SwitchTrack(tracks[8]));
+        Switch(tracks[5], false, true);
+        Switch(tracks[6], false);
+        Switch(tracks[8], false);
+        Switch(tracks[8], false);
+        if (previousSmallArmPosition >= 6)
+        {
+            Switch(tracks[1]);
+        }
+        else
+        {
+            Switch(tracks[0]);
+        }
     }
 
     public void PlayPainting()
     {
-        Switch(tracks[5]);
-        StartCoroutine(SwitchTrack(tracks[7]));
+        Switch(tracks[5], false, true);
+        Switch(tracks[7], false);
+        Switch(tracks[9]);
+        disableClockRadio = true;
     }
 
     public void PlayCereal()
     {
-        Switch(tracks[5]);
-        StartCoroutine(SwitchTrack(tracks[7]));
-        StartCoroutine(SwitchTrack(tracks[0]));
+        Switch(tracks[5], false, true);
+        Switch(tracks[7], false);
+        Switch(tracks[2]);
     }
 }
