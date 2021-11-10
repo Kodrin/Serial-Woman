@@ -8,7 +8,7 @@ public class Radio : MonoBehaviour, ISubscribe
     private AudioSource bgm;
     public bool firstPass = true;
     public int previousSmallArmPosition = 1;
-    public bool disableClockRadio = false; 
+    public bool disableClockRadio = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -21,8 +21,9 @@ public class Radio : MonoBehaviour, ISubscribe
         bgm.Play(0); //play with 0 delay
     }
 
-    void Switch(AudioClip track, bool loopIt = true, bool cut = false)
+    void Switch(AudioClip track, bool loopIt, bool cut)
     {
+        print(loopIt);
         bgm.loop = loopIt;
         if (cut || !bgm.isPlaying)
         {
@@ -36,6 +37,20 @@ public class Radio : MonoBehaviour, ISubscribe
         yield return new WaitForSeconds(bgm.clip.length - bgm.time);
         bgm.clip = track;
         bgm.Play();
+        bgm.loop = true;
+    }
+
+    IEnumerator SwitchTrack(List<AudioClip> clips)
+    {
+        yield return new WaitForSeconds(bgm.clip.length - bgm.time);
+        bgm.clip = clips[0];
+        bgm.Play();
+        for (int i = 1; i < clips.Count; i++)
+        {
+            yield return new WaitForSeconds(bgm.clip.length - bgm.time);
+            bgm.clip = clips[i];
+            bgm.Play();
+        }
         bgm.loop = true;
     }
     protected void OnEnable()
@@ -70,18 +85,19 @@ public class Radio : MonoBehaviour, ISubscribe
     {
         if (!disableClockRadio)
         {
+            StopAllCoroutines(); 
             if (smallArmPosition == 11)
             {
                 Switch(tracks[7], false, true);
-                Switch(tracks[3], false);
-                Switch(tracks[4]);
+                var BlueMoonTracks = new List<AudioClip> { tracks[3], tracks[4] }; 
+                StartCoroutine(SwitchTrack(BlueMoonTracks));
             }
             else if ((smallArmPosition >= 6) && (smallArmPosition != 12))
             {
                 if ((previousSmallArmPosition == 11) || (previousSmallArmPosition < 6) || (previousSmallArmPosition == 12))
                 {
                     Switch(tracks[7], false, true);
-                    Switch(tracks[1]);
+                    StartCoroutine(SwitchTrack(tracks[1]));
                 }
             }
             else
@@ -89,41 +105,43 @@ public class Radio : MonoBehaviour, ISubscribe
                 if ((previousSmallArmPosition >= 6) && (previousSmallArmPosition != 12))
                 {
                     Switch(tracks[7], false, true);
-                    Switch(tracks[0]);
+                    StartCoroutine(SwitchTrack(tracks[0]));
                 }
             }
             previousSmallArmPosition = smallArmPosition;
         }
     }
-
     public void PlayBaron()
     {
+        StopAllCoroutines();
         Switch(tracks[5], false, true);
-        Switch(tracks[6], false);
-        Switch(tracks[8], false);
-        Switch(tracks[8], false);
+        var BaronTracksA = new List<AudioClip> { tracks[6], tracks[8], tracks[8], tracks[1] };
+        var BaronTracksB = new List<AudioClip> { tracks[6], tracks[8], tracks[8], tracks[0] };
+
         if ((previousSmallArmPosition >= 6) && (previousSmallArmPosition != 12))
         {
-            Switch(tracks[1]);
+            StartCoroutine(SwitchTrack(BaronTracksA));
         }
         else
         {
-            Switch(tracks[0]);
+            StartCoroutine(SwitchTrack(BaronTracksB));
         }
     }
 
     public void PlayPainting()
     {
+        StopAllCoroutines();
         Switch(tracks[5], false, true);
-        Switch(tracks[7], false);
-        Switch(tracks[9]);
+        var PaintingTracks = new List<AudioClip> { tracks[7], tracks[9] };
+        StartCoroutine(SwitchTrack(PaintingTracks));
         disableClockRadio = true;
     }
 
     public void PlayCereal()
     {
+        StopAllCoroutines();
         Switch(tracks[5], false, true);
-        Switch(tracks[7], false);
-        Switch(tracks[2]);
+        var CerealTracks = new List<AudioClip> { tracks[7], tracks[2] };
+        StartCoroutine(SwitchTrack(CerealTracks));
     }
 }
