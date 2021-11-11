@@ -93,11 +93,6 @@ public class ClockPuzzle : Puzzle
         }
     }
 
-    protected void MoveArmToNumber(int number)
-    {
-        
-    }
-
     protected int UpdateArmPosition(MoveDirection dir, int number)
     {
         if (dir == MoveDirection.LEFT)

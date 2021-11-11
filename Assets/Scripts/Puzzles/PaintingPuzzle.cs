@@ -25,6 +25,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public bool baronsSmallSolved = false;
     public bool baronsMiddleSolved = false;
     public bool baronsLongSolved = false;
+    public bool baronSolved = false;
+    public bool rotationSolved = false;
 
     //public Texture ladyDog;
     public Material ladyDog; 
@@ -60,112 +62,112 @@ public class PaintingPuzzle : Puzzle, ISubscribe
 
     public void CheckSmallArm(int smallArmPosition)
     {
-        switch(smallArmPosition)
+        if (!solved)
         {
-            case 1:
-            case 4:
-                RotateToHeading(paintings[0], RotationHeading.LEFT);
-                baronsSmallSolved = false;
-                break;
-            case 2:
-            case 5:
-            case 6:
-                RotateToHeading(paintings[0], RotationHeading.DOWN);
-                baronsSmallSolved = false;
-                break;
-            case 3:
-                RotateToHeading(paintings[0], RotationHeading.RIGHT);
-                baronsSmallSolved = true;
-                CheckBaronSolved();
-                break;
-            case 7:
-            case 10:
-            case 12:
-                RotateToHeading(paintings[0], RotationHeading.UP);
-                baronsSmallSolved = false;
-                break;
-            case 8:
-            case 9:
-            case 11:
-                RotateToHeading(paintings[0], RotationHeading.UP);
-                baronsSmallSolved = false;
-                break;
+            switch (smallArmPosition)
+            {
+                case 1:
+                case 4:
+                case 8:
+                case 11:
+                    RotateToHeading(paintings[0], RotationHeading.LEFT);
+                    baronsSmallSolved = false;
+                    break;
+                case 2:
+                case 5:
+                case 6:
+                case 9:
+                    RotateToHeading(paintings[0], RotationHeading.DOWN);
+                    baronsSmallSolved = false;
+                    break;
+                case 3:
+                    RotateToHeading(paintings[0], RotationHeading.RIGHT);
+                    baronsSmallSolved = true;
+                    CheckBaronSolved();
+                    break;
+                case 7:
+                case 10:
+                case 12:
+                    RotateToHeading(paintings[0], RotationHeading.UP);
+                    baronsSmallSolved = false;
+                    break;
+            }
         }
     }
 
     public void CheckMiddleArm(int middleArmPosition)
     {
-        switch (middleArmPosition)
+        if (!solved)
         {
-            case 2:
-            case 6:
-                RotateToHeading(paintings[1], RotationHeading.UP);
-                baronsMiddleSolved = false;
-                break;
-            case 1:
-            case 4:
-                RotateToHeading(paintings[1], RotationHeading.LEFT);
-                baronsMiddleSolved = false;
-                break;
-            case 3:
-            case 5:
-                RotateToHeading(paintings[1], RotationHeading.RIGHT);
-                baronsMiddleSolved = false;
-                break;
-            case 8:
-            case 11:
-            case 12:
-                RotateToHeading(paintings[1], RotationHeading.DOWN);
-                baronsMiddleSolved = false;
-                break;
-            case 7:
-                RotateToHeading(paintings[1], RotationHeading.UP);
-                baronsMiddleSolved = true;
-                CheckBaronSolved();
-                break;
-            case 9:
-            case 10:
-                RotateToHeading(paintings[1], RotationHeading.RIGHT);
-                baronsMiddleSolved = false;
-                break;
+            switch (middleArmPosition)
+            {
+                case 2:
+                case 6:
+                case 9:
+                    RotateToHeading(paintings[1], RotationHeading.UP);
+                    baronsMiddleSolved = false;
+                    break;
+                case 1:
+                case 11:
+                case 4:
+                case 10:
+                    RotateToHeading(paintings[1], RotationHeading.LEFT);
+                    baronsMiddleSolved = false;
+                    break;
+                case 3:
+                case 5:
+                case 8:
+                    RotateToHeading(paintings[1], RotationHeading.RIGHT);
+                    baronsMiddleSolved = false;
+                    break;
+                case 12:
+                    RotateToHeading(paintings[1], RotationHeading.DOWN);
+                    baronsMiddleSolved = false;
+                    break;
+                case 7:
+                    RotateToHeading(paintings[1], RotationHeading.UP);
+                    baronsMiddleSolved = true;
+                    CheckBaronSolved();
+                    break;
+            }
         }
     }
 
     public void CheckLongArm(int longArmPosition)
     {
-        switch (longArmPosition)
+        if (!solved)
         {
-            case 1:
-            case 3:
-                RotateToHeading(paintings[2], RotationHeading.DOWN);
-                baronsLongSolved = false;
-                break;
-            case 5:
-            case 7:
-                RotateToHeading(paintings[2], RotationHeading.RIGHT);
-                baronsLongSolved = false;
-                break;
-            case 2:
-            case 4:
-                RotateToHeading(paintings[2], RotationHeading.DOWN);
-                baronsLongSolved = false;
-                break;
-            case 6:
-            case 10:
-                RotateToHeading(paintings[2], RotationHeading.UP);
-                baronsLongSolved = false;
-                break;
-            case 11:
-                RotateToHeading(paintings[2], RotationHeading.LEFT);
-                baronsLongSolved = true;
-                CheckBaronSolved();
-                break;
-            case 8:
-            case 9:
-            case 12:
-                RotateToHeading(paintings[2], RotationHeading.UP);
-                baronsLongSolved = false;
-                break;
+            switch (longArmPosition)
+            {
+                case 1:
+                case 3:
+                case 6:
+                case 9:
+                    RotateToHeading(paintings[2], RotationHeading.LEFT);
+                    baronsLongSolved = false;
+                    break;
+                case 5:
+                case 7:
+                case 10:
+                    RotateToHeading(paintings[2], RotationHeading.RIGHT);
+                    baronsLongSolved = false;
+                    break;
+                case 2:
+                case 4:
+                case 12:
+                    RotateToHeading(paintings[2], RotationHeading.DOWN);
+                    baronsLongSolved = false;
+                    break;
+                case 11:
+                    RotateToHeading(paintings[2], RotationHeading.LEFT);
+                    baronsLongSolved = true;
+                    CheckBaronSolved();
+                    break;
+                case 8:
+                    RotateToHeading(paintings[2], RotationHeading.UP);
+                    baronsLongSolved = false;
+                    break;
+            }
         }
     }
 
@@ -177,6 +179,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             //paintings[3].SetTexture(ladyDog);
             Material[] allMaterials = paintings[3].GetComponent<Renderer>().materials;
             allMaterials[1] = ladyDog;
+            baronSolved = true;
             paintings[3].GetComponent<Renderer>().materials = allMaterials;
             EventHandler.PublishOnBaronSolve();
         }
@@ -340,13 +343,13 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     protected override void CheckSolveCondition()
     {
         //make sure that solve sequence matches the amount of paintings
-        if (solveSequence.Count == paintings.Count)
+        if ((solveSequence.Count == paintings.Count) && rotationSolved)
         {
             
             for (int i = 0; i < paintings.Count; i++)
             {
                 // if current painting matches solve index and current rotation matches solve index
-                if ((paintings[i].paintingType == solveSequence[i]) && (paintings[i].currentRotation == solveRotation[i]))
+                if (paintings[i].paintingType == solveSequence[i])
                 {
                     // continue;
                 }
@@ -355,16 +358,38 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                     return;
                 }
             }
+
+            //if it didn't return, that means it was solved so mark as solved
+            solved = true;
+            ResolveState();
         }
-        
-        //if it didn't return, that means it was solved so mark as solved
-        solved = true;
-        ResolveState();
+    }
+
+    protected void CheckRotationCondition()
+    {
+        if ((solveSequence.Count == paintings.Count) && baronSolved)
+        {
+
+            for (int i = 0; i < paintings.Count; i++)
+            {
+                // if current painting matches solve index and current rotation matches solve index
+                if (paintings[i].currentRotation == solveRotation[i])
+                {
+                    // continue;
+                }
+                else
+                {
+                    return;
+                }
+            }
+            rotationSolved = true;
+        }
     }
 
     protected override void ResolveState()
     {
         Debug.Log("Painting is Solved!");
+        canInteract = false;
         EventHandler.PublishOnPaintingSolve();
     }
 
@@ -415,6 +440,8 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     {
         Vector3 targetEuler = new Vector3(paintingObj.transform.eulerAngles.x, paintingObj.transform.eulerAngles.y, paintingObj.transform.eulerAngles.z + angle);
         paintingObj.transform.eulerAngles = targetEuler; //snap to desired rotation
+        CheckRotationCondition();
+        CheckSolveCondition();
     }
 
     protected void ChangeHeading(Painting paintingObj)
