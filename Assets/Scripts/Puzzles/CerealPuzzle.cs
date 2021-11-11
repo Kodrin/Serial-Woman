@@ -24,7 +24,20 @@ public class CerealPuzzle : Puzzle
 
     protected override void ResolveState()
     {
+        this.canInteract = false;
+        StartCoroutine(DelaySwap(0, 3, 0.0f));
+        StartCoroutine(DelaySwap(1, 5, 1.0f));
+        StartCoroutine(DelaySwap(2, 7, 2.0f));
+        StartCoroutine(DelaySwap(5, 6, 3.0f));
+        StartCoroutine(DelaySwap(7, 8, 4.0f));
         EventHandler.PublishOnCerealSolve();
+    }
+
+    IEnumerator DelaySwap(int a, int b, float delayTime)
+    {
+        //Wait for the specified delay time before continuing.
+        yield return new WaitForSeconds(delayTime);
+        containers[a].SwapCereal(containers[b].getPiece());
     }
 
     public void CheckWin()
