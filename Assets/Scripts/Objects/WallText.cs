@@ -43,7 +43,7 @@ public class WallText : MonoBehaviour, ISubscribe
 
     public void LampToggle(bool isOn)
     {
-        meshRend.enabled = isOn;
+        meshRend.enabled = !isOn;
     }
 
     public void CheckTime(int armPosition)
