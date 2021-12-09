@@ -49,6 +49,7 @@
           <e p="Note.cs" t="Include" />
           <e p="Objects" t="Include">
             <e p="Lamp.cs" t="Include" />
+            <e p="LotteryTicket.cs" t="Include" />
             <e p="Mannequin.cs" t="Include" />
             <e p="Radio.cs" t="Include" />
             <e p="WallText.cs" t="Include" />
