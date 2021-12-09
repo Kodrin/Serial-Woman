@@ -27,6 +27,7 @@
             <e p="CameraController.cs" t="Include" />
             <e p="CameraShot.cs" t="Include" />
             <e p="Hotspot.cs" t="Include" />
+            <e p="MannequinHotspot.cs" t="Include" />
           </e>
           <e p="Common" t="Include">
             <e p="EventHandler.cs" t="Include" />

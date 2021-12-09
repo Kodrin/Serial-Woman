@@ -11,12 +11,12 @@ public class Hotspot : MonoBehaviour
     public CameraShot cameraShot; 
     
     // Update is called once per frame
-    void Update()
+    public virtual void Update()
     {
         FaceCamera();
     }
 
-    protected void OnMouseOver()
+    protected virtual void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -25,7 +25,7 @@ public class Hotspot : MonoBehaviour
         }
     }
 
-    protected void FaceCamera()
+    protected virtual void FaceCamera()
     {
         this.transform.LookAt(Camera.main.transform.position);
     }

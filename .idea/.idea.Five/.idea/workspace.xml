@@ -22,9 +22,8 @@
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +35,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/TexturePixelator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Text/TextController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Common/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,7 +66,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PaintingPuzzle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/Cereal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraShot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
@@ -80,6 +79,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WallText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" />
       </list>
     </option>
   </component>
@@ -133,7 +134,7 @@
       <workItem from="1636514724724" duration="5602000" />
       <workItem from="1636762478484" duration="1875000" />
       <workItem from="1637212515620" duration="686000" />
-      <workItem from="1639008321825" duration="612000" />
+      <workItem from="1639008321825" duration="2036000" />
     </task>
     <servers />
   </component>
@@ -155,13 +156,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="157" y="358" width="3108" height="1477" key="VCS.FileHistoryDialog" timestamp="1628699016593">
-      <screen x="0" y="0" width="3840" height="2120" />
-    </state>
-    <state x="157" y="358" width="3108" height="1477" key="VCS.FileHistoryDialog/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1628699016593" />
-    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1636763073150">
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup" timestamp="1639017588553">
       <screen x="0" y="0" width="3840" height="2120" />
     </state>
     <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.0.1152.2008@0.0.3840.2120" timestamp="1636763073150" />
+    <state x="1538" y="717" width="672" height="678" key="search.everywhere.popup/0.0.3840.2120/3840.704.2560.1400@0.0.3840.2120" timestamp="1639017588553" />
   </component>
 </project>
