@@ -9,6 +9,8 @@ public class NoteInteraction : MonoBehaviour
     public Image img;
     public Text page;
     public Text title;
+    private bool justOpened;
+    private bool noteOpen;
     private int currentLine = 0;
     private int lastLine;
     public List<string> textLines = new List<string>();
@@ -18,6 +20,7 @@ public class NoteInteraction : MonoBehaviour
         img.enabled = false;
         page.enabled = false;
         title.enabled = false;
+        noteOpen = false;
 
         //if a note object is associated, load all of its pages to Queue
         if (targetNote)
@@ -29,6 +32,35 @@ public class NoteInteraction : MonoBehaviour
         lastLine = textLines.Count;
     }
 
+    void Update()
+    {
+        // Clicking anywhere on the screen should allow us to read through the note if it has already been open
+        if (noteOpen)
+        {
+            // Change page on left click
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (currentLine != lastLine) //check if line is non-null before trying to print text
+                {
+                    Debug.Log("Next Page.");
+                    page.text = textLines[currentLine];
+                    page.enabled = true;
+                    title.enabled = true;
+                    img.enabled = true;
+                    currentLine++;
+                }
+                else
+                {
+                    Debug.Log("Note Closed.");
+                    img.enabled = false;
+                    page.enabled = false;
+                    title.enabled = false;
+                    currentLine = 0;
+                    noteOpen = false;
+                }
+            }
+        }
+    }
     void AddWithLineBreaks(Note nt)
     {
         for (int i = 0; i < nt.pages.Count; i++)
@@ -52,22 +84,26 @@ public class NoteInteraction : MonoBehaviour
 
     void OnMouseDown()
     {
-
-        page.enabled = false;
-        if (currentLine != lastLine) //check if line is non-null before trying to print text
+        if (!noteOpen)
         {
-            page.text = textLines[currentLine];
-            page.enabled = true;
-            title.enabled = true;
-            img.enabled = true;
-            currentLine++;
+            Debug.Log("Note Opened.");
+            if (currentLine != lastLine) //check if line is non-null before trying to print text
+            {
+                page.text = textLines[currentLine];
+                page.enabled = true;
+                title.enabled = true;
+                img.enabled = true;
+                currentLine++;
+            }
+            justOpened = true; 
         }
-        else
+    }
+    private void OnMouseUp()
+    {
+        if(justOpened)
         {
-            img.enabled = false;
-            page.enabled = false;
-            title.enabled = false;
-            currentLine = 0;
+            noteOpen = true;
+            justOpened = false;
         }
     }
 }
