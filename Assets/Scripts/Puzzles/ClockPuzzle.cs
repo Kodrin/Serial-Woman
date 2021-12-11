@@ -47,7 +47,7 @@ public class ClockPuzzle : Puzzle
 
     protected override void Update()
     {
-        if (!canInteract) return;        
+        if (!canInteract || noteOpen) return;        
         Controls();
     }
 

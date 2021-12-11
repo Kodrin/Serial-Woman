@@ -57,6 +57,8 @@ public class NoteInteraction : MonoBehaviour
                     title.enabled = false;
                     currentLine = 0;
                     noteOpen = false;
+                    EventHandler.PublishOnNoteOpen(false);
+                    Debug.Log("PUBLISHED NOTE OPENE FALSE");
                 }
             }
         }
@@ -95,7 +97,9 @@ public class NoteInteraction : MonoBehaviour
                 img.enabled = true;
                 currentLine++;
             }
-            justOpened = true; 
+            justOpened = true;
+            EventHandler.PublishOnNoteOpen(true);
+            Debug.Log("PUBLISHED NOTE OPENE TRUE");
         }
     }
     private void OnMouseUp()

@@ -3,17 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puzzle : MonoBehaviour
+public class Puzzle : MonoBehaviour, ISubscribe
 {
     [Header("PUZZLE")]
     public bool canInteract = false;
+    public bool noteOpen = false; 
     public bool solved = false;
     public bool isSolvable = true;
     
     protected virtual void Start(){}
     protected virtual void Update()
     {
-        if (!canInteract) return;
+        //disable puzzle if a note is open
+        if (!canInteract || noteOpen) return;
     }
 
     //where we encapsulate the controls for the puzzle
@@ -30,5 +32,31 @@ public class Puzzle : MonoBehaviour
     
     //How to reset the puzzle
     protected virtual void ResetPuzzle(){}
-    
+
+    protected void OnEnable()
+    {
+        Subscribe();
+    }
+
+    protected void OnDisable()
+    {
+        Unsubscribe();
+    }
+    public virtual void Subscribe()
+    {
+        EventHandler.OnNoteOpen += DetectNoteOpen;
+
+    }
+
+    public virtual void Unsubscribe()
+    {
+        EventHandler.OnNoteOpen -= DetectNoteOpen;
+
+    }
+
+    void DetectNoteOpen(bool isOpen)
+    {
+        noteOpen = isOpen;
+        Debug.Log("PUZZLE " + isOpen);
+    }
 }

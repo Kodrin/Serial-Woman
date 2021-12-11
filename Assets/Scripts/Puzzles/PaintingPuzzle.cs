@@ -34,30 +34,24 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     // Update is called once per frame
     protected override void Update()
     {
-        if(!canInteract) return;
+        if(!canInteract || noteOpen) return;
             
         if(Input.GetMouseButtonDown(0))
             Controls();
     }
-    private void OnEnable()
-    {
-        Subscribe();
-    }
-    private void OnDisable()
-    {
-        Unsubscribe();
-    }
-    public void Subscribe()
+    public override void Subscribe()
     {
         EventHandler.OnSmallArmMove += CheckSmallArm;
         EventHandler.OnMiddleArmMove += CheckMiddleArm;
         EventHandler.OnLongArmMove += CheckLongArm;
+        EventHandler.OnNoteOpen += DetectNoteOpen;
     }
-    public void Unsubscribe()
+    public override void Unsubscribe()
     {
         EventHandler.OnSmallArmMove -= CheckSmallArm;
-        EventHandler.OnMiddleArmMove += CheckMiddleArm;
-        EventHandler.OnLongArmMove += CheckLongArm;
+        EventHandler.OnMiddleArmMove -= CheckMiddleArm;
+        EventHandler.OnLongArmMove -= CheckLongArm;
+        EventHandler.OnNoteOpen -= DetectNoteOpen;
     }
 
     public void CheckSmallArm(int smallArmPosition)
@@ -467,5 +461,11 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     {
         firstSelection = null;
         secondSelection = null;
+    }
+
+    void DetectNoteOpen(bool isOpen)
+    {
+        noteOpen = isOpen;
+        Debug.Log("PUZZLE " + isOpen);
     }
 }

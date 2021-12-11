@@ -65,5 +65,10 @@ public static class EventHandler
     public static event IntroCompleteEvent OnIntroComplete;
     public static void PublishOnIntroComplete() { if (OnIntroComplete != null) { OnIntroComplete(); } }
 
-    
+    //NOTE
+    public delegate void NoteOpenEvent(bool isOpen);
+    public static event NoteOpenEvent OnNoteOpen;
+    public static void PublishOnNoteOpen(bool isOpen) { if (OnIntroComplete != null) { OnNoteOpen(isOpen); } }
+
+
 }

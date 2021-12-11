@@ -24,6 +24,7 @@ public class Lamp : MonoBehaviour, ISubscribe
     protected Light lightComponent;
 
     public bool LightOn => lightOn;
+    public bool noteOpen;
     
     protected void Awake()
     {
@@ -40,7 +41,10 @@ public class Lamp : MonoBehaviour, ISubscribe
 
     protected void OnMouseDown()
     {
-        ToggleLight();
+        if(!noteOpen)
+        {
+            ToggleLight();
+        }
     }
 
     public void ToggleLight()
@@ -64,11 +68,13 @@ public class Lamp : MonoBehaviour, ISubscribe
     public void Subscribe()
     {
         EventHandler.OnSmallArmMove += CheckConfiguration;
+        EventHandler.OnNoteOpen += DetectNoteOpen;
     }
 
     public void Unsubscribe()
     {
         EventHandler.OnSmallArmMove -= CheckConfiguration;
+        EventHandler.OnNoteOpen -= DetectNoteOpen;
     }
 
     
@@ -114,6 +120,11 @@ public class Lamp : MonoBehaviour, ISubscribe
         lightComponent.color = blueColor;
         EventHandler.PublishOnLampConfigSwitch("blue", Color.blue);
 
+    }
+
+    void DetectNoteOpen(bool isOpen)
+    {
+        noteOpen = isOpen;
     }
 
 }
