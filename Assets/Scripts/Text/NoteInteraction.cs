@@ -22,7 +22,7 @@ public class NoteInteraction : MonoBehaviour
         title.enabled = false;
         noteOpen = false;
 
-        //if a note object is associated, load all of its pages to Queue
+        //if a note object is associated, load all of its pages
         if (targetNote)
         {
             AddWithLineBreaks(targetNote);
@@ -58,7 +58,7 @@ public class NoteInteraction : MonoBehaviour
                     currentLine = 0;
                     noteOpen = false;
                     EventHandler.PublishOnNoteOpen(false);
-                    Debug.Log("PUBLISHED NOTE OPENE FALSE");
+                    //Debug.Log("PUBLISHED NOTE OPEN FALSE");
                 }
             }
         }
@@ -89,17 +89,37 @@ public class NoteInteraction : MonoBehaviour
         if (!noteOpen)
         {
             Debug.Log("Note Opened.");
+            SetNoteProperties();
             if (currentLine != lastLine) //check if line is non-null before trying to print text
             {
                 page.text = textLines[currentLine];
                 page.enabled = true;
+                Debug.Log(targetNote.noteName);
+                title.text = targetNote.noteName;
                 title.enabled = true;
                 img.enabled = true;
                 currentLine++;
             }
             justOpened = true;
             EventHandler.PublishOnNoteOpen(true);
-            Debug.Log("PUBLISHED NOTE OPENE TRUE");
+            //Debug.Log("PUBLISHED NOTE OPEN TRUE");
+        }
+    }
+
+    void SetNoteProperties()
+    {
+        if (targetNote.noteName == "WALL PLAQUE")
+        {
+            img.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 250);
+            page.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 150);
+            title.GetComponent<RectTransform>().localPosition = new Vector3(0, 100, 0);
+
+        }
+        else
+        {
+            img.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 400);
+            page.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 300);
+            title.GetComponent<RectTransform>().localPosition = new Vector3(0, 180, 0);
         }
     }
     private void OnMouseUp()

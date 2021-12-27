@@ -57,6 +57,6 @@ public class Puzzle : MonoBehaviour, ISubscribe
     void DetectNoteOpen(bool isOpen)
     {
         noteOpen = isOpen;
-        Debug.Log("PUZZLE " + isOpen);
+        //Debug.Log("PUZZLE " + isOpen);
     }
 }

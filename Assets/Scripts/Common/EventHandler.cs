@@ -9,7 +9,6 @@ public static class EventHandler
     
     public delegate void CameraSwitchEvent();
     public static event CameraSwitchEvent OnCameraSwitch;
-    
     public static void PublishOnCameraSwitch() { if (OnCameraSwitch != null) { OnCameraSwitch(); } }
 
     public delegate void BaronSolveEvent();
@@ -24,9 +23,6 @@ public static class EventHandler
     public static event CerealSolveEvent OnCerealSolve;
     public static void PublishOnCerealSolve() { if (OnCerealSolve != null) { OnCerealSolve(); } }
 
-    
-    
-    #region Clock Events
     //CLOCK
     public delegate void AnyArmMoveEvent();
     public static event AnyArmMoveEvent OnAnyArmMove;
@@ -43,8 +39,6 @@ public static class EventHandler
     public delegate void LongArmMoveEvent(int position);
     public static event LongArmMoveEvent OnLongArmMove;
     public static void PublishOnLongArmMove(int position) { if (OnLongArmMove != null) { OnLongArmMove(position); } }
-
-    #endregion
 
     //TEXTCONTROLLER
     public delegate void TextControllerMsgEvent(string message);

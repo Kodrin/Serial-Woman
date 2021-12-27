@@ -7,7 +7,7 @@ public class PuzzleController : MonoBehaviour
 {
     [SerializeField] protected Puzzle clockPuzzle;
     [SerializeField] protected Puzzle paintingPuzzle;
-    
+    [SerializeField] protected Puzzle cerealPuzzle;
 
     protected void OnEnable()
     {
@@ -27,17 +27,26 @@ public class PuzzleController : MonoBehaviour
         {
             EnablePuzzle(clockPuzzle);
             DisablePuzzle(paintingPuzzle);
+            DisablePuzzle(cerealPuzzle);
         }
         else if (currentShotType == ShotType.PAINTING_SHOT)
         {
             //todo need to fix the can interact bool on the coroutine so it doesnt conflict with this 
             EnablePuzzle(paintingPuzzle);
             DisablePuzzle(clockPuzzle);
+            DisablePuzzle(cerealPuzzle);
+        }
+        else if (currentShotType == ShotType.BOWL_SHOT)
+        {
+            EnablePuzzle(cerealPuzzle);
+            DisablePuzzle(paintingPuzzle);
+            DisablePuzzle(clockPuzzle);
         }
         else
         {
             DisablePuzzle(paintingPuzzle);
             DisablePuzzle(clockPuzzle);
+            DisablePuzzle(cerealPuzzle);
         }
     }
 

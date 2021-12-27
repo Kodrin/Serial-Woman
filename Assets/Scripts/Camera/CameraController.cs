@@ -62,7 +62,7 @@ public class CameraController : Singleton<CameraController>
         if(currentCameraShot) currentCameraShot.ShowHotspots(false); //disable hotspots of previous camera
         currentCameraShot = toCamShot; //update current camera shot 
         currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
-        
+
         //trigger camera switch event
         EventHandler.PublishOnCameraSwitch();
 

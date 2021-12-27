@@ -466,6 +466,6 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     void DetectNoteOpen(bool isOpen)
     {
         noteOpen = isOpen;
-        Debug.Log("PUZZLE " + isOpen);
+        //Debug.Log("PUZZLE " + isOpen);
     }
 }
