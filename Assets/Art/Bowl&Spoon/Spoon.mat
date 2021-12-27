@@ -91,7 +91,7 @@ Material:
     m_Ints: []
     m_Floats:
     - ColorPrecision: 16
-    - VertexPrecision: 64
+    - VertexPrecision: 128
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
