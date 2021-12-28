@@ -9,7 +9,7 @@ public class MannequinHotspot : Hotspot, ISubscribe
 
     private void Start()
     {
-        gui.SetActive(false);
+        // gui.SetActive(false);
     }
 
     public void DisableInteraction(string colorName, Color color)
@@ -17,10 +17,12 @@ public class MannequinHotspot : Hotspot, ISubscribe
         if (colorName == "blue")
         {
             gui.SetActive(true);
+            // Debug.Log("Switched to blue");
         }
         else
         {
             gui.SetActive(false);
+            // Debug.Log("Switched to disabled");
         }
     }
     
