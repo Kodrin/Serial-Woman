@@ -36,7 +36,7 @@ public class PuzzleController : MonoBehaviour
             DisablePuzzle(clockPuzzle);
             DisablePuzzle(cerealPuzzle);
         }
-        else if (currentShotType == ShotType.BOWL_SHOT)
+        else if (currentShotType == ShotType.BOWL_DETAIL_SHOT)
         {
             EnablePuzzle(cerealPuzzle);
             DisablePuzzle(paintingPuzzle);

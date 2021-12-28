@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Controllers/--Camera_Controller--.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Controllers/--Camera_Controller--.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,13 +74,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Text/TextInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/VHSEffect.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Mannequin.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WallText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       </list>
     </option>
   </component>
@@ -137,7 +135,7 @@
       <workItem from="1636762478484" duration="1875000" />
       <workItem from="1637212515620" duration="686000" />
       <workItem from="1639008321825" duration="2709000" />
-      <workItem from="1640642519392" duration="2102000" />
+      <workItem from="1640642519392" duration="3249000" />
     </task>
     <servers />
   </component>

@@ -10,7 +10,8 @@ public enum ShotType
 {
     ESTABLISHING_SHOT,
     CHAIR_SHOT,
-    BOWL_SHOT,
+    TABLE_SHOT,
+    BOWL_DETAIL_SHOT,
     LOTTERY_SHOT,
     GRANDFATHER_SHOT,
     PAINTING_SHOT,
@@ -106,7 +107,7 @@ public class CameraController : Singleton<CameraController>
         //switch to bowlShot
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SwitchCameraToShotType(ShotType.BOWL_SHOT);
+            SwitchCameraToShotType(ShotType.TABLE_SHOT);
         }
         
         //switch to grandfatherShot
