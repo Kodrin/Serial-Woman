@@ -44,7 +44,8 @@ public class Cereal : MonoBehaviour
     {
         float iDist; //temp var for loop to avoid computing Distance twice
         float nearestDist = float.MaxValue; //init distance at max value
-        float maxDist = 0.025f; //threshold distance to be considered on-slot. 
+        //threshold distance to be considered on-slot. 
+        float maxDist = 0.025f * puzzle.transform.lossyScale.x; //we must account for the scale of the puzzle
         CerealContainer nearestContainer = null;
         Cereal occupyingCereal = null;
 
@@ -58,6 +59,11 @@ public class Cereal : MonoBehaviour
                 nearestContainer = cont;
             }
         }
+        /* DEBUG BLOCK
+        Debug.Log(puzzle.transform.lossyScale.x);
+        Debug.Log("Nearest Container is: " + nearestContainer);
+        Debug.Log("Distance to that container is: " + nearestDist +". Max dist was: " + maxDist);
+        */
         occupyingCereal = nearestContainer.getPiece();
         //if the slot is not too far and not already occupied, snap the cereal to the slot
         if (nearestDist <= maxDist)

@@ -6,11 +6,11 @@ public class MilkSpill : MonoBehaviour
 {
     void Start()
     {
-        this.GetComponent<MeshRenderer>().enabled = false; 
+        this.gameObject.SetActive(false);
     }
 
     public void Spill()
     {
-        this.GetComponent<MeshRenderer>().enabled = true;
+        this.gameObject.SetActive(true);
     }
 }

@@ -18,7 +18,7 @@ public class Bowl : MonoBehaviour
     public void Spill()
     {
         this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, this.transform.eulerAngles.z + 47.3f);
-        milk.GetComponent<MeshRenderer>().enabled = false;
+        milk.gameObject.SetActive(false);
     }
 
 }
