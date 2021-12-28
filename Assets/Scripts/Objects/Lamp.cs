@@ -41,7 +41,8 @@ public class Lamp : MonoBehaviour, ISubscribe
 
     protected void OnMouseDown()
     {
-        if(!noteOpen)
+        ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
+        if (!noteOpen && (currentShotType == ShotType.CHAIR_SHOT || currentShotType == ShotType.TABLE_SHOT))
         {
             ToggleLight();
         }

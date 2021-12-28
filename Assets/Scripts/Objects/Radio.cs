@@ -86,9 +86,9 @@ public class Radio : MonoBehaviour, ISubscribe
 
         if (!disableClockRadio)
         {
-            StopAllCoroutines(); 
             if (smallArmPosition == 11)
             {
+                StopAllCoroutines();
                 Switch(tracks[7], false, true);
                 var BlueMoonTracks = new List<AudioClip> { tracks[3], tracks[4] }; 
                 StartCoroutine(SwitchTrack(BlueMoonTracks));
@@ -97,6 +97,7 @@ public class Radio : MonoBehaviour, ISubscribe
             {
                 if ((previousSmallArmPosition == 11) || (previousSmallArmPosition < 6) || (previousSmallArmPosition == 12))
                 {
+                    StopAllCoroutines();
                     Switch(tracks[7], false, true);
                     StartCoroutine(SwitchTrack(tracks[1]));
                 }
@@ -105,6 +106,7 @@ public class Radio : MonoBehaviour, ISubscribe
             {
                 if ((previousSmallArmPosition >= 6) && (previousSmallArmPosition != 12))
                 {
+                    StopAllCoroutines();
                     Switch(tracks[7], false, true);
                     StartCoroutine(SwitchTrack(tracks[0]));
                 }
