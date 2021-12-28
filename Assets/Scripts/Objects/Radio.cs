@@ -82,6 +82,8 @@ public class Radio : MonoBehaviour, ISubscribe
 
     public void PlayBlueMoon(int smallArmPosition)
     {
+        if (previousSmallArmPosition == smallArmPosition) return;
+
         if (!disableClockRadio)
         {
             StopAllCoroutines(); 
