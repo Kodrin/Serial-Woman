@@ -53,6 +53,22 @@ public class ClockPuzzle : Puzzle
 
     protected override void Controls()
     {
+        string selectedHand = "";
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Debug.Log("Mouse down.");
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 100.0f))
+            {
+                Debug.Log("You clicked on " + hit.transform.name);
+                selectedHand = hit.transform.name;
+                SwitchArm(selectedHand);
+                MoveArmRight();
+            }
+        }
+        /* DEPRECATED KEY CONTROLS
         if (Input.GetKeyDown(KeyCode.A))
         {
             MoveArmLeft();
@@ -66,10 +82,8 @@ public class ClockPuzzle : Puzzle
         if (Input.GetKeyDown(KeyCode.E))
         {
             SwitchArm();
-
         }
-
-
+        */
     }
 
     protected void RotateArm(MoveDirection dir)
@@ -168,6 +182,25 @@ public class ClockPuzzle : Puzzle
             currentSelectedArm.armObject = shortArm.armObject;
             longArm.currentPosition = currentSelectedArm.currentPosition;
             currentSelectedArm.currentPosition = shortArm.currentPosition;
+        }
+    }
+
+    protected void SwitchArm(string selectedArm)
+    {
+        if (selectedArm == "Small_Hand")
+        {
+            currentSelectedArm.armObject = shortArm.armObject; //set currrent object 
+            currentSelectedArm.currentPosition = shortArm.currentPosition;
+        }
+        else if (selectedArm == "Medium_Hand")
+        {
+            currentSelectedArm.armObject = middleArm.armObject; //set currrent object 
+            currentSelectedArm.currentPosition = middleArm.currentPosition;
+        }
+        else if (selectedArm == "Large_Hand")
+        {
+            currentSelectedArm.armObject = longArm.armObject; //set currrent object 
+            currentSelectedArm.currentPosition = longArm.currentPosition;
         }
     }
 
