@@ -21,7 +21,10 @@ public class Cereal : MonoBehaviour
     void Update()
     {
         //disable interaction if a note is open
-        if (!puzzle.canInteract || puzzle.noteOpen) return;
+        if (!puzzle.canInteract || puzzle.noteOpen)
+        {
+            return;
+        }
     }
     void OnMouseDown()
     {

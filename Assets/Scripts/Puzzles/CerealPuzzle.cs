@@ -2,9 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CerealPuzzle : Puzzle
+public class CerealPuzzle : Puzzle, ISubscribe
 {
     public List<CerealContainer> containers = new List<CerealContainer>();
+    public Bowl bowl;
+    public MilkSpill milkSpill;
+    public bool spillAll; 
+
+    protected override void Start()
+    {
+        foreach (CerealContainer c in containers)
+        {
+            c.gameObject.SetActive(false);
+        }
+    }
+
+    protected override void Update()
+    {
+        //disable puzzle if a note is open
+        if (!canInteract || noteOpen) return;
+        if (spillAll)
+        {
+            SpillAll();
+            spillAll = false;
+        }
+    }
+
+    public override void Subscribe()
+    {
+        EventHandler.OnPaintingSolve += SpillAll;
+        EventHandler.OnNoteOpen += DetectNoteOpen;
+    }
+    public override void Unsubscribe()
+    {
+        EventHandler.OnPaintingSolve -= SpillAll;
+        EventHandler.OnNoteOpen -= DetectNoteOpen;
+    }
 
     protected override void CheckSolveCondition()
     {
@@ -43,5 +76,21 @@ public class CerealPuzzle : Puzzle
     public void CheckWin()
     {
         CheckSolveCondition();
+    }
+
+    void SpillAll()
+    {
+        foreach (CerealContainer c in containers)
+        {
+            c.gameObject.SetActive(true);
+        }
+        bowl.Spill();
+        milkSpill.Spill();
+    }
+
+    void DetectNoteOpen(bool isOpen)
+    {
+        noteOpen = isOpen;
+        //Debug.Log("PUZZLE " + isOpen);
     }
 }
