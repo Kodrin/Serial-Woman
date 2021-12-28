@@ -5725,3 +5725,106 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004992 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Repositories\Five\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.278 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1279ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1074ms)
+			LoadAssemblies (100ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (421ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (332ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (238ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4857 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 405.4 MB.
+System memory in use after: 405.9 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 5934.
+Total: 6.712100 ms (FindLiveObjects: 0.499100 ms CreateObjectMapping: 0.386000 ms MarkObjects: 5.791900 ms  DeleteObjects: 0.033700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 10202.880351 seconds.
+  path: Assets/Scenes/Asset_Importing.unity
+  artifactKey: Guid(4fb27925e83d6164287f8f1e316ed2de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Asset_Importing.unity using Guid(4fb27925e83d6164287f8f1e316ed2de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a052813b662be387f194ac3e2da67a6') in 0.015446 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 95.539634 seconds.
+  path: Assets/Art/MilkSpill/MilkSpill.fbx
+  artifactKey: Guid(1b70bb6fc526a5346aa74ed2d634a8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/MilkSpill/MilkSpill.fbx using Guid(1b70bb6fc526a5346aa74ed2d634a8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bfa548ecead2075cdbcc27f48c7b22a8') in 0.170331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.426569 seconds.
+  path: Assets/Art/MilkSpill/MilkSpill.fbx
+  artifactKey: Guid(1b70bb6fc526a5346aa74ed2d634a8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/MilkSpill/MilkSpill.fbx using Guid(1b70bb6fc526a5346aa74ed2d634a8c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03a564867530b97cd83ef38f3a35e54e') in 0.018097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 54.730602 seconds.
+  path: Assets/Prefabs/Environment/MilkSpill.prefab
+  artifactKey: Guid(8a8a124088c3ff44f86c62cbb49c41be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment/MilkSpill.prefab using Guid(8a8a124088c3ff44f86c62cbb49c41be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '809c9fe7d77676c64bc9fef761d612b2') in 0.014632 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.325789 seconds.
+  path: Assets/Prefabs/Environment/MilkSpill.prefab
+  artifactKey: Guid(8a8a124088c3ff44f86c62cbb49c41be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment/MilkSpill.prefab using Guid(8a8a124088c3ff44f86c62cbb49c41be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51cff34b2624541c146ae022c5ca64dd') in 0.010052 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.028401 seconds.
+  path: Assets/Prefabs/Environment/MilkSpill.prefab
+  artifactKey: Guid(8a8a124088c3ff44f86c62cbb49c41be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment/MilkSpill.prefab using Guid(8a8a124088c3ff44f86c62cbb49c41be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3add179526696367b6b2b5af8d19de9f') in 0.007482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.672703 seconds.
+  path: Assets/Scenes/Main.unity
+  artifactKey: Guid(a9bbe5cc37a4ea942b9660c3cdce83e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main.unity using Guid(a9bbe5cc37a4ea942b9660c3cdce83e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1e1f85e1a291d7822da9bb12d1cd155') in 0.007543 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
