@@ -11,6 +11,7 @@ public class NoteInteraction : MonoBehaviour
     public Text title;
     private bool justOpened;
     private bool noteOpen;
+    public bool canInteract;
     private int currentLine = 0;
     private int lastLine;
     public List<string> textLines = new List<string>();
@@ -21,6 +22,7 @@ public class NoteInteraction : MonoBehaviour
         page.enabled = false;
         title.enabled = false;
         noteOpen = false;
+        canInteract = false;
 
         //if a note object is associated, load all of its pages
         if (targetNote)
@@ -34,6 +36,18 @@ public class NoteInteraction : MonoBehaviour
 
     void Update()
     {
+        ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
+        if ((targetNote.noteName == "THE THREE BARONS") && (currentShotType == ShotType.GRANDFATHER_SHOT))
+            canInteract = true;
+        else if ((targetNote.noteName == "HELP!") && (currentShotType == ShotType.PAINTING_SHOT))
+            canInteract = true;
+        else if ((targetNote.noteName == "WALL PLAQUE") && (currentShotType == ShotType.PAINTING_SHOT))
+            canInteract = true;
+        else
+            canInteract = false;
+
+        if (!canInteract) return;
+
         // Clicking anywhere on the screen should allow us to read through the note if it has already been open
         if (noteOpen)
         {
@@ -86,7 +100,7 @@ public class NoteInteraction : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!noteOpen)
+        if (!noteOpen && canInteract)
         {
             Debug.Log("Note Opened.");
             SetNoteProperties();

@@ -22,7 +22,7 @@ public class PuzzleController : MonoBehaviour
     protected void CheckPuzzleControls()
     {
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
-        
+        Debug.Log("Curren Shot Type is : " + currentShotType);
         if (currentShotType == ShotType.GRANDFATHER_SHOT)
         {
             EnablePuzzle(clockPuzzle);
