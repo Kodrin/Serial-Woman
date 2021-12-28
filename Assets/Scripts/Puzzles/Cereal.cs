@@ -16,18 +16,16 @@ public class Cereal : MonoBehaviour
     void Start()
     {
         initialPosition = gameObject.transform.position; //store the initial out-of-bowl position
-        initialRotationY = gameObject.transform.eulerAngles.y; //store the initial out-of-bowl rotation
+        initialRotationY = gameObject.transform.localEulerAngles.y; //store the initial out-of-bowl rotation
     }
     void Update()
     {
         //disable interaction if a note is open
-        if (!puzzle.canInteract || puzzle.noteOpen)
-        {
-            return;
-        }
+        if (!puzzle.canInteract || puzzle.noteOpen) return;
     }
     void OnMouseDown()
     {
+        if (!puzzle.canInteract || puzzle.noteOpen) return;
         previousPosition = gameObject.transform.position; //store the position of the piece before move
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -35,6 +33,7 @@ public class Cereal : MonoBehaviour
 
     void OnMouseDrag()
     {
+        if (!puzzle.canInteract || puzzle.noteOpen) return;
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
         transform.position = curPosition;
@@ -42,6 +41,7 @@ public class Cereal : MonoBehaviour
     
     void OnMouseUp()
     {
+        if (!puzzle.canInteract || puzzle.noteOpen) return;
         float iDist; //temp var for loop to avoid computing Distance twice
         float nearestDist = float.MaxValue; //init distance at max value
         //threshold distance to be considered on-slot. 
@@ -81,7 +81,7 @@ public class Cereal : MonoBehaviour
                 nearestContainer.setPiece(this);
                 associatedContainer = nearestContainer;
                 transform.position = nearestContainer.transform.position;
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+                transform.localEulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
             }
             else //if the slot is already occupied with another cereal piece
             {
@@ -102,7 +102,7 @@ public class Cereal : MonoBehaviour
                 nearestContainer.setPiece(this);
                 //swap Ceareal <-> CerealContainer associations as we swap the position of the pieces
                 transform.position = nearestContainer.transform.position;
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+                transform.localEulerAngles = new Vector3(transform.eulerAngles.x, 180, transform.eulerAngles.z);
             }
             //check if the letter attributed to the cereal and the cereal container match
             checkMatch(this);
@@ -111,7 +111,7 @@ public class Cereal : MonoBehaviour
         else //if we are not close enough to a slot, send the pice to its initial out-of-bowl position
         {
             transform.position = initialPosition;
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, initialRotationY, transform.eulerAngles.z);
+            transform.localEulerAngles = new Vector3(transform.eulerAngles.x, initialRotationY, transform.eulerAngles.z);
             //when moving from slot to initial position we must clear Container <=> Cereal associations 
             if (associatedContainer)
             {
