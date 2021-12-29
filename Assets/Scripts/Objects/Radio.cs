@@ -9,6 +9,9 @@ public class Radio : MonoBehaviour, ISubscribe
     public bool firstPass = true;
     public int previousSmallArmPosition = 1;
     public bool disableClockRadio = false;
+    public bool baronSolved = false;
+    public bool paintingSolved = false;
+    public bool cerealSolved = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -116,6 +119,7 @@ public class Radio : MonoBehaviour, ISubscribe
     }
     public void PlayBaron()
     {
+        if (baronSolved) return;
         StopAllCoroutines();
         Switch(tracks[5], false, true);
         var BaronTracksA = new List<AudioClip> { tracks[6], tracks[8], tracks[8], tracks[1] };
@@ -129,22 +133,27 @@ public class Radio : MonoBehaviour, ISubscribe
         {
             StartCoroutine(SwitchTrack(BaronTracksB));
         }
+        baronSolved = true;
     }
 
     public void PlayPainting()
     {
+        if (paintingSolved) return;
         StopAllCoroutines();
         Switch(tracks[5], false, true);
         var PaintingTracks = new List<AudioClip> { tracks[7], tracks[9] };
         StartCoroutine(SwitchTrack(PaintingTracks));
         disableClockRadio = true;
+        paintingSolved = true;
     }
 
     public void PlayCereal()
     {
+        if (cerealSolved) return;
         StopAllCoroutines();
         Switch(tracks[5], false, true);
         var CerealTracks = new List<AudioClip> { tracks[7], tracks[2] };
         StartCoroutine(SwitchTrack(CerealTracks));
+        cerealSolved = true;
     }
 }

@@ -19,7 +19,6 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     public float swapTime = 1.0f;
     
     public List<PaintingType> solveSequence = new List<PaintingType>();
-    public List<RotationHeading> solveRotation = new List<RotationHeading>();
     public List<Painting> paintings = new List<Painting>();
 
     public bool baronsSmallSolved = false;
@@ -139,27 +138,32 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 case 9:
                     RotateToHeading(paintings[2], RotationHeading.LEFT);
                     baronsLongSolved = false;
+                    Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 5:
                 case 7:
                 case 10:
                     RotateToHeading(paintings[2], RotationHeading.RIGHT);
                     baronsLongSolved = false;
+                    Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 2:
                 case 4:
                 case 12:
                     RotateToHeading(paintings[2], RotationHeading.DOWN);
                     baronsLongSolved = false;
+                    Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 11:
                     RotateToHeading(paintings[2], RotationHeading.LEFT);
                     baronsLongSolved = true;
                     CheckBaronSolved();
+                    Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 8:
                     RotateToHeading(paintings[2], RotationHeading.UP);
                     baronsLongSolved = false;
+                    Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
             }
         }
@@ -304,7 +308,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 else if (desiredhHeading == RotationHeading.DOWN)
                     QuickRotate(p, 270);
             }
-            p.currentRotation = desiredhHeading;
+            p.setHeading(desiredhHeading);
         }
     }
     protected void Swap()
@@ -339,7 +343,6 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         //make sure that solve sequence matches the amount of paintings
         if ((solveSequence.Count == paintings.Count) && rotationSolved)
         {
-            
             for (int i = 0; i < paintings.Count; i++)
             {
                 // if current painting matches solve index and current rotation matches solve index
@@ -349,6 +352,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 }
                 else
                 {
+                    Debug.Log(paintings[i].paintingType + " does not match " + solveSequence[i]);
                     return;
                 }
             }
@@ -367,16 +371,18 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             for (int i = 0; i < paintings.Count; i++)
             {
                 // if current painting matches solve index and current rotation matches solve index
-                if (paintings[i].currentRotation == solveRotation[i])
+                if (paintings[i].currentRotation == paintings[i].targetRotation)
                 {
                     // continue;
                 }
                 else
                 {
+                    Debug.Log(paintings[i].paintingType + " is " + paintings[i].currentRotation + " and must be " + paintings[i].targetRotation);
                     return;
                 }
             }
             rotationSolved = true;
+            CheckSolveCondition();
         }
     }
 
@@ -384,7 +390,12 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     {
         Debug.Log("Painting is Solved!");
         canInteract = false;
+        for (int i = 0; i < paintings.Count; i++)
+        {
+            paintings[i].isInteractable = false;
+        }
         EventHandler.PublishOnPaintingSolve();
+
     }
 
     protected IEnumerator WaitForSwap(Painting paintingObj, Vector3 originalPos, Vector3 targetPos)

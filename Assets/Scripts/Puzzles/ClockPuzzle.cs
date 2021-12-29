@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class ClockPuzzle : Puzzle
+public class ClockPuzzle : Puzzle, ISubscribe
 {
     [System.Serializable]
     public enum MoveDirection
@@ -27,6 +27,11 @@ public class ClockPuzzle : Puzzle
         public GameObject armObject;
         public int currentPosition;
         // public float currentRotation;
+
+        public void DisableArm()
+        {
+            armObject.SetActive(false);
+        }
     }
     
     [Header("ARMS")]
@@ -41,9 +46,20 @@ public class ClockPuzzle : Puzzle
     [Header("Solve Condition")] 
     [Range(1, 12)] public int targetShortArmPos = 1; 
     [Range(1, 12)] public int targetMiddleArmPos = 1; 
-    [Range(1, 12)] public int targetLongArmPos = 1; 
-    
+    [Range(1, 12)] public int targetLongArmPos = 1;
 
+
+    public override void Subscribe()
+    {
+        EventHandler.OnNoteOpen += DetectNoteOpen;
+        EventHandler.OnPaintingSolve += DisableHands;
+    }
+
+    public override void Unsubscribe()
+    {
+        EventHandler.OnNoteOpen -= DetectNoteOpen;
+        EventHandler.OnPaintingSolve -= DisableHands;
+    }
 
     protected override void Update()
     {
@@ -229,5 +245,18 @@ public class ClockPuzzle : Puzzle
         EventHandler.PublishOnSmallArmMove(shortArm.currentPosition);
         EventHandler.PublishOnMiddleArmMove(middleArm.currentPosition);
         EventHandler.PublishOnLongArmMove(longArm.currentPosition);
+    }
+
+    void DetectNoteOpen(bool isOpen)
+    {
+        noteOpen = isOpen;
+        //Debug.Log("PUZZLE " + isOpen);
+    }
+
+    void DisableHands()
+    {
+        shortArm.DisableArm();
+        middleArm.DisableArm();
+        longArm.DisableArm();
     }
 }

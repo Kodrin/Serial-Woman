@@ -25,6 +25,7 @@ public class Painting : MonoBehaviour
     public PaintingType paintingType;
     public RotationHeading initialRotation;
     public RotationHeading currentRotation;
+    public RotationHeading targetRotation;
     private Texture currentTexture;
     public bool isInteractable = true;
 
@@ -61,6 +62,11 @@ public class Painting : MonoBehaviour
     {
         currentTexture = t;
         gameObject.GetComponent<Renderer>().material.mainTexture = currentTexture;
+    }
+
+    public void setHeading(RotationHeading r)
+    {
+        currentRotation = r;
     }
 }
 
