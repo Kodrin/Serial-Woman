@@ -44,7 +44,11 @@ public static class EventHandler
     public delegate void TextControllerMsgEvent(string message);
     public static event TextControllerMsgEvent OnTextControllerMsg;
     public static void PublishOnTextControllerMsg(string message) { if (OnTextControllerMsg != null) { OnTextControllerMsg(message); } }
-    
+
+    public delegate void TextControllerResetEvent();
+    public static event TextControllerResetEvent OnTextControllerReset;
+    public static void PublishOnTextControllerReset() { if (OnTextControllerReset != null) { OnTextControllerReset(); } }
+
     //LAMP
     public delegate void LampSwitchEvent(string colorName, Color color);
     public static event LampSwitchEvent OnLampConfigSwitch;

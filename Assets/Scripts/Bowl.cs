@@ -20,6 +20,7 @@ public class Bowl : MonoBehaviour
     {
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if ((currentShotType != ShotType.TABLE_SHOT) && (currentShotType != ShotType.CHAIR_SHOT)) return;
+        EventHandler.PublishOnTextControllerReset();
         EventHandler.PublishOnTextControllerMsg("It's a cereal bowl filled with milk.");
     }
     public void Spill()

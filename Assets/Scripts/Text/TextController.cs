@@ -12,14 +12,15 @@ public class TextController : MonoBehaviour, ISubscribe
         public string text;
         public float displayTimer = 0;
         public float timeToDisplay;
+        public bool reset = false;
 
         public ScreenText(string text)
         {
-            this.text = text;            
+            this.text = text;
             timeToDisplay = GetDisplayTime();
             Debug.Log($"Display Time: {timeToDisplay} , Text : {text}");
         }
-        
+
         public float GetDisplayTime()
         {
             float charTime = 0.10f; //each char represent 1/4 seconds
@@ -28,6 +29,11 @@ public class TextController : MonoBehaviour, ISubscribe
 
         public void UpdateTimer()
         {
+            if (reset)
+            {
+                reset = false;
+                finishedDisplaying = true;
+            }
             if (displayTimer >= timeToDisplay)
             {
                 finishedDisplaying = true;
@@ -38,18 +44,18 @@ public class TextController : MonoBehaviour, ISubscribe
             }
         }
     }
-    
+
     public Text mainTextField;
     public ScreenText currentText;
     Queue<ScreenText> mainTextQueue = new Queue<ScreenText>();
 
     [SerializeField] protected float displayTimer = 0;
     [SerializeField] protected float displayTime = 0;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -69,7 +75,7 @@ public class TextController : MonoBehaviour, ISubscribe
             mainTextField.text = "";
         }
     }
-    
+
     protected void OnEnable()
     {
         Subscribe();
@@ -83,13 +89,21 @@ public class TextController : MonoBehaviour, ISubscribe
     public void Subscribe()
     {
         EventHandler.OnTextControllerMsg += QueueText;
+        EventHandler.OnTextControllerReset += ResetText;
     }
 
     public void Unsubscribe()
     {
         EventHandler.OnTextControllerMsg -= QueueText;
+        EventHandler.OnTextControllerReset -= ResetText;
     }
 
+    public void ResetText()
+    {
+        mainTextField.text = "";
+        currentText.reset = true;
+        mainTextQueue.Clear();
+    }
     public void QueueText(string text)
     {
         mainTextQueue.Enqueue(new ScreenText(text));

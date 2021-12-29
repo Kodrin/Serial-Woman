@@ -61,9 +61,16 @@ public class Painting : MonoBehaviour
             if (currentShotType == ShotType.PAINTING_SHOT)
             {
                 if (paintingType == PaintingType.LADY)
+                {
+                    EventHandler.PublishOnTextControllerReset();
                     EventHandler.PublishOnTextControllerMsg("The woman in the frame seems to be pointing to something.");
+                }
+                    
                 else
+                {
+                    EventHandler.PublishOnTextControllerReset();
                     EventHandler.PublishOnTextControllerMsg("A white dog has appeared in the frame. The woman is now pointing in a different direction.");
+                }
             }
             else
                 return;

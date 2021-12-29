@@ -87,6 +87,7 @@ public class Radio : MonoBehaviour, ISubscribe
     {
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if ((currentShotType != ShotType.TABLE_SHOT) && (currentShotType != ShotType.CHAIR_SHOT)) return;
+        EventHandler.PublishOnTextControllerReset();
         EventHandler.PublishOnTextControllerMsg("A transistor radio.");
     }
     public void PlayBlueMoon(int smallArmPosition)

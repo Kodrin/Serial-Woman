@@ -36,6 +36,7 @@ public class LotteryTicket : MonoBehaviour, ISubscribe
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if ((currentShotType == ShotType.TABLE_SHOT) || (currentShotType == ShotType.CHAIR_SHOT))
         {
+            EventHandler.PublishOnTextControllerReset();
             EventHandler.PublishOnTextControllerMsg("It's a lottery ticket.");
             if (!lightOn && paintingSolved)
             {
@@ -49,6 +50,7 @@ public class LotteryTicket : MonoBehaviour, ISubscribe
 
         else if (currentShotType == ShotType.LOTTERY_SHOT)
         {
+            EventHandler.PublishOnTextControllerReset();
             if (paintingSolved)
             {
                 EventHandler.PublishOnTextControllerMsg("There are strange markings on the ticket. Perhaps they hold some importance.");

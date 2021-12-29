@@ -9,6 +9,7 @@ public class CerealBox : MonoBehaviour
     {
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if ((currentShotType != ShotType.TABLE_SHOT) && (currentShotType != ShotType.CHAIR_SHOT)) return;
+        EventHandler.PublishOnTextControllerReset();
         EventHandler.PublishOnTextControllerMsg("An empty cereal box.");
     }
 }
