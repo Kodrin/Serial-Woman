@@ -23,6 +23,7 @@
           <e p="Audio" t="Include">
             <e p="AudioController.cs" t="Include" />
           </e>
+          <e p="Bowl.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraController.cs" t="Include" />
             <e p="CameraShot.cs" t="Include" />
@@ -47,6 +48,8 @@
           <e p="Lights" t="Include">
             <e p="LightsController.cs" t="Include" />
           </e>
+          <e p="Milk.cs" t="Include" />
+          <e p="MilkSpill.cs" t="Include" />
           <e p="Note.cs" t="Include" />
           <e p="Objects" t="Include">
             <e p="Lamp.cs" t="Include" />
