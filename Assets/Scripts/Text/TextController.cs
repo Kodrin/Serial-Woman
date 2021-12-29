@@ -22,7 +22,7 @@ public class TextController : MonoBehaviour, ISubscribe
         
         public float GetDisplayTime()
         {
-            float charTime = 0.05f; //each char represent 1/4 seconds
+            float charTime = 0.10f; //each char represent 1/4 seconds
             return text.ToCharArray().Length * charTime;
         }
 

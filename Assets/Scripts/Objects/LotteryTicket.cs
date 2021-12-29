@@ -31,6 +31,35 @@ public class LotteryTicket : MonoBehaviour, ISubscribe
         EventHandler.OnLampPowerToggle -= LampToggle;
     }
 
+    private void OnMouseDown()
+    {
+        ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
+        if ((currentShotType == ShotType.TABLE_SHOT) || (currentShotType == ShotType.CHAIR_SHOT))
+        {
+            EventHandler.PublishOnTextControllerMsg("It's a lottery ticket.");
+            if (!lightOn && paintingSolved)
+            {
+                EventHandler.PublishOnTextControllerMsg("It's wet to the touch. There appear to be blood stains and other markings on the ticket.");
+            }
+            else
+            {
+                EventHandler.PublishOnTextControllerMsg("It's wet to the touch but there are no visible markings on the ticket.");
+            }
+        }
+
+        else if (currentShotType == ShotType.LOTTERY_SHOT)
+        {
+            if (paintingSolved)
+            {
+                EventHandler.PublishOnTextControllerMsg("There are strange markings on the ticket. Perhaps they hold some importance.");
+            }
+            else
+            {
+                EventHandler.PublishOnTextControllerMsg("Just a plain old lottery ticket.");
+            }
+        }
+    }
+
     // Start is called before the first frame update
     public void LampToggle(bool lampOn)
     {

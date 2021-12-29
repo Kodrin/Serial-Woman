@@ -53,6 +53,25 @@ public class Painting : MonoBehaviour
         }
     }
 
+    private void OnMouseDown()
+    {
+        ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
+        if ((paintingType == PaintingType.LADY) || (paintingType == PaintingType.DOG))
+        {
+            if (currentShotType == ShotType.PAINTING_SHOT)
+            {
+                if (paintingType == PaintingType.LADY)
+                    EventHandler.PublishOnTextControllerMsg("The woman in the frame seems to be pointing to something.");
+                else
+                    EventHandler.PublishOnTextControllerMsg("A white dog has appeared in the frame. The woman is now pointing in a different direction.");
+            }
+            else
+                return;
+        }
+        else
+            return;
+    }
+
     public Texture GetTexture()
     {
         return currentTexture;
