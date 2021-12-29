@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Paper/Blender/Paper_01.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Paper/Blender/Paper_01.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Paper/Blender/Paper_01.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Paper/Blender/Paper_01.blend1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,13 +73,13 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/VHSEffect.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Mannequin.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Common/EventHandler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/WallText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Lamp.cs" />
       </list>
     </option>
   </component>
@@ -95,6 +94,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Build\Five.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Codrin\Desktop\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -136,7 +143,7 @@
       <workItem from="1637212515620" duration="686000" />
       <workItem from="1639008321825" duration="2709000" />
       <workItem from="1640642519392" duration="3903000" />
-      <workItem from="1640717798583" duration="1762000" />
+      <workItem from="1640717798583" duration="2431000" />
     </task>
     <servers />
   </component>

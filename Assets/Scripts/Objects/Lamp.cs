@@ -105,21 +105,21 @@ public class Lamp : MonoBehaviour, ISubscribe
     public void RedConfiguration()
     {
         lightComponent.color = redColor;
-        EventHandler.PublishOnLampConfigSwitch("red", Color.red);
+        EventHandler.PublishOnLampConfigSwitch("red", redColor);
 
     }
 
     public void GreenConfiguration()
     {
         lightComponent.color = greenColor;
-        EventHandler.PublishOnLampConfigSwitch("green", Color.green);
+        EventHandler.PublishOnLampConfigSwitch("green", greenColor);
 
     }
 
     public void BlueConfiguration()
     {
         lightComponent.color = blueColor;
-        EventHandler.PublishOnLampConfigSwitch("blue", Color.blue);
+        EventHandler.PublishOnLampConfigSwitch("blue", blueColor);
 
     }
 
