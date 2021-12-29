@@ -62,21 +62,24 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 case 1:
                 case 4:
                 case 8:
-                case 11:
                     RotateToHeading(paintings[0], RotationHeading.LEFT);
                     baronsSmallSolved = false;
                     break;
                 case 2:
                 case 5:
                 case 6:
-                case 9:
+                case 11:
                     RotateToHeading(paintings[0], RotationHeading.DOWN);
                     baronsSmallSolved = false;
                     break;
                 case 3:
-                    RotateToHeading(paintings[0], RotationHeading.RIGHT);
+                    RotateToHeading(paintings[0], RotationHeading.LEFT);
                     baronsSmallSolved = true;
                     CheckBaronSolved();
+                    break;
+                case 9:
+                    RotateToHeading(paintings[0], RotationHeading.RIGHT);
+                    baronsSmallSolved = false;
                     break;
                 case 7:
                 case 10:
@@ -101,7 +104,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                     baronsMiddleSolved = false;
                     break;
                 case 1:
-                case 11:
+                case 12:
                 case 4:
                 case 10:
                     RotateToHeading(paintings[1], RotationHeading.LEFT);
@@ -113,7 +116,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                     RotateToHeading(paintings[1], RotationHeading.RIGHT);
                     baronsMiddleSolved = false;
                     break;
-                case 12:
+                case 11:
                     RotateToHeading(paintings[1], RotationHeading.DOWN);
                     baronsMiddleSolved = false;
                     break;
@@ -147,7 +150,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                     baronsLongSolved = false;
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
-                case 2:
+                case 8:
                 case 4:
                 case 12:
                     RotateToHeading(paintings[2], RotationHeading.DOWN);
@@ -160,7 +163,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                     CheckBaronSolved();
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
-                case 8:
+                case 2:
                     RotateToHeading(paintings[2], RotationHeading.UP);
                     baronsLongSolved = false;
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
