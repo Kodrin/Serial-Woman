@@ -266,6 +266,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         {
             if(p.currentRotation == RotationHeading.UP)
             {
+                p.setHeading(desiredhHeading);
                 if (desiredhHeading == RotationHeading.RIGHT)
                     QuickRotate(p, 90);
 
@@ -277,6 +278,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             }
             else if (p.currentRotation == RotationHeading.RIGHT)
             {
+                p.setHeading(desiredhHeading);
                 if (desiredhHeading == RotationHeading.DOWN)
                     QuickRotate(p, 90);
 
@@ -288,6 +290,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             }
             else if (p.currentRotation == RotationHeading.DOWN) 
             {
+                p.setHeading(desiredhHeading);
                 if (desiredhHeading == RotationHeading.LEFT)
                     QuickRotate(p, 90);
 
@@ -299,6 +302,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
             }
             else if (p.currentRotation == RotationHeading.LEFT)
             {
+                p.setHeading(desiredhHeading);
                 if (desiredhHeading == RotationHeading.UP)
                     QuickRotate(p, 90);
 
@@ -308,7 +312,6 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 else if (desiredhHeading == RotationHeading.DOWN)
                     QuickRotate(p, 270);
             }
-            p.setHeading(desiredhHeading);
         }
     }
     protected void Swap()
