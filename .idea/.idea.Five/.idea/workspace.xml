@@ -23,12 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/MilkSpill/Blender/MilkSpill.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/MilkSpill/Blender/MilkSpill.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/MilkSpill/Blender/MilkSpill.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/MilkSpill/Blender/MilkSpill.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +79,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Lights/LightsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/Hotspot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/MannequinHotspot.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Puzzles/PuzzleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraController.cs" />
       </list>
     </option>
   </component>
@@ -141,7 +136,7 @@
       <workItem from="1637212515620" duration="686000" />
       <workItem from="1639008321825" duration="2709000" />
       <workItem from="1640642519392" duration="3903000" />
-      <workItem from="1640717798583" duration="1232000" />
+      <workItem from="1640717798583" duration="1762000" />
     </task>
     <servers />
   </component>

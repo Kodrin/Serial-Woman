@@ -16,6 +16,7 @@ public enum ShotType
     GRANDFATHER_SHOT,
     PAINTING_SHOT,
     MANNEQUIN_SHOT,
+    NOTE_ON_FLOOR_SHOT,
     BLOOD_SHOT
 }
 
@@ -24,6 +25,7 @@ public class CameraController : Singleton<CameraController>
 
     public CameraShot currentCameraShot;
     public List<CameraShot> cameraShots = new List<CameraShot>();
+        
 
     protected void OnEnable()
     {

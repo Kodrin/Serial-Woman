@@ -30,6 +30,7 @@
             <e p="Hotspot.cs" t="Include" />
             <e p="MannequinHotspot.cs" t="Include" />
           </e>
+          <e p="CerealBox.cs" t="Include" />
           <e p="Common" t="Include">
             <e p="EventHandler.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
