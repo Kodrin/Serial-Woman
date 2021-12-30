@@ -14,6 +14,7 @@ public class NoteInteraction : MonoBehaviour
     public bool canInteract;
     private int currentLine = 0;
     private int lastLine;
+    public CameraController cameraController;
     public List<string> textLines = new List<string>();
 
     void Start()
@@ -71,6 +72,7 @@ public class NoteInteraction : MonoBehaviour
                     title.enabled = false;
                     currentLine = 0;
                     noteOpen = false;
+                    cameraController.EnableHotspots();
                     EventHandler.PublishOnNoteOpen(false);
                     //Debug.Log("PUBLISHED NOTE OPEN FALSE");
                 }
@@ -141,6 +143,7 @@ public class NoteInteraction : MonoBehaviour
         if(justOpened)
         {
             noteOpen = true;
+            cameraController.DisableHotspots();
             justOpened = false;
         }
     }
