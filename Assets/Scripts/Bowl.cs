@@ -29,6 +29,7 @@ public class Bowl : MonoBehaviour
     }
     public void Spill()
     {
+        if (nomilk) return;
         this.transform.localPosition = new Vector3(this.transform.localPosition.x, 0.07f, this.transform.localPosition.z);
         this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, this.transform.eulerAngles.y, this.transform.eulerAngles.z + 47.3f);
         milk.gameObject.SetActive(false);
