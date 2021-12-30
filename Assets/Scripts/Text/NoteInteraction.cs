@@ -39,7 +39,7 @@ public class NoteInteraction : MonoBehaviour
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if ((targetNote.noteName == "THE THREE BARONS") && (currentShotType == ShotType.GRANDFATHER_SHOT))
             canInteract = true;
-        else if ((targetNote.noteName == "HELP!") && (currentShotType == ShotType.PAINTING_SHOT))
+        else if ((targetNote.noteName == "HELP!") && (currentShotType == ShotType.NOTE_ON_FLOOR_SHOT))
             canInteract = true;
         else if ((targetNote.noteName == "WALL PLAQUE") && (currentShotType == ShotType.PAINTING_SHOT))
             canInteract = true;
