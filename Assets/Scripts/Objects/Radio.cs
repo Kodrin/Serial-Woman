@@ -34,6 +34,12 @@ public class Radio : MonoBehaviour, ISubscribe
         }
     }
 
+    IEnumerator EndRadio()
+    {
+        yield return new WaitForSeconds(bgm.clip.length - bgm.time);
+        EventHandler.PublishOnLastTrack();
+    }
+
     IEnumerator SwitchTrack(AudioClip track)
     {
         yield return new WaitForSeconds(bgm.clip.length - bgm.time);
@@ -159,8 +165,7 @@ public class Radio : MonoBehaviour, ISubscribe
         if (cerealSolved) return;
         StopAllCoroutines();
         Switch(tracks[5], false, true);
-        var CerealTracks = new List<AudioClip> { tracks[7], tracks[2] };
-        StartCoroutine(SwitchTrack(CerealTracks));
         cerealSolved = true;
+        EndRadio();
     }
 }

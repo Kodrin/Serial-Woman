@@ -63,6 +63,10 @@ public static class EventHandler
     public static event IntroCompleteEvent OnIntroComplete;
     public static void PublishOnIntroComplete() { if (OnIntroComplete != null) { OnIntroComplete(); } }
 
+    public delegate void LastTrackEvent();
+    public static event LastTrackEvent OnLastTrack;
+    public static void PublishOnLastTrack() { if (OnLastTrack != null) { OnLastTrack(); } }
+
     //NOTE
     public delegate void NoteOpenEvent(bool isOpen);
     public static event NoteOpenEvent OnNoteOpen;
