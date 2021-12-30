@@ -19,14 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Five/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Head/Materials/Head.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Head/Materials/Head.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cutscene/Final_Cutscene.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cutscene/Final_Cutscene.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/Final_Cutscene_Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/Final_Cutscene_Timeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Timelines/TitleCard_Timeline.playable" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Timelines/TitleCard_Timeline.playable" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="93fd0e6c-6fbc-473c-bcb2-0144c5e201f1" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
