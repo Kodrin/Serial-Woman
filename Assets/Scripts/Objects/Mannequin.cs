@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Mannequin : MonoBehaviour, ISubscribe
 {
+    [SerializeField] protected GameObject mannequinHotspot;
     protected MeshRenderer meshRend;
     protected MeshRenderer[] meshRendChildren;
 
@@ -17,6 +18,7 @@ public class Mannequin : MonoBehaviour, ISubscribe
 
     protected void Start()
     {
+        // mannequinHotspot.SetActive(false);
         meshRend.enabled = false;
         foreach (var m in meshRendChildren)
         {
@@ -53,6 +55,7 @@ public class Mannequin : MonoBehaviour, ISubscribe
             foreach (var m in meshRendChildren)
             {
                 m.enabled = true;
+                // mannequinHotspot.SetActive(true);
             }
         }
         else
@@ -61,6 +64,7 @@ public class Mannequin : MonoBehaviour, ISubscribe
             foreach (var m in meshRendChildren)
             {
                 m.enabled = false;
+                // mannequinHotspot.SetActive(false);
             }
         }
     }
