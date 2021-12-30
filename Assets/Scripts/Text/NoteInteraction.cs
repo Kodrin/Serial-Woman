@@ -12,6 +12,7 @@ public class NoteInteraction : MonoBehaviour
     private bool justOpened;
     private bool noteOpen;
     public bool canInteract;
+    public bool floorNoteFirstOpen = false;
     private int currentLine = 0;
     private int lastLine;
     public CameraController cameraController;
@@ -43,6 +44,8 @@ public class NoteInteraction : MonoBehaviour
         else if ((targetNote.noteName == "HELP!") && (currentShotType == ShotType.NOTE_ON_FLOOR_SHOT))
             canInteract = true;
         else if ((targetNote.noteName == "WALL PLAQUE") && (currentShotType == ShotType.PAINTING_SHOT))
+            canInteract = true;
+        else if ((targetNote.noteName == "WELCOME") && ((currentShotType == ShotType.TABLE_SHOT) || (currentShotType == ShotType.CHAIR_SHOT) || (currentShotType == ShotType.BOWL_DETAIL_SHOT)))
             canInteract = true;
         else
             canInteract = false;
@@ -118,7 +121,11 @@ public class NoteInteraction : MonoBehaviour
             }
             justOpened = true;
             EventHandler.PublishOnNoteOpen(true);
-            //Debug.Log("PUBLISHED NOTE OPEN TRUE");
+            if ((targetNote.noteName == "HELP!") && !floorNoteFirstOpen)
+            {
+                EventHandler.PublishOnFloorNoteOpen();
+                floorNoteFirstOpen = true;
+            }   
         }
     }
 

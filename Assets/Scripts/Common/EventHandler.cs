@@ -70,7 +70,10 @@ public static class EventHandler
     //NOTE
     public delegate void NoteOpenEvent(bool isOpen);
     public static event NoteOpenEvent OnNoteOpen;
-    public static void PublishOnNoteOpen(bool isOpen) { if (OnIntroComplete != null) { OnNoteOpen(isOpen); } }
+    public static void PublishOnNoteOpen(bool isOpen) { if (OnNoteOpen != null) { OnNoteOpen(isOpen); } }
 
+    public delegate void FloorNoteOpenEvent();
+    public static event FloorNoteOpenEvent OnFloorNoteOpen;
+    public static void PublishOnFloorNoteOpen() { if (OnFloorNoteOpen != null) { OnFloorNoteOpen(); } }
 
 }

@@ -27,13 +27,13 @@ public class Painting : MonoBehaviour
     public RotationHeading currentRotation;
     public RotationHeading targetRotation;
     private Texture currentTexture;
-    public bool isInteractable = true;
+    public bool isInteractable;
+    public bool isSolved;
 
     private void Start()
     {
-        if ((paintingType == PaintingType.LADY) || (paintingType == PaintingType.DOG))
-            isInteractable = false; 
-
+        isSolved = false;
+        isInteractable = false;
         currentRotation = initialRotation;
         currentTexture = gameObject.GetComponent<Renderer>().material.mainTexture;
 
@@ -55,6 +55,12 @@ public class Painting : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (isSolved)
+        {
+            EventHandler.PublishOnTextControllerReset();
+            EventHandler.PublishOnTextControllerMsg("The paintings are all in order. There is nothing left to do here.");
+            return;
+        }
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if ((paintingType == PaintingType.LADY) || (paintingType == PaintingType.DOG))
         {
@@ -76,7 +82,12 @@ public class Painting : MonoBehaviour
                 return;
         }
         else
-            return;
+        {
+            if (!(currentShotType == ShotType.PAINTING_SHOT) || isInteractable) return;
+            EventHandler.PublishOnTextControllerReset();
+            EventHandler.PublishOnTextControllerMsg("I shouldn't mess with these paintings until I know what order they go in.");
+            EventHandler.PublishOnTextControllerMsg("That large painting of a woman in black clothing is rather odd. Perhaps I should take a look.");
+        }
     }
 
     public Texture GetTexture()

@@ -7,7 +7,8 @@ public class CerealPuzzle : Puzzle, ISubscribe
     public List<CerealContainer> containers = new List<CerealContainer>();
     public Bowl bowl;
     public MilkSpill milkSpill;
-    public bool spillAll; 
+    public bool spillAll;
+    public GameObject welcomeNote;
 
     protected override void Start()
     {
@@ -80,6 +81,7 @@ public class CerealPuzzle : Puzzle, ISubscribe
 
     void SpillAll()
     {
+        welcomeNote.SetActive(false);
         foreach (CerealContainer c in containers)
         {
             c.gameObject.SetActive(true);

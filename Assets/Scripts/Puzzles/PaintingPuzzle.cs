@@ -46,6 +46,7 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         EventHandler.OnMiddleArmMove += CheckMiddleArm;
         EventHandler.OnLongArmMove += CheckLongArm;
         EventHandler.OnNoteOpen += DetectNoteOpen;
+        EventHandler.OnFloorNoteOpen += StartPuzzle;
     }
     public override void Unsubscribe()
     {
@@ -53,7 +54,15 @@ public class PaintingPuzzle : Puzzle, ISubscribe
         EventHandler.OnMiddleArmMove -= CheckMiddleArm;
         EventHandler.OnLongArmMove -= CheckLongArm;
         EventHandler.OnNoteOpen -= DetectNoteOpen;
+        EventHandler.OnFloorNoteOpen -= StartPuzzle;
     }
+
+    public void StartPuzzle()
+    {
+        demon.isInteractable = true;
+        sleep.isInteractable = true;
+        horse.isInteractable = true;
+    }    
 
     public void CheckSmallArm(int smallArmPosition)
     {
@@ -367,6 +376,10 @@ public class PaintingPuzzle : Puzzle, ISubscribe
 
             //if it didn't return, that means it was solved so mark as solved
             solved = true;
+            foreach(Painting p in paintings)
+            {
+                p.isSolved = true;
+            }
             ResolveState();
         }
     }

@@ -39,8 +39,8 @@ public class ClockPuzzle : Puzzle, ISubscribe
     [SerializeField] protected ClockArm shortArm;
     [SerializeField] protected ClockArm middleArm;
     [SerializeField] protected ClockArm longArm;
-    
-    
+    public bool armsInteractable = false;
+
     [SerializeField] protected float moveAngleIncrement = 30.0f;
 
     [Header("Solve Condition")] 
@@ -52,12 +52,14 @@ public class ClockPuzzle : Puzzle, ISubscribe
     public override void Subscribe()
     {
         EventHandler.OnNoteOpen += DetectNoteOpen;
+        EventHandler.OnFloorNoteOpen += StartPuzzle;
         EventHandler.OnPaintingSolve += DisableHands;
     }
 
     public override void Unsubscribe()
     {
         EventHandler.OnNoteOpen -= DetectNoteOpen;
+        EventHandler.OnFloorNoteOpen -= StartPuzzle;
         EventHandler.OnPaintingSolve -= DisableHands;
     }
 
@@ -80,8 +82,16 @@ public class ClockPuzzle : Puzzle, ISubscribe
             {
                 Debug.Log("You clicked on " + hit.transform.name);
                 selectedHand = hit.transform.name;
-                SwitchArm(selectedHand);
-                MoveArmRight();
+                if (armsInteractable)
+                {
+                    SwitchArm(selectedHand);
+                    MoveArmRight();
+                }
+                else
+                {
+                    EventHandler.PublishOnTextControllerReset();
+                    EventHandler.PublishOnTextControllerMsg("I shouldn't mess with the time unless I have a reason to.");
+                }
             }
         }
         /* DEPRECATED KEY CONTROLS
@@ -102,6 +112,10 @@ public class ClockPuzzle : Puzzle, ISubscribe
         */
     }
 
+    public void StartPuzzle()
+    {
+        armsInteractable = true;
+    }
     public int GetHour()
     {
         return shortArm.currentPosition;
