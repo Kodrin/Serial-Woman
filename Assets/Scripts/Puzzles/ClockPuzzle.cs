@@ -102,6 +102,10 @@ public class ClockPuzzle : Puzzle, ISubscribe
         */
     }
 
+    public int GetHour()
+    {
+        return shortArm.currentPosition;
+    }
     protected void RotateArm(MoveDirection dir)
     {
         switch (dir)

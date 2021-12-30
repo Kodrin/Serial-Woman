@@ -25,6 +25,7 @@ public class CameraController : Singleton<CameraController>
 
     public CameraShot currentCameraShot;
     public List<CameraShot> cameraShots = new List<CameraShot>();
+    public ClockPuzzle clockPuzzle;
         
 
     protected void OnEnable()
@@ -85,12 +86,36 @@ public class CameraController : Singleton<CameraController>
         //disable / enable hotspots
         if(currentCameraShot) currentCameraShot.ShowHotspots(false); //disable hotspots of previous camera
         currentCameraShot = to; //update current camera shot 
-        currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
+        if (currentCameraShot.shotType == ShotType.CHAIR_SHOT)
+        {
+            List<Hotspot> h = currentCameraShot.hotspots;
+            if (h.Count > 0)
+            {
+                foreach (var hotspot in h)
+                {
+                    if (hotspot.gameObject.name == "Mannequin_Hotspot")
+                    {
+                        if (clockPuzzle.GetHour() == 11)
+                        {
+                            hotspot.gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            hotspot.gameObject.SetActive(false);
+                        }
+                    }
+                    else
+                        hotspot.gameObject.SetActive(true);
+                }
+            }
+        }
+        else
+            currentCameraShot.ShowHotspots(true); //enable hotspots of current camera
         
         //trigger camera switch event
         EventHandler.PublishOnCameraSwitch();
     }
-    
+
     public void DisableHotspots()
     {
         currentCameraShot.ShowHotspots(false);
