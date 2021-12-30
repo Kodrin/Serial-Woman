@@ -8,15 +8,26 @@ public class PuzzleController : MonoBehaviour
     [SerializeField] protected Puzzle clockPuzzle;
     [SerializeField] protected Puzzle paintingPuzzle;
     [SerializeField] protected Puzzle cerealPuzzle;
+    [SerializeField] protected CameraController cameraController;
 
     protected void OnEnable()
     {
         EventHandler.OnCameraSwitch += CheckPuzzleControls; //add so it will enable interaction when camera is switching
+        EventHandler.OnCerealSolve += EndGame;
+        EventHandler.OnIntroComplete += StartGame;
     }
 
     protected void OnDisable()
     {
         EventHandler.OnCameraSwitch -= CheckPuzzleControls; //add so it will enable interaction when camera is switching
+        EventHandler.OnCerealSolve -= EndGame;
+        EventHandler.OnIntroComplete -= StartGame;
+    }
+
+    private void Start()
+    {
+        //Hotspots should be disabled until intro cutscene is complete
+        cameraController.DisableHotspots();
     }
 
     protected void CheckPuzzleControls()
@@ -50,6 +61,14 @@ public class PuzzleController : MonoBehaviour
         }
     }
 
+    protected void StartGame()
+    {
+        cameraController.EnableHotspots();
+    }
+    protected void EndGame()
+    {
+        cameraController.DisableHotspots();
+    }
     protected void EnablePuzzle(Puzzle puzzle)
     {
         puzzle.canInteract = true;
