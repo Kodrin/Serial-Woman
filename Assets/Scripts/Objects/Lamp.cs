@@ -25,7 +25,9 @@ public class Lamp : MonoBehaviour, ISubscribe
 
     public bool LightOn => lightOn;
     public bool noteOpen;
-    
+    public float maxTime;
+    float elapsedTime = 0.0f;
+
     protected void Awake()
     {
         lightComponent = this.GetComponentInChildren<Light>();
@@ -37,6 +39,17 @@ public class Lamp : MonoBehaviour, ISubscribe
         {
             ToggleLight();
         }
+        if (lightComponent.color == blueColor)
+        {
+            if (elapsedTime >= maxTime)
+            {
+                maxTime = UnityEngine.Random.Range(0.1f, 1.0f);
+                ToggleLight();
+                elapsedTime = 0.0f;
+                return;
+            }
+            elapsedTime += Time.deltaTime;
+        }
     }
 
     protected void OnMouseDown()
@@ -44,7 +57,13 @@ public class Lamp : MonoBehaviour, ISubscribe
         ShotType currentShotType = CameraController.Instance.currentCameraShot.shotType;
         if (!noteOpen && (currentShotType == ShotType.CHAIR_SHOT || currentShotType == ShotType.TABLE_SHOT))
         {
-            ToggleLight();
+            if (lightComponent.color == blueColor)
+            {
+                EventHandler.PublishOnTextControllerReset();
+                EventHandler.PublishOnTextControllerMsg("The lamp is malfunctioning.");
+            }
+            else
+                ToggleLight();
         }
     }
 
@@ -118,6 +137,7 @@ public class Lamp : MonoBehaviour, ISubscribe
 
     public void BlueConfiguration()
     {
+        maxTime = UnityEngine.Random.Range(0.1f, 1.0f);
         lightComponent.color = blueColor;
         EventHandler.PublishOnLampConfigSwitch("blue", blueColor);
 
