@@ -20,8 +20,7 @@ public class Radio : MonoBehaviour, ISubscribe
     }
     public void StartRadio()
     {
-        bgm.loop = true;
-        bgm.Play(0); //play with 0 delay
+        StartCoroutine(DelayedStart(13));
     }
 
     void Switch(AudioClip track, bool loopIt, bool cut)
@@ -37,6 +36,10 @@ public class Radio : MonoBehaviour, ISubscribe
     IEnumerator EndRadio()
     {
         yield return new WaitForSeconds(bgm.clip.length - bgm.time);
+        bgm.clip = tracks[10];
+        bgm.Play();
+        bgm.loop = false;
+        Debug.Log("End Radio");
         EventHandler.PublishOnLastTrack();
     }
 
@@ -60,6 +63,13 @@ public class Radio : MonoBehaviour, ISubscribe
             bgm.Play();
         }
         bgm.loop = true;
+    }
+
+    IEnumerator DelayedStart(int x)
+    {
+        yield return new WaitForSeconds(x);
+        bgm.loop = true;
+        bgm.Play(0); //play with 0 delay
     }
     protected void OnEnable()
     {
@@ -166,6 +176,7 @@ public class Radio : MonoBehaviour, ISubscribe
         StopAllCoroutines();
         Switch(tracks[5], false, true);
         cerealSolved = true;
-        EndRadio();
+        Debug.Log("Sending request to End Radio.");
+        StartCoroutine(EndRadio());
     }
 }

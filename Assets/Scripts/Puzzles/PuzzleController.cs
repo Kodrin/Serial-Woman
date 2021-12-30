@@ -31,6 +31,7 @@ public class PuzzleController : MonoBehaviour
     {
         //Hotspots should be disabled until intro cutscene is complete
         cameraController.DisableHotspots();
+        StartCoroutine(WaitForIntro());
     }
 
     protected void CheckPuzzleControls()
@@ -63,6 +64,12 @@ public class PuzzleController : MonoBehaviour
             DisablePuzzle(cerealPuzzle);
         }
     }
+    IEnumerator WaitForIntro()
+    {
+        yield return new WaitForSeconds(32);
+        EventHandler.PublishOnIntroComplete();
+        Debug.Log("Intro Complete!");
+    }
 
     protected void StartGame()
     {
@@ -75,7 +82,21 @@ public class PuzzleController : MonoBehaviour
 
     protected void PlayEnding()
     {
+        Debug.Log("End Game.");
         outro.SetActive(true);
+        StartCoroutine(DisableCereal());
+        StartCoroutine(ExitGame());
+    }
+    IEnumerator DisableCereal()
+    {
+        yield return new WaitForSeconds(4);
+        cerealPuzzle.gameObject.SetActive(false);
+    }
+
+    IEnumerator ExitGame()
+    {
+        yield return new WaitForSeconds(93);
+        Application.Quit();
     }
     protected void EnablePuzzle(Puzzle puzzle)
     {
