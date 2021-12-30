@@ -20,7 +20,9 @@ public class PaintingPuzzle : Puzzle, ISubscribe
     
     public List<PaintingType> solveSequence = new List<PaintingType>();
     public List<Painting> paintings = new List<Painting>();
-
+    public Painting demon;
+    public Painting horse;
+    public Painting sleep;
     public bool baronsSmallSolved = false;
     public bool baronsMiddleSolved = false;
     public bool baronsLongSolved = false;
@@ -62,29 +64,29 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 case 1:
                 case 4:
                 case 8:
-                    RotateToHeading(paintings[0], RotationHeading.LEFT);
+                    RotateToHeading(sleep, RotationHeading.LEFT);
                     baronsSmallSolved = false;
                     break;
                 case 2:
                 case 5:
                 case 6:
                 case 11:
-                    RotateToHeading(paintings[0], RotationHeading.DOWN);
+                    RotateToHeading(sleep, RotationHeading.DOWN);
                     baronsSmallSolved = false;
                     break;
                 case 3:
-                    RotateToHeading(paintings[0], RotationHeading.LEFT);
+                    RotateToHeading(sleep, RotationHeading.LEFT);
                     baronsSmallSolved = true;
                     CheckBaronSolved();
                     break;
                 case 9:
-                    RotateToHeading(paintings[0], RotationHeading.RIGHT);
+                    RotateToHeading(sleep, RotationHeading.RIGHT);
                     baronsSmallSolved = false;
                     break;
                 case 7:
                 case 10:
                 case 12:
-                    RotateToHeading(paintings[0], RotationHeading.UP);
+                    RotateToHeading(sleep, RotationHeading.UP);
                     baronsSmallSolved = false;
                     break;
             }
@@ -100,28 +102,28 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 case 2:
                 case 6:
                 case 9:
-                    RotateToHeading(paintings[1], RotationHeading.UP);
+                    RotateToHeading(horse, RotationHeading.UP);
                     baronsMiddleSolved = false;
                     break;
                 case 1:
                 case 12:
                 case 4:
                 case 10:
-                    RotateToHeading(paintings[1], RotationHeading.LEFT);
+                    RotateToHeading(horse, RotationHeading.LEFT);
                     baronsMiddleSolved = false;
                     break;
                 case 3:
                 case 5:
                 case 8:
-                    RotateToHeading(paintings[1], RotationHeading.RIGHT);
+                    RotateToHeading(horse, RotationHeading.RIGHT);
                     baronsMiddleSolved = false;
                     break;
                 case 11:
-                    RotateToHeading(paintings[1], RotationHeading.DOWN);
+                    RotateToHeading(horse, RotationHeading.DOWN);
                     baronsMiddleSolved = false;
                     break;
                 case 7:
-                    RotateToHeading(paintings[1], RotationHeading.UP);
+                    RotateToHeading(horse, RotationHeading.UP);
                     baronsMiddleSolved = true;
                     CheckBaronSolved();
                     break;
@@ -139,32 +141,32 @@ public class PaintingPuzzle : Puzzle, ISubscribe
                 case 3:
                 case 6:
                 case 9:
-                    RotateToHeading(paintings[2], RotationHeading.LEFT);
+                    RotateToHeading(demon, RotationHeading.LEFT);
                     baronsLongSolved = false;
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 5:
                 case 7:
                 case 10:
-                    RotateToHeading(paintings[2], RotationHeading.RIGHT);
+                    RotateToHeading(demon, RotationHeading.RIGHT);
                     baronsLongSolved = false;
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 8:
                 case 4:
                 case 12:
-                    RotateToHeading(paintings[2], RotationHeading.DOWN);
+                    RotateToHeading(demon, RotationHeading.DOWN);
                     baronsLongSolved = false;
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 11:
-                    RotateToHeading(paintings[2], RotationHeading.LEFT);
+                    RotateToHeading(demon, RotationHeading.LEFT);
                     baronsLongSolved = true;
                     CheckBaronSolved();
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
                 case 2:
-                    RotateToHeading(paintings[2], RotationHeading.UP);
+                    RotateToHeading(demon, RotationHeading.UP);
                     baronsLongSolved = false;
                     Debug.Log("Demon has Rotation " + paintings[2].currentRotation);
                     break;
