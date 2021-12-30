@@ -91,6 +91,15 @@ public class CameraController : Singleton<CameraController>
         EventHandler.PublishOnCameraSwitch();
     }
     
+    public void DisableHotspots()
+    {
+        currentCameraShot.ShowHotspots(false);
+    }
+
+    public void EnableHotspots()
+    {
+        currentCameraShot.ShowHotspots(true);
+    }
     
     protected void DebugCameraSwitchControl()
     {
